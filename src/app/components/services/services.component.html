@@ -73,4 +73,26 @@
         </div>
     </div>
 
+    <div class="industries">
+        <h3>Industries We Serve</h3>
+        <p>Serving Varied Industry Needs with Precision Solutions Throughout the UAE</p>
+        <div class="industrycards">
+            <div class="industry-card" *ngFor="let ind of industry">
+                <h5>{{ ind.head }}</h5>
+                <p>{{ ind.para }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="standards">
+        <h3>Certifications and Standards</h3>
+        <div class="standardscards">
+            <div class="standards-card" *ngFor="let item of ass">
+                <img [src]="item.img" alt="{{ item.head }}">
+                <h5>{{ item.head }}</h5>
+                <p>{{ item.para }}</p>
+            </div>
+        </div>
+    </div>
+
 </div>

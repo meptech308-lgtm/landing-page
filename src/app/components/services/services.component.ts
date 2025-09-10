@@ -46,4 +46,64 @@ export class ServicesComponent {
     },
   ]
 
+  industry: any[] = [
+    {
+      id: 1,
+      head: 'Health Care',
+      para: 'Hospitals, clinics, and medical centers with critical air quality requirements'
+    },
+    {
+      id: 2,
+      head: 'Commercial Building',
+      para: 'Office complexes, retail centers, and mixed-use developments'
+    },
+    {
+      id: 3,
+      head: 'Hospitalilty',
+      para: 'Hotels, restaurants, and entertainment venues'
+    },
+    {
+      id: 4,
+      head: 'Industrial',
+      para: 'Manufacturing plants, warehouses, and industrial complexes'
+    },
+    {
+      id: 5,
+      head: 'Educational',
+      para: 'Schools, universities, and training centers'
+    },
+    {
+      id: 6,
+      head: 'Residential',
+      para: 'Villas, apartments, and residential communities'
+    },
+  ]
+
+  ass: any[] = [
+    {
+      id: 1,
+      img: '/ass1.png',
+      head: 'ISO 9001',
+      para: 'Quality Management'
+    },
+    {
+      id: 2,
+      img: '/ass2.png',
+      head: 'Daikin Certified',
+      para: 'QAuthourized Dealer'
+    },
+    {
+      id: 3,
+      img: '/ass3.png',
+      head: 'UAE Standards',
+      para: 'Local Compilance'
+    },
+    {
+      id: 4,
+      img: '/ass4.png',
+      head: 'ASHRAE',
+      para: 'International Standards'
+    },
+  ]
+
 }
