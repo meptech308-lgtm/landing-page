@@ -1,1 +1,26 @@
-<p>services works!</p>
+<div>
+    <app-banner></app-banner>
+
+    <div class="core">
+        <h4>Our Core Services</h4>
+        <p>End-to-end HVAC solutions designed to meet the demanding
+            requirements of UAE's climate and building standards</p>
+    </div>
+
+    <div class="cards">
+        <div class="card" *ngFor="let card of cards">
+            <div class="card-header">
+                <img [src]="card.img" alt="{{ card.head }}">
+                <h5>{{ card.head }}</h5>
+            </div>
+            <p class="card-para">{{ card.para }}</p>
+            <h6 class="features-heading">Key Features</h6>
+            <ul class="features-list">
+                <li *ngFor="let feature of card.features">
+                    <i class="bi bi-plus-circle"></i> {{ feature }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
