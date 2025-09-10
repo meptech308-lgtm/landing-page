@@ -1,0 +1,73 @@
+.container-fluid {
+    background-image: url('../../../../public/banner1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.headings h4 {
+    color: #EA4D44;
+    font-size: 52px;
+    margin: 0;
+}
+
+.headings p {
+    color: #ECF1F9;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.explore-btn {
+    background-color: #EA4D44;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    opacity: 0.85;
+}
+
+.quote-btn {
+    background-color: rgba(255, 255, 255, 0.37);
+    color: #EA4D44;
+    border: 2px solid #EA4D44;
+    padding: 10px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.quote-btn:hover {
+    background-color: rgba(234, 77, 68, 0.1);
+}
+
+.label h6 {
+    background-color: #7E7F81;
+    color: #000000;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 24px;
+}
