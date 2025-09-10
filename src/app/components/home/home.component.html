@@ -1,3 +1,56 @@
 <div>
     <app-banner></app-banner>
+
+    <div class="why">
+        <h4>Why We?</h4>
+        <p>End-to-end HVAC solutions designed to meet the demanding
+            requirements of UAE's climate control and building standards</p>
+    </div>
+
+    <div class="firstcards">
+        <div class="card" *ngFor="let card of cards">
+            <img [src]="card.img" alt="{{ card.head }}">
+            <h5>{{ card.head }}</h5>
+            <p>{{ card.para }}</p>
+        </div>
+    </div>
+
+    <h4 class="heading">About</h4>
+
+    <div class="about">
+        <div class="about-left">
+            <img src="/logo.png" alt="logo">
+            <p>MEPTECH AIR CONDITION TRADING L.L.C is a competitive trader of HVAC products through which we endow with
+                technical assistance for various innovative aspects of air conditioning and ventilation processes over
+                international standards maintained in quality of products and service.</p>
+            <p>We are specialized in catering to our customers with various engineering requirements in diverse
+                disciplines
+                of Air-Conditioning, Ventilation, Airflow Control, Air Distribution, Fire/Smoke Control, Acoustics, and
+                services. MEPTECH AIR CONDITION TRADING L.L.C is driven by fully qualified & self-
+                motivated professionals, collectively contributing their experience and expertise, to gear advanced
+                engineering solutions.</p>
+            <p>Our strong commitment towards quality backed by the latest technology made us collaborate with
+                renowned international brands like Daikin, Systemair, Kleanland, JC Cooling to name a
+                few and undertake responsibility to cater to the requirements of various MEP Projects across the Middle
+                East.</p>
+            <p>“Business Engineered By Trust.”</p>
+            <button class="explore-btn">Explore</button>
+        </div>
+        <div class="about-right">
+            <img src="/about.png" alt="image">
+        </div>
+    </div>
+
+        <h4 class="heading">Featured Categories</h4>
+
+<div class="featured">
+  <div
+    class="featured-card"
+    *ngFor="let item of featured"
+    [style.backgroundImage]="'url(' + item.img + ')'"
+  >
+    <h5>{{ item.head }}</h5>
+  </div>
+</div>
+
 </div>
