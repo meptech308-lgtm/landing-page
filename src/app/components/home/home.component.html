@@ -41,16 +41,12 @@
         </div>
     </div>
 
-        <h4 class="heading">Featured Categories</h4>
+    <h4 class="heading">Featured Categories</h4>
 
-<div class="featured">
-  <div
-    class="featured-card"
-    *ngFor="let item of featured"
-    [style.backgroundImage]="'url(' + item.img + ')'"
-  >
-    <h5>{{ item.head }}</h5>
-  </div>
-</div>
+    <div class="featured">
+        <div class="featured-card" *ngFor="let item of featured" [style.backgroundImage]="'url(' + item.img + ')'">
+            <h5>{{ item.head }}</h5>
+        </div>
+    </div>
 
 </div>
