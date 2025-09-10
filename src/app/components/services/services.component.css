@@ -1,3 +1,7 @@
+.main{
+    padding: 1rem;
+}
+
 .core {
     text-align: center;
     padding: 2rem;
@@ -303,4 +307,107 @@
 .standards-card:hover {
     background-color: rgba(234, 77, 68, 0.05);
     transform: translateY(-5px);
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .industrycards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .standardscards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .approach {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .approach .left {
+    text-align: left;
+  }
+
+  .approach .right {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .core h4 {
+    font-size: 24px;
+  }
+
+  .core p {
+    font-size: 14px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .industrycards {
+    grid-template-columns: 1fr;
+  }
+
+  .standardscards {
+    grid-template-columns: 1fr;
+  }
+
+  .approach {
+    padding: 20px 15px;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .flow {
+    gap: 20px;
+  }
+
+  .step .name h5 {
+    font-size: 16px;
+  }
+
+  .step .name p {
+    font-size: 13px;
+  }
+
+  .industries h3,
+  .standards h3,
+  .approach .left h3 {
+    font-size: 22px;
+  }
+
+  .industries p,
+  .approach .left p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .core {
+    padding: 1rem;
+  }
+
+  .cards {
+    padding: 1rem;
+  }
+
+  .approach {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .step .no {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .step .name h5 {
+    font-size: 15px;
+  }
 }
