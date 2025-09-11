@@ -83,3 +83,105 @@
     color: #7E7F81;
     font-size: 24px;
 }
+
+.gather img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+    .note h1 {
+        font-size: 40px;
+    }
+
+    .note p {
+        font-size: 18px;
+        padding: 1.5rem;
+    }
+
+    .us p {
+        font-size: 24px;
+    }
+
+    .heading {
+        font-size: 40px;
+    }
+
+    .team .gather p {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Landscape & Small Tablets */
+@media (max-width: 768px) {
+    .note {
+        padding: 0 1rem;
+    }
+
+    .note h1 {
+        font-size: 32px;
+    }
+
+    .note p {
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 1rem;
+    }
+
+    .note p::before,
+    .note p::after {
+        font-size: 50px;
+    }
+
+    .us p {
+        font-size: 20px;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .team .gather p {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .note h1 {
+        font-size: 26px;
+    }
+
+    .note p {
+        font-size: 14px;
+        padding: 0.8rem;
+    }
+
+    .note p::before,
+    .note p::after {
+        font-size: 36px;
+    }
+
+    .us {
+        padding: 2rem 1rem;
+    }
+
+    .us p {
+        font-size: 16px;
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+
+    .team {
+        padding: 2rem 1rem;
+    }
+
+    .team .gather p {
+        font-size: 16px;
+    }
+}
