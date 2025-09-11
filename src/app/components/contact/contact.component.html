@@ -2,113 +2,117 @@
     <app-banner></app-banner>
 </div>
 
-<div class="contact-form-container">
-    <h2>Request a Quote</h2>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <!-- Full Name + Phone -->
-        <div class="row">
-            <div class="form-group col">
-                <label for="fullName">Full Name</label>
-                <input id="fullName" type="text" class="form-control" formControlName="fullName"
-                    placeholder="Enter your full name">
+<div class="container-fluid">
+    <div class="contact-form-container">
+        <h2>Request a Quote</h2>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <!-- Full Name + Phone -->
+            <div class="row">
+                <div class="form-group col">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" type="text" class="form-control" formControlName="fullName"
+                        placeholder="Enter your full name">
+                    <small class="error"
+                        *ngIf="contactForm.get('fullName')?.touched && contactForm.get('fullName')?.invalid">
+                        Full name is required.
+                    </small>
+                </div>
+
+                <div class="form-group col">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="tel" class="form-control" formControlName="phone"
+                        placeholder="Enter your phone number">
+                    <small class="error"
+                        *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('required')">
+                        Phone number is required.
+                    </small>
+                    <small class="error"
+                        *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('pattern')">
+                        Enter a valid 10-digit phone number.
+                    </small>
+                </div>
+            </div>
+
+            <!-- Email + Enquiry Type -->
+            <div class="row">
+                <div class="form-group col">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control" formControlName="email"
+                        placeholder="Enter your email">
+                    <small class="error"
+                        *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.hasError('required')">
+                        Email is required.
+                    </small>
+                    <small class="error"
+                        *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.hasError('email')">
+                        Enter a valid email address.
+                    </small>
+                </div>
+
+                <div class="form-group col">
+                    <label for="enquiry">Enquiry Type</label>
+                    <select id="enquiry" class="form-control" formControlName="enquiry">
+                        <option value="" disabled>Select enquiry type</option>
+                        <option>Installation</option>
+                        <option>Maintenance</option>
+                        <option>Repair</option>
+                        <option>Other</option>
+                    </select>
+                    <small class="error"
+                        *ngIf="contactForm.get('enquiry')?.touched && contactForm.get('enquiry')?.invalid">
+                        Please select an enquiry type.
+                    </small>
+                </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="form-group">
+                <label for="details">Project Details</label>
+                <textarea id="details" rows="4" class="form-control" formControlName="details"
+                    placeholder="Enter project details"></textarea>
                 <small class="error"
-                    *ngIf="contactForm.get('fullName')?.touched && contactForm.get('fullName')?.invalid">
-                    Full name is required.
+                    *ngIf="contactForm.get('details')?.touched && contactForm.get('details')?.hasError('required')">
+                    Project details are required.
+                </small>
+                <small class="error"
+                    *ngIf="contactForm.get('details')?.touched && contactForm.get('details')?.hasError('minlength')">
+                    Project details must be at least 10 characters long.
                 </small>
             </div>
 
-            <div class="form-group col">
-                <label for="phone">Phone Number</label>
-                <input id="phone" type="tel" class="form-control" formControlName="phone"
-                    placeholder="Enter your phone number">
-                <small class="error"
-                    *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('required')">
-                    Phone number is required.
-                </small>
-                <small class="error"
-                    *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('pattern')">
-                    Enter a valid 10-digit phone number.
-                </small>
-            </div>
-        </div>
+            <!-- Button -->
+            <button type="submit" class="btn-submit">Request a Quote</button>
+        </form>
+    </div>
 
-        <!-- Email + Enquiry Type -->
-        <div class="row">
-            <div class="form-group col">
-                <label for="email">Email</label>
-                <input id="email" type="email" class="form-control" formControlName="email"
-                    placeholder="Enter your email">
-                <small class="error"
-                    *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.hasError('required')">
-                    Email is required.
-                </small>
-                <small class="error"
-                    *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.hasError('email')">
-                    Enter a valid email address.
-                </small>
-            </div>
-
-            <div class="form-group col">
-                <label for="enquiry">Enquiry Type</label>
-                <select id="enquiry" class="form-control" formControlName="enquiry">
-                    <option value="" disabled>Select enquiry type</option>
-                    <option>Installation</option>
-                    <option>Maintenance</option>
-                    <option>Repair</option>
-                    <option>Other</option>
-                </select>
-                <small class="error" *ngIf="contactForm.get('enquiry')?.touched && contactForm.get('enquiry')?.invalid">
-                    Please select an enquiry type.
-                </small>
-            </div>
-        </div>
-
-        <!-- Project Details -->
-        <div class="form-group">
-            <label for="details">Project Details</label>
-            <textarea id="details" rows="4" class="form-control" formControlName="details"
-                placeholder="Enter project details"></textarea>
-            <small class="error"
-                *ngIf="contactForm.get('details')?.touched && contactForm.get('details')?.hasError('required')">
-                Project details are required.
-            </small>
-            <small class="error"
-                *ngIf="contactForm.get('details')?.touched && contactForm.get('details')?.hasError('minlength')">
-                Project details must be at least 10 characters long.
-            </small>
-        </div>
-
-        <!-- Button -->
-        <button type="submit" class="btn-submit">Request a Quote</button>
-    </form>
-</div>
-
-<div class="card">
-    <div class="hours">
+    <div class="card">
         <h5>Business Hours</h5>
-        <div class="left">
-            <p>Monday-Friday</p>
-            <p>Saturday</p>
-            <p>Sunday</p>
+        <div class="hours">
+            <div class="content">
+                <div class="left">
+                    <p>Monday-Friday</p>
+                    <p>Saturday</p>
+                    <p>Sunday</p>
+                </div>
+                <div class="right">
+                    <p>8:00 am to 6:00pm</p>
+                    <p>9:00 am to 5:00pm</p>
+                    <p>Closed</p>
+                </div>
+            </div>
         </div>
-        <div class="right">
-            <p>8:00 am to 6:00pm</p>
-            <p>9:00 am to 5:00pm</p>
-            <p>Closed</p>
+
+        <div class="location">
+            <h5>Location</h5>
+            <div class="val">
+                <p>
+                    Land Rover Showroom building, Manazel
+                    Office no 47 M Floor
+                    Al Garhoud , Dubai
+                    United Arab Emirates
+                </p>
+                <button>View on Map</button>
+            </div>
         </div>
     </div>
-
-    <div class="location">
-        <h5>Location</h5>
-        <div class="val">
-            <p>
-                Land Rover Showroom building, Manazel
-                Office no 47 M Floor
-                Al Garhoud , Dubai
-                United Arab Emirates
-            </p>
-            <button>View on Map</button>
-        </div>
-    </div>
-
 </div>
