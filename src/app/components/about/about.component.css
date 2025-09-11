@@ -1,0 +1,53 @@
+.note {
+    background-image: url('../../../../public/banner2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 1rem;
+}
+
+.note h1 {
+    color: #EA4D44;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.note p {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 800px;
+    position: relative;
+    padding: 2rem;
+    /* background-color: #ffffff40; */
+}
+
+.note p::before {
+    content: "“";
+    font-size: 80px;
+    color: #EA4D44;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%, -30%);
+    font-weight: bold;
+}
+
+.note p::after {
+    content: "”";
+    font-size: 80px;
+    color: #EA4D44;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(30%, 30%);
+    font-weight: bold;
+}
