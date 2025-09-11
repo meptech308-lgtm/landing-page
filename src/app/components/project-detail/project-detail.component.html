@@ -1,1 +1,6 @@
-<p>project-detail works!</p>
+<div class="project-detail" *ngIf="project">
+    <h2>{{ project.head }}</h2>
+    <img [src]="project.img" alt="{{ project.head }}">
+    <p>{{ project.description }}</p>
+    <button routerLink="/projects"> Back to Projects</button>
+</div>
