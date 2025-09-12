@@ -11,6 +11,7 @@ import { CassetteComponent } from './cassette/cassette.component';
 import { AirhandlingunitsComponent } from './airhandlingunits/airhandlingunits.component';
 import { FancoilunitsComponent } from './fancoilunits/fancoilunits.component';
 import { SoundatteComponent } from './soundatte/soundatte.component';
+import { MotorizedComponent } from './motorized/motorized.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -23,11 +24,12 @@ const routes: Routes = [
   { path: 'cassette', component: CassetteComponent },
   { path: 'airhandling', component: AirhandlingunitsComponent },
   { path: 'fancoilunits', component: FancoilunitsComponent },
-  { path: 'soundatte', component: SoundatteComponent }
+  { path: 'soundatte', component: SoundatteComponent },
+  { path: 'motorized', component: MotorizedComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)], 
   exports: [RouterModule]
 })
 export class DetailsRoutingModule { }
