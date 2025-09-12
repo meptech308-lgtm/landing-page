@@ -1,0 +1,81 @@
+<div class="vrvx-container">
+    <div class="top-section">
+        <div class="main-img">
+            <img [src]="product.mainImg" [alt]="product.name">
+        </div>
+    </div>
+
+    <div class="short">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.short }}</p>
+    </div>
+
+    <div class="enquire">
+        <button>Enquire Now</button>
+    </div>
+
+    <app-features [features]="product.features"></app-features>
+
+    <div class="table-section">
+        <h3>{{ product.tableName }}</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Type</th>
+                    <th>Width</th>
+                    <th>Height</th>
+                    <th>Length</th>
+                    <th>dB(A) Reduction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of product.table">
+                    <td>{{ row.srNo }}</td>
+                    <td>{{ row.type }}</td>
+                    <td>{{ row.width }}</td>
+                    <td>{{ row.height }}</td>
+                    <td>{{ row.length.join(' / ') }}</td>
+                    <td>{{ row.dbReduction.join(' / ') }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Table 2 -->
+    <div class="table-section">
+        <h3>{{ product.tableName2 }}</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Type</th>
+                    <th>Length</th>
+                    <th>63 Hz</th>
+                    <th>125 Hz</th>
+                    <th>250 Hz</th>
+                    <th>500 Hz</th>
+                    <th>1K</th>
+                    <th>2K</th>
+                    <th>4K</th>
+                    <th>8K</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of product.table2">
+                    <td>{{ row.srNo }}</td>
+                    <td>{{ row.type }}</td>
+                    <td>{{ row.length }}</td>
+                    <td>{{ row.values['63Hz'] }}</td>
+                    <td>{{ row.values['125Hz'] }}</td>
+                    <td>{{ row.values['250Hz'] }}</td>
+                    <td>{{ row.values['500Hz'] }}</td>
+                    <td>{{ row.values['1K'] }}</td>
+                    <td>{{ row.values['2K'] }}</td>
+                    <td>{{ row.values['4K'] }}</td>
+                    <td>{{ row.values['8K'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

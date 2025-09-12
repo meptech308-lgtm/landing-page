@@ -23,6 +23,7 @@ import { NonreturndampersComponent } from './nonreturndampers/nonreturndampers.c
 import { EcologyunitComponent } from './ecologyunit/ecologyunit.component';
 import { RegistersComponent } from './registers/registers.component';
 import { Thermostat2Component } from './thermostat2/thermostat2.component';
+import { ThermostatComponent } from './thermostat/thermostat.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -47,11 +48,12 @@ const routes: Routes = [
   { path: 'nonreturndampers', component: NonreturndampersComponent },
   { path: 'ecologyunits', component: EcologyunitComponent },
   { path: 'registers', component: RegistersComponent },
-  { path: 'thermostat2', component: Thermostat2Component }
+  { path: 'thermostat2', component: Thermostat2Component },
+  { path: 'thermostat', component: ThermostatComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)], 
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class DetailsRoutingModule { }
