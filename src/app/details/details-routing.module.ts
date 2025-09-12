@@ -22,6 +22,7 @@ import { VariablereturndamperComponent } from './variablereturndamper/variablere
 import { NonreturndampersComponent } from './nonreturndampers/nonreturndampers.component';
 import { EcologyunitComponent } from './ecologyunit/ecologyunit.component';
 import { RegistersComponent } from './registers/registers.component';
+import { Thermostat2Component } from './thermostat2/thermostat2.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -45,7 +46,8 @@ const routes: Routes = [
   { path: 'variablereturndamper', component: VariablereturndamperComponent },
   { path: 'nonreturndampers', component: NonreturndampersComponent },
   { path: 'ecologyunits', component: EcologyunitComponent },
-  { path: 'registers', component: RegistersComponent }
+  { path: 'registers', component: RegistersComponent },
+  { path: 'thermostat2', component: Thermostat2Component }
 ];
 
 @NgModule({
