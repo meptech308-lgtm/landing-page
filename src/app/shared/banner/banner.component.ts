@@ -47,7 +47,7 @@ export class BannerComponent {
   constructor(private router: Router) { }
 
   get currentBanner() {
-    const currentUrl = this.router.url.split('?')[0]; // normalize URL
+    const currentUrl = this.router.url.split('?')[0];
     const matchingKey = Object.keys(this.bannerData)
       .filter(key => key !== 'default')
       .sort((a, b) => b.length - a.length)

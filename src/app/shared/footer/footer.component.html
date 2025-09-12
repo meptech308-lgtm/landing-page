@@ -1,9 +1,9 @@
 <footer>
     <div class="first">
-        <h4>Ready to Start Your HVAC Project?</h4>
+        <h4>{{ currentFooter.heading }}</h4>
     </div>
     <div class="second">
-        <p>Get professional consultation and competitive quotes for your HVAC requirements</p>
+        <p>{{ currentFooter.subtext }}</p>
     </div>
     <div class="third">
         <button>Request a Quote</button>
@@ -29,11 +29,11 @@
                     <div class="links">
                         <h6>QUICK LINKS</h6>
                         <ul>
-                            <li>Home</li>
-                            <li>Products</li>
-                            <li>Service</li>
-                            <li>Projects</li>
-                            <li>Contact</li>
+                            <li (click)="goTo('/')">Home</li>
+                            <li (click)="goTo('/products')">Products</li>
+                            <li (click)="goTo('/services')">Service</li>
+                            <li (click)="goTo('/projects')">Projects</li>
+                            <li (click)="goTo('/contact')">Contact</li>
                         </ul>
                     </div>
 
