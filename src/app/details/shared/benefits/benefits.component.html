@@ -1,0 +1,8 @@
+<div class="benefits-container" *ngIf="benefits?.length">
+    <div class="benefits-title">
+        BENEFITS
+    </div>
+    <div class="benefits-grid">
+        <div class="benefit" *ngFor="let b of benefits">{{ b }}</div>
+    </div>
+</div>
