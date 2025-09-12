@@ -5,13 +5,15 @@ import { VrvivComponent } from './vrviv/vrviv.component';
 import { VrvxComponent } from './vrvx/vrvx.component';
 import { VrvaptComponent } from './vrvapt/vrvapt.component';
 import { ConcealedacComponent } from './concealedac/concealedac.component';
+import { WallsplitComponent } from './wallsplit/wallsplit.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
   { path: 'vrviv', component: VrvivComponent },
   { path: 'vrvx', component: VrvxComponent },
   { path: 'vrvapt', component: VrvaptComponent },
-  { path: 'concealedac', component: ConcealedacComponent }
+  { path: 'concealedac', component: ConcealedacComponent },
+  { path: 'wallsplit', component: WallsplitComponent }
 ];
 
 @NgModule({
