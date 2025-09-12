@@ -1,0 +1,23 @@
+<div class="vrvx-container">
+    <div class="top-section">
+        <div class="main-img">
+            <img [src]="product.mainImg" [alt]="product.name">
+        </div>
+    </div>
+
+    <div class="short">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.short }}</p>
+    </div>
+
+    <div class="enquire">
+        <button>Enquire Now</button>
+    </div>
+
+    <div class="cards">
+        <app-product-card *ngFor="let c of product.cards" [head]="c.head" [points]="c.points">
+        </app-product-card>
+    </div>
+
+    <app-features [features]="product.features"></app-features>
+</div>

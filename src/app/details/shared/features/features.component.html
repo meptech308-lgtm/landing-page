@@ -1,0 +1,8 @@
+<div class="features-container" *ngIf="features?.length">
+    <h3>Features</h3>
+    <ul>
+        <li *ngFor="let feature of features">
+            {{ feature }}
+        </li>
+    </ul>
+</div>

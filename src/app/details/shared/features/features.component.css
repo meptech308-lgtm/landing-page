@@ -1,0 +1,42 @@
+.features-container {
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+
+.features-container h3 {
+    color: #222;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+}
+
+.features-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-container li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #444;
+    font-weight: bold;
+}
+
+.features-container li::before {
+    content: "✔";
+    color: #EA4D44;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .features-container{
+        padding: 1rem;
+    }
+}
