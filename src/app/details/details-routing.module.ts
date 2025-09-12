@@ -6,6 +6,7 @@ import { VrvxComponent } from './vrvx/vrvx.component';
 import { VrvaptComponent } from './vrvapt/vrvapt.component';
 import { ConcealedacComponent } from './concealedac/concealedac.component';
 import { WallsplitComponent } from './wallsplit/wallsplit.component';
+import { RooftoppackageComponent } from './rooftoppackage/rooftoppackage.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'vrvx', component: VrvxComponent },
   { path: 'vrvapt', component: VrvaptComponent },
   { path: 'concealedac', component: ConcealedacComponent },
-  { path: 'wallsplit', component: WallsplitComponent }
+  { path: 'wallsplit', component: WallsplitComponent },
+  { path: 'rooftoppackage', component: RooftoppackageComponent }
 ];
 
 @NgModule({
