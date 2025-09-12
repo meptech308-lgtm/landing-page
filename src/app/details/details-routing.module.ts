@@ -10,6 +10,7 @@ import { RooftoppackageComponent } from './rooftoppackage/rooftoppackage.compone
 import { CassetteComponent } from './cassette/cassette.component';
 import { AirhandlingunitsComponent } from './airhandlingunits/airhandlingunits.component';
 import { FancoilunitsComponent } from './fancoilunits/fancoilunits.component';
+import { SoundatteComponent } from './soundatte/soundatte.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'rooftoppackage', component: RooftoppackageComponent },
   { path: 'cassette', component: CassetteComponent },
   { path: 'airhandling', component: AirhandlingunitsComponent },
-  { path: 'fancoilunits', component: FancoilunitsComponent }
+  { path: 'fancoilunits', component: FancoilunitsComponent },
+  { path: 'soundatte', component: SoundatteComponent }
 ];
 
 @NgModule({
