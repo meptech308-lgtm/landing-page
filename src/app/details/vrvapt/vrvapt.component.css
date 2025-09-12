@@ -1,0 +1,167 @@
+.vrvapt-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.main-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.short {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.short h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.short p {
+    font-size: 1.1rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.about {
+    margin: 2rem auto;
+    font-size: 1rem;
+    color: #444;
+    padding: 0 1rem;
+}
+
+.sub-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.sub-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sub-card img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+
+.sub-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.big-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.big-card {
+    border: 2px solid rgba(234, 77, 68, 0.4);
+    border-radius: 10px;
+    padding: 1.5rem;
+    background: #fff;
+}
+
+.big-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.big-card p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.enquire {
+    text-align: start;
+    margin: 2rem 0;
+}
+
+.enquire button {
+    background-color: #EA4D44;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.enquire button:hover {
+    background-color: #c63c36;
+}
+
+@media (max-width: 992px) {
+    .short h2 {
+        font-size: 1.8rem;
+    }
+
+    .short p {
+        font-size: 1rem;
+    }
+
+    .sub-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-img img {
+        max-width: 100%;
+    }
+
+    .short h2 {
+        font-size: 1.5rem;
+    }
+
+    .sub-card img {
+        max-width: 300px;
+    }
+
+    .big-card {
+        padding: 1rem;
+    }
+
+    .big-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .big-card p {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,34 @@
+<div class="vrvapt-container">
+    <div class="main-img">
+        <img [src]="product.mainImg" [alt]="product.name">
+    </div>
+
+    <div class="short">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.short }}</p>
+    </div>
+
+    <div class="about">
+        <p>{{ product.about }}</p>
+    </div>
+
+    <div class="enquire">
+        <button>Enquire Now</button>
+    </div>
+
+    <div class="sub-images">
+        <div class="sub-card" *ngFor="let s of product.subImages">
+            <img [src]="s.img" [alt]="s.head">
+            <h3>{{ s.head }}</h3>
+            <p>{{ s.para }}</p>
+        </div>
+    </div>
+
+    <div class="big-cards">
+        <div class="big-card" *ngFor="let b of product.bigCards">
+            <h3>{{ b.head }}</h3>
+            <p>{{ b.para }}</p>
+        </div>
+    </div>
+
+</div>
