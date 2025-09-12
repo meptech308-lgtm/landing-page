@@ -21,6 +21,7 @@ import { CeilingdiffusersComponent } from './ceilingdiffusers/ceilingdiffusers.c
 import { VariablereturndamperComponent } from './variablereturndamper/variablereturndamper.component';
 import { NonreturndampersComponent } from './nonreturndampers/nonreturndampers.component';
 import { EcologyunitComponent } from './ecologyunit/ecologyunit.component';
+import { RegistersComponent } from './registers/registers.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -43,7 +44,8 @@ const routes: Routes = [
   { path: 'ceilingdiffusers', component: CeilingdiffusersComponent },
   { path: 'variablereturndamper', component: VariablereturndamperComponent },
   { path: 'nonreturndampers', component: NonreturndampersComponent },
-  { path: 'ecologyunits', component: EcologyunitComponent }
+  { path: 'ecologyunits', component: EcologyunitComponent },
+  { path: 'registers', component: RegistersComponent }
 ];
 
 @NgModule({
