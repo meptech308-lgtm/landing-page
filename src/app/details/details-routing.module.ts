@@ -15,6 +15,7 @@ import { MotorizedComponent } from './motorized/motorized.component';
 import { LineargrillsComponent } from './lineargrills/lineargrills.component';
 import { LinearslotdiffucerComponent } from './linearslotdiffucer/linearslotdiffucer.component';
 import { VolumecontrolComponent } from './volumecontrol/volumecontrol.component';
+import { FiredamperComponent } from './firedamper/firedamper.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'motorized', component: MotorizedComponent },
   { path: 'lineargrills', component: LineargrillsComponent },
   { path: 'linerslotdiffuser', component: LinearslotdiffucerComponent },
-  { path: 'volumecontrol', component: VolumecontrolComponent }
+  { path: 'volumecontrol', component: VolumecontrolComponent },
+  { path: 'firedamper', component: FiredamperComponent }
 ];
 
 @NgModule({
