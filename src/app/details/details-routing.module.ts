@@ -20,6 +20,7 @@ import { ControlunitsComponent } from './controlunits/controlunits.component';
 import { CeilingdiffusersComponent } from './ceilingdiffusers/ceilingdiffusers.component';
 import { VariablereturndamperComponent } from './variablereturndamper/variablereturndamper.component';
 import { NonreturndampersComponent } from './nonreturndampers/nonreturndampers.component';
+import { EcologyunitComponent } from './ecologyunit/ecologyunit.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -41,7 +42,8 @@ const routes: Routes = [
   { path: 'controlunits', component: ControlunitsComponent },
   { path: 'ceilingdiffusers', component: CeilingdiffusersComponent },
   { path: 'variablereturndamper', component: VariablereturndamperComponent },
-  { path: 'nonreturndampers', component: NonreturndampersComponent }
+  { path: 'nonreturndampers', component: NonreturndampersComponent },
+  { path: 'ecologyunits', component: EcologyunitComponent }
 ];
 
 @NgModule({

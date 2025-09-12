@@ -1,0 +1,29 @@
+<div class="vrvx-container">
+    <div class="top-section">
+        <div class="main-img">
+            <img [src]="product.mainImg" [alt]="product.name">
+        </div>
+    </div>
+
+    <div class="short">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.short }}</p>
+    </div>
+
+    <div class="enquire">
+        <button>Enquire Now</button>
+    </div>
+
+    <app-features [features]="product.features"></app-features>
+
+    <div class="images-grid">
+        <div class="image-card full-width" *ngIf="product.subImages.length > 0">
+            <img [src]="product.subImages[0]" alt="Product image">
+        </div>
+
+        <div class="image-card centered" *ngIf="product.subImages.length > 1">
+            <img [src]="product.subImages[1]" alt="Product image">
+        </div>
+    </div>
+
+</div>

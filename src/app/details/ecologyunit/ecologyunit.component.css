@@ -1,0 +1,140 @@
+.vrvx-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.top-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.short h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #222;
+    font-weight: bolder;
+}
+
+.short p {
+    font-size: 1rem;
+    color: #222;
+    font-weight: bold;
+}
+
+.enquire {
+    text-align: start;
+    margin-top: 2rem;
+}
+
+.enquire button {
+    background-color: #EA4D44;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.enquire button:hover {
+    background-color: #c63c36;
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* First image takes full row */
+.image-card.full-width {
+  grid-column: span 3;
+}
+
+/* Second image centered */
+.image-card.centered {
+  grid-column: 2 / 3; /* place in the middle column */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .images-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-card.full-width {
+    grid-column: span 2;
+  }
+
+  .image-card.centered {
+    grid-column: 1 / 3; /* center across both columns */
+    justify-self: center;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .images-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-card.full-width,
+  .image-card.centered {
+    grid-column: span 1;
+    justify-self: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-img img {
+        max-width: 100%;
+    }
+
+    .images-grid {
+        grid-template-columns: 1fr;
+    }
+}
