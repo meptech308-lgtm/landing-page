@@ -17,6 +17,7 @@ import { LinearslotdiffucerComponent } from './linearslotdiffucer/linearslotdiff
 import { VolumecontrolComponent } from './volumecontrol/volumecontrol.component';
 import { FiredamperComponent } from './firedamper/firedamper.component';
 import { ControlunitsComponent } from './controlunits/controlunits.component';
+import { CeilingdiffusersComponent } from './ceilingdiffusers/ceilingdiffusers.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -35,7 +36,8 @@ const routes: Routes = [
   { path: 'linerslotdiffuser', component: LinearslotdiffucerComponent },
   { path: 'volumecontrol', component: VolumecontrolComponent },
   { path: 'firedamper', component: FiredamperComponent },
-  { path: 'controlunits', component: ControlunitsComponent }
+  { path: 'controlunits', component: ControlunitsComponent },
+  { path: 'ceilingdiffusers', component: CeilingdiffusersComponent }
 ];
 
 @NgModule({
