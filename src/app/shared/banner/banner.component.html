@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid" [ngStyle]="{'background-image': 'url(' + currentBanner.img + ')'}">
     <div class="headings">
-        <h4>HVAC Product Solutions Partner</h4>
-        <p>Trusted by MEP consultants and contractors across the UAE for reliable HVAC solutions</p>
+        <h4>{{ currentBanner.title }}</h4>
+        <p>{{ currentBanner.subtitle }}</p>
     </div>
     <div class="buttons">
         <button class="explore-btn">Explore</button>
