@@ -1,1 +1,28 @@
-<p>list works!</p>
+<div class="banner">
+    <app-banner></app-banner>
+</div>
+
+<div class="container">
+    <div class="filters">
+        <input type="text" placeholder="Search Name" [(ngModel)]="searchText" (input)="applyFilters()">
+
+        <select [(ngModel)]="selectedCategory" (change)="applyFilters()">
+            <option value="">All Categories</option>
+            <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+        </select>
+    </div>
+</div>
+
+<div class="products-section">
+    <div class="container">
+        <div class="products">
+            <div class="product-card" *ngFor="let product of filteredProducts">
+                <img [src]="product.img" class="product-img" [alt]="product.name">
+                <div class="card-body">
+                    <h5>{{ product.name }}</h5>
+                    <button>View More Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
