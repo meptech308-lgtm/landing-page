@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ImageComponent } from "../shared/image/image.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-lineargrills',
-  imports: [CommonModule, ImageComponent],
+  imports: [CommonModule, ImageComponent, RandomlistComponent],
   templateUrl: './lineargrills.component.html',
   styleUrl: './lineargrills.component.css'
 })

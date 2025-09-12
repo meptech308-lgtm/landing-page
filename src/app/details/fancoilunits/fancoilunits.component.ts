@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-fancoilunits',
-  imports: [CommonModule, ProductCardComponent],
+  imports: [CommonModule, ProductCardComponent, RandomlistComponent],
   templateUrl: './fancoilunits.component.html',
   styleUrl: './fancoilunits.component.css'
 })

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-vrviv',
-  imports: [CommonModule],
+  imports: [CommonModule, RandomlistComponent],
   templateUrl: './vrviv.component.html',
   styleUrl: './vrviv.component.css'
 })

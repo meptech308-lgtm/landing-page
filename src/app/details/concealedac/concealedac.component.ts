@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
 import { BenefitsComponent } from "../shared/benefits/benefits.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-concealedac',
-  imports: [CommonModule, ProductCardComponent, BenefitsComponent],
+  imports: [CommonModule, ProductCardComponent, BenefitsComponent, RandomlistComponent],
   templateUrl: './concealedac.component.html',
   styleUrl: './concealedac.component.css'
 })

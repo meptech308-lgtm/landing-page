@@ -1,0 +1,134 @@
+.randomlist-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    position: relative;
+    display: inline-block;
+}
+
+.view-more-btn {
+    margin: 2rem auto 0 auto;
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: #EA4D44;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.view-more-btn:hover {
+    background: #d43f36;
+    transform: translateY(-2px);
+}
+
+.products-section {
+    padding: 3rem 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.product-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.card-body {
+    background-color: #fafafa;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.card-body h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.card-body button {
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 100%;
+    background: #EA4D44;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card-body button:hover {
+    background: #ea4c44e6;
+}
+
+@media (max-width: 992px) {
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .product-img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-img {
+        height: 200px;
+    }
+
+    .card-body h5 {
+        font-size: 1rem;
+    }
+
+    .card-body button {
+        padding: 6px 16px;
+        font-size: 0.85rem;
+    }
+}

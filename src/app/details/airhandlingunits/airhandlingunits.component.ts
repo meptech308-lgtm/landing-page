@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
 import { FeaturesComponent } from "../shared/features/features.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-airhandlingunits',
-  imports: [CommonModule, ProductCardComponent, FeaturesComponent],
+  imports: [CommonModule, ProductCardComponent, FeaturesComponent, RandomlistComponent],
   templateUrl: './airhandlingunits.component.html',
   styleUrl: './airhandlingunits.component.css'
 })

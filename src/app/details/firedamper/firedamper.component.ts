@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ImageComponent } from "../shared/image/image.component";
 import { CommonModule } from '@angular/common';
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-firedamper',
-  imports: [ImageComponent, CommonModule],
+  imports: [ImageComponent, CommonModule, RandomlistComponent],
   templateUrl: './firedamper.component.html',
   styleUrl: './firedamper.component.css'
 })

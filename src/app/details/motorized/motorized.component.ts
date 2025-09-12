@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ImageComponent } from "../shared/image/image.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-motorized',
-  imports: [CommonModule, ImageComponent],
+  imports: [CommonModule, ImageComponent, RandomlistComponent],
   templateUrl: './motorized.component.html',
   styleUrl: './motorized.component.css'
 })

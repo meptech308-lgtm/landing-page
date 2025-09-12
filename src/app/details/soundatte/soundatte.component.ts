@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-soundatte',
-  imports: [CommonModule],
+  imports: [CommonModule, RandomlistComponent],
   templateUrl: './soundatte.component.html',
   styleUrl: './soundatte.component.css'
 })

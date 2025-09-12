@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { BenefitsComponent } from "../shared/benefits/benefits.component";
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-cassette',
-  imports: [CommonModule, BenefitsComponent, ProductCardComponent],
+  imports: [CommonModule, BenefitsComponent, ProductCardComponent, RandomlistComponent],
   templateUrl: './cassette.component.html',
   styleUrl: './cassette.component.css'
 })

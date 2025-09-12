@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FeaturesComponent } from "../shared/features/features.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-thermostat',
-  imports: [CommonModule, FeaturesComponent],
+  imports: [CommonModule, FeaturesComponent, RandomlistComponent],
   templateUrl: './thermostat.component.html',
   styleUrl: './thermostat.component.css'
 })

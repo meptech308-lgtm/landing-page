@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ImageComponent } from "../shared/image/image.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-linearslotdiffucer',
-  imports: [CommonModule, ImageComponent],
+  imports: [CommonModule, ImageComponent, RandomlistComponent],
   templateUrl: './linearslotdiffucer.component.html',
   styleUrl: './linearslotdiffucer.component.css'
 })

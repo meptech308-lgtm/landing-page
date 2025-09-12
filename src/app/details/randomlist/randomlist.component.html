@@ -1,0 +1,19 @@
+<div class="container-fluid randomlist-wrapper">
+    <div class="section-header">
+        <h3>Another products like this</h3>
+    </div>
+    <div class="products-section">
+        <div class="container">
+            <div class="products">
+                <div class="product-card" *ngFor="let product of randomProducts">
+                    <img [src]="product.img" class="product-img" [alt]="product.name">
+                    <div class="card-body">
+                        <h5>{{ product.name }}</h5>
+                        <button [routerLink]="['/products', product.route]">View More Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="view-more-btn" (click)="goToListPage()">View More</button>
+</div>

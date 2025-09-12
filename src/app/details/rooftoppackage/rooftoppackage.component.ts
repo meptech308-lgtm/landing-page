@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { BenefitsComponent } from "../shared/benefits/benefits.component";
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-rooftoppackage',
-  imports: [CommonModule, BenefitsComponent, ProductCardComponent],
+  imports: [CommonModule, BenefitsComponent, ProductCardComponent, RandomlistComponent],
   templateUrl: './rooftoppackage.component.html',
   styleUrl: './rooftoppackage.component.css'
 })

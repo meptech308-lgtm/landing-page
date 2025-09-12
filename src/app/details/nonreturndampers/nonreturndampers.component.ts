@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ImageComponent } from "../shared/image/image.component";
 import { FeaturesComponent } from "../shared/features/features.component";
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-nonreturndampers',
-  imports: [CommonModule, ImageComponent, FeaturesComponent],
+  imports: [CommonModule, ImageComponent, FeaturesComponent, RandomlistComponent],
   templateUrl: './nonreturndampers.component.html',
   styleUrl: './nonreturndampers.component.css'
 })

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RandomlistComponent } from "../randomlist/randomlist.component";
 
 @Component({
   selector: 'app-vrvapt',
-  imports: [CommonModule],
+  imports: [CommonModule, RandomlistComponent],
   templateUrl: './vrvapt.component.html',
   styleUrl: './vrvapt.component.css'
 })
