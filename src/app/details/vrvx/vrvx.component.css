@@ -1,0 +1,93 @@
+.vrvx-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.top-section {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.short h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #222;
+    font-weight: bolder;
+}
+
+.short p {
+    font-size: 1rem;
+    color: #222;
+    font-weight: bold;
+}
+
+.about {
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+.enquire {
+    text-align: start;
+    margin-top: 2rem;
+}
+
+.enquire button {
+    background-color: #EA4D44;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.enquire button:hover {
+    background-color: #c63c36;
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-img img {
+        max-width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}

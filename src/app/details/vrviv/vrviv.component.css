@@ -80,7 +80,7 @@
 
 .name-short p {
     font-size: 1rem;
-    color: #555;
+    color: #222;
     font-weight: bold;
 }
 
@@ -111,30 +111,25 @@
     object-fit: cover;
 }
 
-.enquire-btn {
-    display: inline-block;
-    margin: 1.5rem 0;
-    padding: 12px 28px;
+.enquire {
+    text-align: start;
+    margin-top: 2rem;
+}
+
+.enquire button {
     background-color: #EA4D44;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
+    color: white;
     border: none;
-    border-radius: 30px;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(234, 77, 68, 0.3);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease;
 }
 
-.enquire-btn:hover {
-    background-color: #d13e38;
-    box-shadow: 0 6px 14px rgba(234, 77, 68, 0.45);
-    transform: translateY(-2px);
-}
-
-.enquire-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 8px rgba(234, 77, 68, 0.3);
+.enquire button:hover {
+    background-color: #c63c36;
 }
 
 @media (max-width: 768px) {
