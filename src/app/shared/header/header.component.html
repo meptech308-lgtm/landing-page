@@ -26,22 +26,22 @@
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
             <ul class="navbar-nav gap-3">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                    <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeNavbar()" [routerLinkActiveOptions]="{ exact: true }">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+                    <a class="nav-link" routerLink="/products" (click)="closeNavbar()" routerLinkActive="active">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+                    <a class="nav-link" routerLink="/services" (click)="closeNavbar()" routerLinkActive="active">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
+                    <a class="nav-link" routerLink="/projects" (click)="closeNavbar()" routerLinkActive="active">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
+                    <a class="nav-link" routerLink="/about" (click)="closeNavbar()" routerLinkActive="active">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+                    <a class="nav-link" routerLink="/contact" (click)="closeNavbar()" routerLinkActive="active">Contact</a>
                 </li>
             </ul>
         </div>

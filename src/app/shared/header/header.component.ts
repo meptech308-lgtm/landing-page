@@ -14,4 +14,11 @@ export class HeaderComponent {
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+
+  closeNavbar() {
+    const navbar = document.getElementById('mainNavbar');
+    if (navbar && navbar.classList.contains('show')) {
+      navbar.classList.remove('show');
+    }
+  }
 }
