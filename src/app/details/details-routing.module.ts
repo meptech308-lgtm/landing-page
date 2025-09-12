@@ -12,6 +12,7 @@ import { AirhandlingunitsComponent } from './airhandlingunits/airhandlingunits.c
 import { FancoilunitsComponent } from './fancoilunits/fancoilunits.component';
 import { SoundatteComponent } from './soundatte/soundatte.component';
 import { MotorizedComponent } from './motorized/motorized.component';
+import { LineargrillsComponent } from './lineargrills/lineargrills.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'airhandling', component: AirhandlingunitsComponent },
   { path: 'fancoilunits', component: FancoilunitsComponent },
   { path: 'soundatte', component: SoundatteComponent },
-  { path: 'motorized', component: MotorizedComponent }
+  { path: 'motorized', component: MotorizedComponent },
+  { path: 'lineargrills', component: LineargrillsComponent }
 ];
 
 @NgModule({
