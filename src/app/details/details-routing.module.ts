@@ -14,6 +14,7 @@ import { SoundatteComponent } from './soundatte/soundatte.component';
 import { MotorizedComponent } from './motorized/motorized.component';
 import { LineargrillsComponent } from './lineargrills/lineargrills.component';
 import { LinearslotdiffucerComponent } from './linearslotdiffucer/linearslotdiffucer.component';
+import { VolumecontrolComponent } from './volumecontrol/volumecontrol.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'soundatte', component: SoundatteComponent },
   { path: 'motorized', component: MotorizedComponent },
   { path: 'lineargrills', component: LineargrillsComponent },
-  { path: 'linerslotdiffuser', component: LinearslotdiffucerComponent }
+  { path: 'linerslotdiffuser', component: LinearslotdiffucerComponent },
+  { path: 'volumecontrol', component: VolumecontrolComponent }
 ];
 
 @NgModule({
