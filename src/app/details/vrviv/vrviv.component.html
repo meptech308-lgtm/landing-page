@@ -1,0 +1,34 @@
+<div class="product-details">
+    <div class="top-section">
+        <div class="main-img">
+            <img [src]="product.mainImg" [alt]="product.name">
+        </div>
+
+        <div class="points">
+            <div class="point" *ngFor="let item of product.imgPoints">
+                <div class="point-header">
+                    <span class="circle">{{ item.no }}</span>
+                    <h4>{{ item.head }}</h4>
+                </div>
+                <ul>
+                    <li *ngFor="let p of item.points">{{ p }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="name-short">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.short }}</p>
+    </div>
+
+    <div class="work">
+        <p>{{ product.work }}</p>
+    </div>
+
+    <button class="enquire-btn">Enquire Now</button>
+
+    <div class="sub-img">
+        <img [src]="product.subImg" [alt]="product.name + ' Sub Image'">
+    </div>
+</div>
