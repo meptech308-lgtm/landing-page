@@ -1,18 +1,30 @@
 .contact-form-container {
     max-width: 800px;
     margin: 3rem auto;
-    padding: 2rem;
-    border: 1px solid #ccc;
-    /* border added */
-    border-radius: 8px;
+    padding: 2.5rem;
+    border-radius: 14px;
     background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border: none;
 }
 
 .contact-form-container h2 {
     text-align: center;
-    color: #EA4D44;
-    text-decoration: underline;
+    color: #222;
+    font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 2rem;
+    position: relative;
+}
+
+.contact-form-container h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, #EA4D44, #ff7a70);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
 }
 
 .row {
@@ -28,14 +40,23 @@
 }
 
 .form-group label {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.5rem;
+    color: #333;
 }
 
 .form-control {
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #EA4D44;
+    box-shadow: 0 0 0 3px rgba(234, 77, 68, 0.15);
+    outline: none;
 }
 
 textarea.form-control {
@@ -49,38 +70,51 @@ textarea.form-control {
 }
 
 .btn-submit {
-    background-color: #EA4D44;
+    background: linear-gradient(90deg, #EA4D44, #ff7a70);
     color: #fff;
-    padding: 0.8rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
-    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1.5rem;
     display: block;
     width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn-submit:hover {
-    background-color: #c43c35;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(234, 77, 68, 0.25);
 }
 
 .card {
     max-width: 800px;
     margin: 2rem auto;
-    padding: 1.5rem 2rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 2rem;
+    border-radius: 14px;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border: none;
 }
 
 .card h5 {
     font-size: 1.2rem;
-    color: #EA4D44;
+    color: #222;
+    font-weight: 600;
     margin-bottom: 1rem;
-    display: inline-block;
-    padding-bottom: 0.2rem;
+    position: relative;
+}
+
+.card h5::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #EA4D44;
+    margin-top: 0.4rem;
+    border-radius: 2px;
 }
 
 .hours .content {
@@ -102,30 +136,32 @@ textarea.form-control {
 
 .location h5 {
     font-size: 1.1rem;
-    color: #EA4D44;
+    color: #222;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .location .val p {
     font-size: 0.95rem;
-    line-height: 1.5;
-    color: #444;
+    line-height: 1.6;
+    color: #555;
     margin-bottom: 1rem;
 }
 
 .location .val button {
-    background-color: #EA4D44;
+    background: linear-gradient(90deg, #EA4D44, #ff7a70);
     color: #fff;
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.5rem;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .location .val button:hover {
-    background-color: #c43c35;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(234, 77, 68, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -138,11 +174,7 @@ textarea.form-control {
     }
 
     .card {
-        padding: 1rem;
-    }
-
-    .hours .right {
-        margin-top: 0.5rem;
+        padding: 1.5rem;
     }
 
     .btn-submit {
@@ -156,22 +188,22 @@ textarea.form-control {
 
 @media (max-width: 480px) {
     .contact-form-container {
-        padding: 1rem;
+        padding: 1.5rem;
         margin: 1rem;
     }
 
     .contact-form-container h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .form-control {
         font-size: 0.9rem;
-        padding: 0.5rem;
+        padding: 0.6rem;
     }
 
     .card {
         margin: 1rem;
-        padding: 1rem;
+        padding: 1.2rem;
     }
 
     .card h5 {
