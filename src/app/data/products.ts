@@ -19,7 +19,7 @@ export const Products = [
     },
     {
         id: 4,
-        img: '/products/concealedac/main.png',
+        img: '/products/concealedac/main.jpg',
         name: 'Concealed AC Unit',
         route: 'concealedac'
     },

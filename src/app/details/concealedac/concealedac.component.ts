@@ -13,7 +13,7 @@ import { RandomlistComponent } from "../randomlist/randomlist.component";
 export class ConcealedacComponent {
 
   product = {
-    mainImg: '/products/concealedac/main.png',
+    mainImg: '/products/concealedac/main.jpg',
     name: 'Concealed AC Unit',
     short: 'Efficient Concealed Daikin Ducted Air Conditioners for home ',
     about: 'A Daikin ducted air conditioner consists of an indoor and outdoor unit and flexible ducting. The indoor unit is concealed out of sight in your ceiling or under the floor, with flexible ducting distributing conditioned air through vents located throughout your home. An outdoor unit is positioned in a discreet location outside your home.',
