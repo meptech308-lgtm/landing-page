@@ -14,7 +14,7 @@ export class BannerComponent {
   bannerData: any = {
     '/': {
       img: '/banner1.png',
-      title: 'HVAC Product Solutions Partner',
+      title: 'HVAC PRODUCT SOLUTIONS PARTNER',
       subtitle: 'Trusted by MEP consultants and contractors across the UAE for reliable HVAC solutions'
     },
     '/services': {
