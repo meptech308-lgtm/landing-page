@@ -41,22 +41,22 @@ export class HomeComponent {
     {
       id: 1,
       img: '/image1.png',
-      head: 'AC equipments'
+      head: 'AC EQUIPMENTS'
     },
     {
       id: 2,
       img: '/image2.png',
-      head: 'Air Distribution Products'
+      head: 'AIR DISTRIBUTION PRODUCTS'
     },
     {
       id: 1,
       img: '/image3.png',
-      head: 'Ventilations'
+      head: 'VENTILATIONS'
     },
     {
       id: 1,
       img: '/image4.png',
-      head: 'Control Units'
+      head: 'CONTROL UNITS'
     },
   ]
 
