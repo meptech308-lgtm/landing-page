@@ -1,87 +1,115 @@
+/* ---------- General Notes Section ---------- */
 .note {
-    /* background-image: url('../../../../public/banner2.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
     gap: 20px;
-    padding: 0 1rem;
+    backdrop-filter: blur(6px);
+    /* subtle glass effect */
 }
 
 .note h1 {
     color: #EA4D44;
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 900;
     margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
 }
 
 .note p {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 20px;
     line-height: 1.8;
     max-width: 800px;
     position: relative;
     padding: 2rem;
-    /* background-color: #ffffff40; */
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    /* subtle overlay for text readability */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    font-family: 'Georgia', serif;
+}
+
+.note p::before,
+.note p::after {
+    font-weight: bold;
+    color: #EA4D44;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .note p::before {
     content: "“";
     font-size: 80px;
-    color: #EA4D44;
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(-30%, -30%);
-    font-weight: bold;
 }
 
 .note p::after {
     content: "”";
     font-size: 80px;
-    color: #EA4D44;
     position: absolute;
     bottom: 0;
     right: 0;
     transform: translate(30%, 30%);
-    font-weight: bold;
 }
 
+/* ---------- About Us Section ---------- */
 .us {
     text-align: center;
-    padding: 3rem;
+    padding: 4rem 2rem;
+    background: #f8f8f8;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .us p {
-    font-size: 32px;
-    color: #7E7F81;
+    font-size: 28px;
+    color: #4A4A4A;
     max-width: 1100px;
     margin: 0 auto;
+    line-height: 1.8;
+    font-family: 'Arial', sans-serif;
 }
 
+/* ---------- Headings ---------- */
 .heading {
     font-size: 48px;
-    margin-bottom: 2rem;
     text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
+/* ---------- Team Section ---------- */
 .team {
-    padding: 3rem;
+    padding: 4rem 2rem;
+    background: #ffffff;
 }
 
 .sub {
-    font-weight: bold;
-    margin-bottom: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #EA4D44;
+    font-size: 28px;
 }
 
 .team .gather p {
-    color: #7E7F81;
-    font-size: 24px;
+    color: #555555;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 2rem;
 }
 
 .gather img {
@@ -89,17 +117,24 @@
     max-width: 100%;
     height: auto;
     margin: 1rem auto;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
+.gather img:hover {
+    transform: scale(1.03);
+}
+
+/* ---------- Responsive Enhancements ---------- */
 @media (max-width: 1024px) {
     .note h1 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .note p {
         font-size: 18px;
-        padding: 1.5rem;
+        padding: 1.8rem;
     }
 
     .us p {
@@ -111,24 +146,18 @@
     }
 
     .team .gather p {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
-/* Mobile Landscape & Small Tablets */
 @media (max-width: 768px) {
-    .note {
-        padding: 0 1rem;
-    }
-
     .note h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .note p {
         font-size: 16px;
-        line-height: 1.6;
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .note p::before,
@@ -145,19 +174,18 @@
     }
 
     .team .gather p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
-/* Mobile Portrait */
 @media (max-width: 480px) {
     .note h1 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .note p {
         font-size: 14px;
-        padding: 0.8rem;
+        padding: 1rem;
     }
 
     .note p::before,
@@ -182,6 +210,6 @@
     }
 
     .team .gather p {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
