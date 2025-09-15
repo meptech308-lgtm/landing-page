@@ -1,45 +1,56 @@
+/* Topbar */
 .topbar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 1rem 1rem;
-    background: #56575A;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(90deg, #56575A, #3c3d3f);
+    font-size: 0.9rem;
 }
 
 .dealer {
     flex: 1 1 100%;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+    color: #eaeaea;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .topbar-contact {
     flex: 1 1 100%;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    font-size: 0.9rem;
-}
-
-.topbar-contact p {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin: 0;
+    gap: 1.2rem;
 }
 
 .topbar-contact a {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
     color: #fff;
     text-decoration: none;
-    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.topbar-contact a:hover {
+    color: #E94C44;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0.8rem 1rem;
+    background: #fff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-nav .nav-link {
     font-size: 16px;
+    font-weight: 500;
     color: #1E1E1E;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 6px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -47,24 +58,43 @@
 }
 
 .navbar-nav .nav-link.active {
-  position: relative;
-  color: #E94C44;
+    color: #E94C44;
 }
 
 .navbar-nav .nav-link.active::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #dc3545;
-  border-radius: 2px;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #E94C44;
+    border-radius: 2px;
+    animation: slideIn 0.3s ease;
 }
 
+/* Brand logo */
 .navbar-brand img {
     height: 50px;
+    transition: transform 0.3s ease;
 }
 
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* Keyframes for underline */
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive adjustments */
 @media (min-width: 992px) {
     .dealer {
         flex: 1;
@@ -80,6 +110,6 @@
 
 @media (max-width: 576px) {
     .navbar-brand img {
-        height: 35px;
+        height: 38px;
     }
 }
