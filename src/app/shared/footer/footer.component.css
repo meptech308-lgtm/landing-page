@@ -1,24 +1,28 @@
 footer {
-    padding: 50px 20px;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    background: #56575A;
+    padding: 30px 30px;
+    font-family: 'Inter', Arial, sans-serif;
+    color: #f5f5f5;
+    background: linear-gradient(135deg, #2d2e32, #1f2023);
+    position: relative;
+    overflow: hidden;
 }
 
 /* Headline */
 footer .first {
     text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: -0.5px;
 }
 
 /* Subheading */
 footer .second {
     text-align: center;
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 25px;
+    font-size: 17px;
+    color: #b5b5b7;
+    margin-bottom: 35px;
 }
 
 /* Buttons */
@@ -26,48 +30,52 @@ footer .third {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 40px;
+    gap: 18px;
+    margin-bottom: 50px;
 }
 
 footer .third button {
-    padding: 12px 28px;
+    padding: 14px 32px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    border-radius: 50px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    backdrop-filter: blur(6px);
 }
 
 footer .third button:first-child {
-    background-color: #EA4D44;
+    background: linear-gradient(135deg, #EA4D44, #c43a32);
     color: #fff;
-    border: none;
+    box-shadow: 0 4px 12px rgba(234, 77, 68, 0.4);
 }
 
 footer .third button:first-child:hover {
-    background-color: #c53d36;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(234, 77, 68, 0.6);
 }
 
 footer .third button:last-child {
-    background-color: transparent;
-    color: #fff;
+    background: transparent;
     border: 2px solid #EA4D44;
+    color: #fff;
 }
 
 footer .third button:last-child:hover {
-    background-color: #EA4D44;
+    background: #EA4D44;
     color: #fff;
+    transform: translateY(-3px);
 }
 
 /* Main content */
 footer .fourth {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 60px;
     flex-wrap: wrap;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 40px;
 }
 
 /* Left column */
@@ -75,24 +83,24 @@ footer .fourth .left {
     flex: 1 1 35%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 footer .fourth .left img {
-    width: 140px;
+    width: 150px;
     height: auto;
 }
 
 footer .fourth .left p {
-    max-width: 350px;
-    line-height: 1.6;
-    color: #bbb;
-    font-size: 14px;
+    max-width: 360px;
+    line-height: 1.7;
+    color: #aaa;
+    font-size: 15px;
 }
 
 footer .fourth .left ul {
     display: flex;
-    gap: 18px;
+    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -101,15 +109,16 @@ footer .fourth .left ul {
 footer .fourth .left ul li {
     font-size: 22px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 footer .fourth .left i {
-    color: #bbb;
+    color: #aaa;
 }
 
 footer .fourth .left i:hover {
     color: #EA4D44;
+    transform: scale(1.2);
 }
 
 /* Right column */
@@ -117,26 +126,23 @@ footer .fourth .right {
     flex: 1 1 60%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
     align-items: flex-end;
 }
 
 footer .fourth .right-first {
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 60px;
     flex-wrap: wrap;
 }
 
 footer .fourth h6 {
     font-size: 15px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     color: #fff;
-}
-
-.contacts {
-    margin-top: 2rem;
+    letter-spacing: 1px;
 }
 
 footer .fourth ul {
@@ -146,9 +152,9 @@ footer .fourth ul {
 }
 
 footer .fourth li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #bbb;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #bdbdbd;
     cursor: pointer;
     transition: color 0.3s ease;
     display: flex;
@@ -169,6 +175,7 @@ footer .fourth li i {
 @media (max-width: 992px) {
     footer .fourth {
         flex-direction: column;
+        gap: 40px;
     }
 
     footer .fourth .right {
@@ -177,7 +184,7 @@ footer .fourth li i {
 
     footer .fourth .right-first {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
 
     footer .first {
@@ -185,10 +192,6 @@ footer .fourth li i {
     }
 
     footer .second {
-        font-size: 14px;
-    }
-
-    footer .fourth .left p {
-        max-width: 100%;
+        font-size: 15px;
     }
 }
