@@ -1,5 +1,4 @@
 .container-fluid {
-    /* background-image: url('../../../../public/banner1.png'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,80 +8,149 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
     padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-fluid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+.headings,
+.buttons,
+.label {
+    position: relative;
+    z-index: 1;
 }
 
 .headings h4 {
     color: #EA4D44;
-    font-size: 52px;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 2px;
     margin: 0;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeSlideDown 1s ease forwards;
 }
 
 .headings p {
     color: #ECF1F9;
-    font-size: 18px;
-    margin: 10px 0 0 0;
+    font-size: 20px;
+    margin: 12px 0 0 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease 0.5s forwards;
 }
 
 .buttons {
     display: flex;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s ease 1s forwards;
 }
 
 .explore-btn,
 .quote-btn {
-    padding: 10px 30px;
-    font-size: 24px;
+    padding: 12px 36px;
+    font-size: 22px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
+    border-radius: 12px;
+    transition: all 0.3s ease;
     min-width: 180px;
+    font-weight: 600;
 }
 
 .explore-btn {
-    background-color: #EA4D44;
+    background: linear-gradient(135deg, #EA4D44, #d73b3b);
     color: #FFFFFF;
     border: none;
+    box-shadow: 0 4px 12px rgba(234, 77, 68, 0.4);
 }
 
 .explore-btn:hover {
-    opacity: 0.85;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(234, 77, 68, 0.6);
 }
 
 .quote-btn {
-    background-color: rgba(255, 255, 255, 0.37);
-    color: #EA4D44;
-    border: 2px solid #EA4D44;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    backdrop-filter: blur(6px);
 }
 
 .quote-btn:hover {
-    background-color: rgba(234, 77, 68, 0.1);
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
 }
 
 .label h6 {
-    background-color: #7E7F81;
-    color: #000000;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
     font-weight: bold;
     display: inline-block;
-    padding: 8px 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    font-size: 24px;
+    padding: 10px 26px;
+    border-radius: 30px;
+    margin-top: 24px;
+    font-size: 22px;
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeZoom 1s ease 1.5s forwards;
 }
 
+/* Animations */
+@keyframes fadeSlideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeZoom {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
     .headings h4 {
-        font-size: 42px;
+        font-size: 44px;
     }
 }
 
 @media (max-width: 768px) {
     .headings h4 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .headings p {
@@ -91,12 +159,8 @@
 
     .explore-btn,
     .quote-btn {
-        font-size: 20px;
-        padding: 8px 24px;
-    }
-
-    .label h6 {
-        font-size: 20px;
+        font-size: 18px;
+        padding: 10px 24px;
     }
 }
 
@@ -111,13 +175,12 @@
 
     .explore-btn,
     .quote-btn {
-        font-size: 18px;
+        font-size: 16px;
         min-width: 140px;
-        padding: 8px 20px;
     }
 
     .label h6 {
-        font-size: 18px;
-        padding: 6px 16px;
+        font-size: 16px;
+        padding: 8px 20px;
     }
 }
