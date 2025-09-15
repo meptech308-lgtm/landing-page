@@ -37,10 +37,54 @@
                     <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeNavbar()"
                         [routerLinkActiveOptions]="{ exact: true }">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/products" (click)="closeNavbar()"
-                        routerLinkActive="active">Products</a>
+
+                <li class="nav-item dropdown" [class.show]="dropdownOpen" (mouseleave)="dropdownOpen=false">
+                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
+                        (click)="toggleDropdown($event)" [attr.aria-expanded]="dropdownOpen">
+                        Products
+                    </a>
+
+                    <!-- Multilevel dropdown -->
+                    <ul class="dropdown-menu multilevel-dropdown" [class.show]="dropdownOpen"
+                        aria-labelledby="productsDropdown">
+                        <ng-container *ngFor="let cat of categories">
+                            <li class="parent" [class.open]="cat.open" (mouseenter)="openCategory(cat)"
+                                (mouseleave)="cat.open=false">
+                                <a href="#" class="dropdown-item" (click)="toggleCategory($event, cat)">
+                                    {{ cat.name }}
+                                    <span class="expand" *ngIf="cat.items?.length">›</span>
+                                </a>
+
+                                <!-- Recursive submenus -->
+                                <ul class="child dropdown-menu" [class.show]="cat.open" *ngIf="cat.items?.length">
+                                    <li *ngFor="let item of cat.items" [class.parent]="item.items?.length"
+                                        [class.open]="item.open" (mouseenter)="openCategory(item)"
+                                        (mouseleave)="item.open=false">
+
+                                        <a class="dropdown-item" href="#"
+                                            (click)="item.items ? toggleCategory($event, item) : closeNavbar()"
+                                            [routerLink]="!item.items ? ['/products', item.route] : null">
+                                            {{ item.name }}
+                                            <span class="expand" *ngIf="item.items?.length">›</span>
+                                        </a>
+
+                                        <!-- Nested children -->
+                                        <ul class="child dropdown-menu" [class.show]="item.open"
+                                            *ngIf="item.items?.length">
+                                            <li *ngFor="let sub of item.items">
+                                                <a class="dropdown-item" [routerLink]="['/products', sub.route]"
+                                                    (click)="closeNavbar()">
+                                                    {{ sub.name }}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ng-container>
+                    </ul>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/services" (click)="closeNavbar()"
                         routerLinkActive="active">Services</a>
