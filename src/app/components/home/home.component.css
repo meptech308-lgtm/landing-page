@@ -1,52 +1,110 @@
-.heading {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
+/* Page background */
+:host {
+    display: block;
+    background: #f8f9fc;
+    /* subtle off-white for premium look */
+    color: #000;
+    font-family: "Poppins", sans-serif;
 }
 
+/* Headings */
+.heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 2rem 0 1.5rem 0;
+    color: #222;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+}
+
+/* Decorative underline */
+.heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #EA4D44;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+/* Why section */
 .why {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    background: linear-gradient(135deg, #ffffff, #f4f5f9);
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease 0.3s forwards;
 }
 
 .why h4 {
-    font-weight: bold;
-    font-size: 28px;
+    font-weight: 700;
+    font-size: 30px;
     margin: 0;
-    color: #000;
+    color: #111;
 }
 
 .why p {
-    color: #7E7F81;
-    max-width: 500px;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0;
+    color: #555;
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 auto;
 }
 
+/* Cards */
 .firstcards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
     background: #fff;
-    border: 1px solid #ea4c4492;
-    border-radius: 8px;
-    padding: 1.5rem;
+    border: 1px solid #ea4c4433;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.35s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.8s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
@@ -57,40 +115,49 @@
 }
 
 .card h5 {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
     margin: 0 0 0.5rem 0;
-    color: #000;
+    color: #111;
 }
 
 .card p {
-    font-size: 14px;
-    color: #7E7F81;
+    font-size: 15px;
+    color: #666;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
+/* Explore button */
 .explore-btn {
-    background-color: #EA4D44;
+    background: linear-gradient(135deg, #EA4D44, #d73b3b);
     color: #FFFFFF;
     border: none;
-    padding: 10px 30px;
-    font-size: 24px;
+    padding: 12px 32px;
+    font-size: 20px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(234, 77, 68, 0.35);
 }
 
 .explore-btn:hover {
-    opacity: 0.85;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(234, 77, 68, 0.5);
 }
 
+/* About section */
 .about {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
     padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease 0.5s forwards;
 }
 
 .about-left {
@@ -98,14 +165,14 @@
 }
 
 .about-left img {
-    width: 350px;
+    width: 300px;
     margin-bottom: 1.5rem;
 }
 
 .about-left p {
-    color: #7E7F81;
+    color: #555;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 1rem;
 }
 
@@ -117,19 +184,20 @@
 
 .about-right img {
     max-width: 100%;
-    border-radius: 12px;
+    border-radius: 14px;
     object-fit: cover;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
+/* Featured categories */
 .featured {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    gap: 12px 10px;
+    gap: 16px;
     padding: 2rem;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    width: 100%;
 }
 
 .featured-card {
@@ -138,31 +206,65 @@
     background-position: center;
     height: 250px;
     width: 100%;
-    max-width: 450px;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
+    transition: all 0.35s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.featured-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.featured-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.featured-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.featured-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.featured-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .featured-card h5 {
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 6px;
+    z-index: 1;
 }
 
 .featured-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
+/* Animations */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
     .firstcards {
         grid-template-columns: repeat(2, 1fr);
@@ -197,10 +299,9 @@
 
     .featured-card {
         height: 200px;
-        max-width: 100%;
     }
 
     .featured-card h5 {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
