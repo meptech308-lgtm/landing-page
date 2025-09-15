@@ -55,13 +55,13 @@ export const Products = [
     },
     {
         id: 10,
-        img: '/products/soundatte/main.png',
+        img: '/products/soundatte/main.jpg',
         name: 'Sound Attenuators',
         route: 'soundatte'
     },
     {
         id: 11,
-        img: '/products/motorized/main.png',
+        img: '/products/motorized/main.jpg',
         name: 'Motorized Smoke Fire Damper',
         route: 'motorized'
     },

@@ -12,7 +12,7 @@ import { RandomlistComponent } from "../randomlist/randomlist.component";
 export class MotorizedComponent {
 
   product = {
-    mainImg: '/products/motorized/main.png',
+    mainImg: '/products/motorized/main.jpg',
     name: 'Motorized Smoke Fire Damper',
     short: 'Motorized Smoke damper is an ideal life-safety equipment. It is typically put in an air transfer opening or an air distribution system and used at different zones to stop the fire. It is primarily made to close automatically when heat due to fire is detected, blocking airflow and preventing the spread of fire as a result.',
     images: [
