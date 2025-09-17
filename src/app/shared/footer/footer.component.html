@@ -6,8 +6,8 @@
         <p>{{ currentFooter.subtext }}</p>
     </div>
     <div class="third">
-        <button>Request a Quote</button>
-        <button>Call: +971 4 491 9004</button>
+        <button (click)="goTo('/contact')">Request a Quote</button>
+        <a href="tel:+97144919004" class="btn-call">Call: +971 4 491 9004</a>
     </div>
     <div class="fourth">
         <div class="left">
@@ -40,21 +40,30 @@
                     <div class="contacts">
                         <h6>Contacts</h6>
                         <ul>
-                            <li><i class="bi bi-envelope"></i> sales&#64;meptechuae.com</li>
-                            <li><i class="bi bi-telephone"></i> +971 4 491 9004</li>
-                            <li><i class="bi bi-whatsapp"></i> +971 50 347 1731</li>
+                            <li>
+                                <i class="bi bi-envelope"></i>
+                                <a href="mailto:sales@meptechuae.com">sales&#64;meptechuae.com</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-telephone"></i>
+                                <a href="tel:+97144919004">+971 4 491 9004</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-whatsapp"></i>
+                                <a href="https://wa.me/971503471731" target="_blank">+971 50 347 1731</a>
+                            </li>
                             <li><i class="bi bi-geo-alt"></i> Dubai,United Arab Emirates</li>
-                            <li><i class="bi bi-calendar3"></i> Sun-Thu:8 am-6pm</li>
+                            <li><i class="bi bi-calendar3"></i> Mon - Fri: 8:30 am - 6:00 pm</li>
                         </ul>
                     </div>
                 </div>
                 <div class="right-right">
                     <h6>PRODUCTS</h6>
                     <ul>
-                        <li>VRV Systems</li>
-                        <li>Rooftop Unit</li>
-                        <li>Fancoil Units</li>
-                        <li>Controls and Thermostats</li>
+                        <li (click)="goTo('/products/vrviv')">VRV Systems</li>
+                        <li (click)="goTo('/products/rooftoppackage')">Rooftop Unit</li>
+                        <li (click)="goTo('/products/fancoilunits')">Fancoil Units</li>
+                        <li (click)="goTo('/products/thermostat')">Controls and Thermostats</li>
                     </ul>
                 </div>
             </div>

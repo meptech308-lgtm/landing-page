@@ -55,4 +55,8 @@ export class BannerComponent {
 
     return matchingKey ? this.bannerData[matchingKey] : this.bannerData['default'];
   }
+
+  goTo(url:string){
+    this.router.navigate([`${url}`])
+  }
 }

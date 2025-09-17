@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://meptechuae.com/</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/about</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/contact</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/projects</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products</loc>
+  </url>
+</urlset>

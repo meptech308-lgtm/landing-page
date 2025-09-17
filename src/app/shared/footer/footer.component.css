@@ -45,6 +45,23 @@ footer .third button {
     backdrop-filter: blur(6px);
 }
 
+footer .third a.btn-call {
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid #EA4D44;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+footer .third a.btn-call:hover {
+    background: #EA4D44;
+    transform: translateY(-3px);
+}
+
 footer .third button:first-child {
     background: linear-gradient(135deg, #EA4D44, #c43a32);
     color: #fff;
@@ -171,6 +188,20 @@ footer .fourth li i {
     font-size: 16px;
 }
 
+footer .fourth li a {
+    color: #bdbdbd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+}
+
+footer .fourth li a:hover {
+    color: #EA4D44;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     footer .fourth {
@@ -193,5 +224,18 @@ footer .fourth li i {
 
     footer .second {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .third {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    footer .third button,
+    footer .third a.btn-call {
+        width: 100%;
+        text-align: center;
     }
 }
