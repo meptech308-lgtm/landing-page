@@ -54,7 +54,8 @@
     <h4 class="heading">Featured Categories</h4>
 
     <div class="featured">
-        <div class="featured-card" *ngFor="let item of featured" [style.backgroundImage]="'url(' + item.img + ')'">
+        <div class="featured-card" *ngFor="let item of featured" [style.backgroundImage]="'url(' + item.img + ')'"
+            (click)="goToProducts(item.head)">
             <h5>{{ item.head }}</h5>
         </div>
     </div>

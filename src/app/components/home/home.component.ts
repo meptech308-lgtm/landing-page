@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -59,5 +60,20 @@ export class HomeComponent {
       head: 'CONTROL UNITS'
     },
   ]
+
+  constructor(
+    private router: Router
+  ) { }
+
+  goToProducts(head: string) {
+    const mapping: any = {
+      'AC EQUIPMENTS': 'AC Equipments',
+      'AIR DISTRIBUTION PRODUCTS': 'Air Distribution',
+      'VENTILATIONS': 'Ventilation',
+      'CONTROL UNITS': 'Controls'
+    };
+
+    this.router.navigate(['/products'], { state: { category: mapping[head] || head } });
+  }
 
 }
