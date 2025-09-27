@@ -3,6 +3,21 @@
 xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://meptechuae.com/</loc>
+      <video:video>
+        <video:thumbnail_loc>https://meptechuae.com/logo1.png</video:thumbnail_loc>
+        <video:title>MEPTECH AIR CONDITION TRADING L.L.C</video:title>
+        <video:description>Official partner for complete Daikin Air conditioning products offering full scope technical, selection, warranty and after sales support</video:description>
+        <video:content_loc>https://meptechuae.com/video.mp4</video:content_loc>
+        <video:duration>67</video:duration> <video:publication_date>2025-05-01T08:00:00+05:30</video:publication_date> 
+        <video:family_friendly>yes</video:family_friendly>
+        <video:tag>HVAC</video:tag>
+        <video:tag>Daikin</video:tag>
+        <video:tag>Air Conditioning</video:tag>
+        <video:tag>MEPTECH</video:tag>
+      </video:video>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/</loc>
   </url>
   <url>
     <loc>https://meptechuae.com/about</loc>

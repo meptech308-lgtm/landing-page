@@ -35,7 +35,6 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.category);
     this.applyFilters();
   }
 

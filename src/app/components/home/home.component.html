@@ -1,10 +1,22 @@
 <div>
     <app-banner></app-banner>
 
-    <div class="why">
-        <h4>Why We?</h4>
-        <p>End-to-end HVAC solutions designed to meet the demanding
-            requirements of UAE's climate control and building standards</p>
+    <div class="why-video-section">
+        <div class="why">
+            <h4>Why We?</h4>
+            <p>End-to-end HVAC solutions designed to meet the demanding
+                requirements of UAE's climate control and building standards</p>
+        </div>
+
+        <div class="video-container">
+            <video #bgVideo autoplay muted loop playsinline>
+                <source src="/video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <button class="mute-btn" (click)="toggleMute(bgVideo)">
+                <i [class]="isMuted ? 'bi bi-volume-mute' : 'bi bi-volume-up'"></i>
+            </button>
+        </div>
     </div>
 
     <div class="firstcards">
