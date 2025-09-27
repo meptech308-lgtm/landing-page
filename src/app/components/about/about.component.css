@@ -181,11 +181,34 @@
         padding: 1.5rem;
     }
 
+    .heading {
+        font-size: 32px;
+    }
+
+    .us p {
+        font-size: 16px;
+    }
+
     .gather img {
         max-width: 80%;
     }
+}
+
+@media (max-width: 576px) {
 
     .heading {
-        font-size: 34px;
+        font-size: 26px;
+    }
+
+    .us {
+        padding: 3rem 1rem;
+    }
+
+    .us p {
+        font-size: 14px;
+    }
+
+    .gather img {
+        max-width: 100%;
     }
 }
