@@ -49,7 +49,7 @@ export class HomeComponent implements AfterViewInit {
     },
     {
       id: 2,
-      img: '/image2.png',
+      img: '/images.jpeg',
       head: 'AIR DISTRIBUTION PRODUCTS'
     },
     {

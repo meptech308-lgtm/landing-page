@@ -15,7 +15,7 @@ export class ContactComponent {
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
       fullName: ['', Validators.required],
-      phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
+      phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       enquiry: ['', Validators.required],
       details: ['', [Validators.required, Validators.minLength(10)]]
@@ -24,11 +24,26 @@ export class ContactComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
-      alert('Form submitted successfully!');
+      const formValues = this.contactForm.value;
+
+      const message = `New Quote Request:
+Full Name: ${formValues.fullName}
+Phone: ${formValues.phone}
+Email: ${formValues.email}
+Enquiry Type: ${formValues.enquiry}
+Project Details: ${formValues.details}`;
+
+      const encodedMessage = encodeURIComponent(message);
+
+      const whatsappNumber = '971503471731';
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, '_blank');
+
       this.contactForm.reset();
     } else {
       this.contactForm.markAllAsTouched();
     }
   }
+
 }

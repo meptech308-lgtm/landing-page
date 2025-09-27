@@ -26,10 +26,6 @@
                         *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('required')">
                         Phone number is required.
                     </small>
-                    <small class="error"
-                        *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.hasError('pattern')">
-                        Enter a valid 10-digit phone number.
-                    </small>
                 </div>
             </div>
 
