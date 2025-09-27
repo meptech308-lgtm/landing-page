@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { Products } from '../../data/products';
 
 @Component({
   selector: 'app-home',
@@ -63,6 +64,8 @@ export class HomeComponent implements AfterViewInit {
       head: 'CONTROL UNITS'
     },
   ]
+
+  products = Products
 
   constructor(
     private router: Router
