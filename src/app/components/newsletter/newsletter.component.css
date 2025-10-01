@@ -1,0 +1,77 @@
+.heading {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #222;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    position: relative;
+}
+
+.heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #EA4D44;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* ---------- Team Section ---------- */
+.team {
+    padding: 5rem 2rem;
+    background: #ffffff;
+}
+
+.sub {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #EA4D44;
+    font-size: 26px;
+    text-align: center;
+}
+
+.team .gather p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto 2rem;
+}
+
+.gather img {
+    display: block;
+    max-width: 60%;
+    height: auto;
+    margin: 1.2rem auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gather img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 32px;
+    }
+
+    .gather img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .heading {
+        font-size: 26px;
+    }
+
+    .gather img {
+        max-width: 100%;
+    }
+}

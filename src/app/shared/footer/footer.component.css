@@ -2,7 +2,7 @@ footer {
     padding: 30px 30px;
     font-family: 'Inter', Arial, sans-serif;
     color: #f5f5f5;
-    background: linear-gradient(135deg, #2d2e32, #1f2023);
+    background: linear-gradient(135deg, #2d2e32c3, #1f2023);
     position: relative;
     overflow: hidden;
 }

@@ -1,152 +1,173 @@
-/* ---------- General Notes Section ---------- */
+/* Wrapper */
+.about-wrapper {
+    font-family: 'Poppins', sans-serif;
+    color: #2c2c2c;
+}
+
+/* Founder’s Note */
 .note {
+    position: relative;
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 2rem;
-    gap: 30px;
-    backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3rem 2rem;
+    color: #fff;
+}
+
+.note .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+}
+
+.note .content {
+    position: relative;
+    max-width: 950px;
+    z-index: 2;
 }
 
 .note h1 {
-    color: #EA4D44;
-    font-size: 54px;
+    font-size: 60px;
     font-weight: 900;
-    margin: 0;
-    letter-spacing: 1.5px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-    animation: fadeDown 1.2s ease forwards;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    color: #EA4D44;
+    /* Golden accent */
+    text-transform: uppercase;
+    animation: fadeDown 1s ease;
 }
 
 .note p {
-    color: #fff;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.9;
-    max-width: 800px;
-    position: relative;
-    padding: 2.2rem;
-    border-radius: 16px;
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    font-family: 'Georgia', serif;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.8rem;
+    border-left: 6px solid #EA4D44;
+    border-radius: 12px;
+}
+
+.fade-up {
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeUp 1.5s ease forwards 0.5s;
+    animation: fadeUp 1s ease forwards;
 }
 
-/* Quotation marks */
-.note p::before,
-.note p::after {
-    font-weight: bold;
-    color: #EA4D44;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+/* Staggered delays for paragraphs */
+.fade-up:nth-of-type(1) {
+    animation-delay: 0.3s;
 }
 
-.note p::before {
-    content: "“";
-    font-size: 70px;
-    position: absolute;
-    top: -20px;
-    left: -20px;
+.fade-up:nth-of-type(2) {
+    animation-delay: 0.6s;
 }
 
-.note p::after {
-    content: "”";
-    font-size: 70px;
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
+.fade-up:nth-of-type(3) {
+    animation-delay: 0.9s;
 }
 
-/* ---------- About Us Section ---------- */
-.us {
+/* About Us */
+.us,
+.mission {
     text-align: center;
     padding: 5rem 2rem;
-    background: linear-gradient(135deg, #ffffff, #f4f4f4);
-    border-radius: 18px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
     margin: 3rem auto;
     max-width: 1100px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
-.us:hover {
+.us:hover,
+.mission:hover {
     transform: translateY(-5px);
 }
 
-.us p {
-    font-size: 24px;
-    color: #4A4A4A;
+.us p,
+.mission p {
+    font-size: 20px;
+    color: #444;
     line-height: 1.9;
-    font-family: 'Arial', sans-serif;
+    margin-bottom: 1.2rem;
 }
 
-/* ---------- Headings ---------- */
+/* Headings */
 .heading {
-    font-size: 50px;
-    text-align: center;
+    font-size: 48px;
     margin-bottom: 2.5rem;
-    color: #222;
     font-weight: 800;
-    letter-spacing: 0.8px;
+    color: #222;
+    letter-spacing: 1px;
     position: relative;
 }
 
 .heading::after {
     content: "";
     display: block;
-    width: 80px;
+    width: 90px;
     height: 4px;
     background: #EA4D44;
     margin: 1rem auto 0;
     border-radius: 2px;
 }
 
-/* ---------- Team Section ---------- */
-.team {
-    padding: 5rem 2rem;
-    background: #ffffff;
+/* Video */
+.video-container {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 500px;
+    margin: 4rem auto;
+    max-width: 1000px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
-.sub {
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #EA4D44;
-    font-size: 26px;
-    text-align: center;
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+    transition: transform 0.5s ease;
 }
 
-.team .gather p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 850px;
-    margin: 0 auto 2rem;
-}
-
-.gather img {
-    display: block;
-    max-width: 60%;
-    height: auto;
-    margin: 1.2rem auto;
-    border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.gather img:hover {
+.video-container:hover video {
     transform: scale(1.05);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
-/* ---------- Animations ---------- */
+.mute-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.65);
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.mute-btn i{
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.mute-btn:hover {
+    background: #EA4D44;
+    color: #000;
+}
+
+/* Animations */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -171,44 +192,41 @@
     }
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 992px) {
     .note h1 {
-        font-size: 38px;
+        font-size: 44px;
     }
 
     .note p {
-        font-size: 16px;
-        padding: 1.5rem;
+        font-size: 18px;
     }
 
     .heading {
-        font-size: 32px;
-    }
-
-    .us p {
-        font-size: 16px;
-    }
-
-    .gather img {
-        max-width: 80%;
+        font-size: 36px;
     }
 }
 
 @media (max-width: 576px) {
+    .note h1 {
+        font-size: 32px;
+    }
+
+    .note p {
+        font-size: 16px;
+        padding: 1.2rem;
+    }
 
     .heading {
-        font-size: 26px;
+        font-size: 28px;
     }
 
-    .us {
-        padding: 3rem 1rem;
+    .us p,
+    .mission p {
+        font-size: 16px;
     }
 
-    .us p {
-        font-size: 14px;
-    }
-
-    .gather img {
-        max-width: 100%;
+    .video-container {
+        margin: 0.5rem;
     }
 }

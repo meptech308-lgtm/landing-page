@@ -125,6 +125,7 @@
     font-size: 17px;
     line-height: 1.7;
     margin: 0 auto;
+    text-align: center;
 }
 
 /* Cards */
@@ -147,6 +148,12 @@
     opacity: 0;
     transform: translateY(30px);
     animation: fadeUp 1s ease forwards;
+}
+
+.firstcards .card:first-child img {
+    width: 120px;
+    height: auto; 
+    margin-bottom: 1rem;
 }
 
 .card:nth-child(1) {

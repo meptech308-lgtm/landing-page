@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -10,10 +10,7 @@ import { Products } from '../../data/products';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterViewInit {
-
-  isMuted = true;
-  @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
+export class HomeComponent {
 
   cards: any[] = [
     {
@@ -71,10 +68,6 @@ export class HomeComponent implements AfterViewInit {
     private router: Router
   ) { }
 
-  ngAfterViewInit() {
-    this.bgVideo.nativeElement.muted = this.isMuted;
-  }
-
   goToProducts(head: string) {
     const mapping: any = {
       'AC EQUIPMENTS': 'AC Equipments',
@@ -84,11 +77,6 @@ export class HomeComponent implements AfterViewInit {
     };
 
     this.router.navigate(['/products'], { state: { category: mapping[head] || head } });
-  }
-
-  toggleMute(video: HTMLVideoElement) {
-    this.isMuted = !this.isMuted;
-    video.muted = this.isMuted;
   }
 
 }

@@ -46,4 +46,9 @@ Project Details: ${formValues.details}`;
     }
   }
 
+  openMap() {
+    const mapUrl = 'https://maps.app.goo.gl/2wPdFbUEN1iMPjxX6';
+    window.open(mapUrl, '_blank');
+  }
+
 }

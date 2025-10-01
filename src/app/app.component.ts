@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./shared/header/header.component";
 import { FooterComponent } from "./shared/footer/footer.component";
+
+declare let gtag: Function;
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,21 @@ import { FooterComponent } from "./shared/footer/footer.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'meptech';
+
+  constructor(
+    private router: Router
+  ) { }
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        gtag('config', 'G-2ML3SZ46T9', {
+          page_path: event.urlAfterRedirects
+        });
+      }
+    });
+  }
+
 }

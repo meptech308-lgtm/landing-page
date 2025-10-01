@@ -3,19 +3,11 @@
 
     <div class="why-video-section">
         <div class="why">
-            <h4>Why We?</h4>
-            <p>End-to-end HVAC solutions designed to meet the demanding
-                requirements of UAE's climate control and building standards</p>
-        </div>
-
-        <div class="video-container">
-            <video #bgVideo autoplay muted loop playsinline>
-                <source src="/video.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <button class="mute-btn" (click)="toggleMute(bgVideo)">
-                <i [class]="isMuted ? 'bi bi-volume-mute' : 'bi bi-volume-up'"></i>
-            </button>
+            <h4>Why Choose Us?</h4>
+            <p>At MEPTECH Air-condition Trading LLC, we deliver end-to-end HVAC solutions engineered for the UAE’s
+                demanding climate and stringent building standards. From world-class Daikin systems to
+                precision-manufactured air distribution products, we combine innovation, reliability, and expertise to
+                create comfort you can trust.</p>
         </div>
     </div>
 
@@ -27,7 +19,7 @@
         </div>
     </div>
 
-        <div class="image-flow" appLazyLoad>
+    <div class="image-flow" appLazyLoad>
         <div class="carousel-row top">
             <div class="carousel-track">
                 <p *ngFor="let itm of products">{{itm.name}}</p>

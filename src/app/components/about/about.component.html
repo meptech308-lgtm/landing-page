@@ -1,63 +1,78 @@
-<div>
-    <div class="note" [ngStyle]="{'background-image': noteBackground}">
-        <h1>Founder's Note</h1>
-        <p>
-            <!-- <span>"</span> -->
-            Our aim at HVAC Solutions Hub is simple: we provide comfort, efficiency and quality in every HVAC solution
-            we deliver. From a hobby in quality systems,
-            Naos Intelligence formed into a professional service underpinned by the expert knowledge and dedicated team
-            behind it.
-            We take pride in offering only the best products from Daikin and we complete every job with precision
-            craftsmanship.
-            <!-- <span>"</span> -->
-        </p>
-    </div>
+<div class="about-wrapper">
+    <!-- Founder’s Note -->
+    <section class="note" [ngStyle]="{'background-image': noteBackground}">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Founder's Note</h1>
+            <p class="fade-up">
+                At Meptech Air Condition Trading LLC, our vision has always been clear — to bring comfort, efficiency,
+                and
+                quality to every space we serve. What started as a strong passion for HVAC excellence has grown into a
+                company trusted for its commitment to delivering world-class solutions.
+            </p>
+            <p class="fade-up">
+                As an Authorized Dealer for Daikin air conditioning systems, we take pride in offering our clients the
+                best
+                the industry has to offer. Alongside this, our in-house expertise in the manufacturing of air
+                distribution
+                and ventilation products allows us to provide complete, reliable, and customized solutions.
+            </p>
+            <p class="fade-up">
+                Our dedicated team of professionals is the backbone of Meptech. With their knowledge, craftsmanship, and
+                integrity, we ensure every project is executed with precision and care. We remain committed to raising
+                the
+                standard of HVAC solutions and building long-lasting relationships with our valued clients.
+            </p>
+        </div>
+    </section>
 
-    <div class="us">
+    <!-- About Us -->
+    <section class="us">
         <h3 class="heading">About Us</h3>
-        <p>We Would like to introduce our company MEPTECH Air-condition
-            Trading LLC, the brain child of a set of internationally experienced
-            professionals in HVAC Equipment & Air side products. With a short
-            span of time MEPTECH have made a strategic partnership with many
-            of the leading Contracting companies & Fit out Contractors by
-            supplying most competitive and innovative HVAC Products &
-            technical solution.</p>
-    </div>
+        <p class="fade-up">
+            MEPTECH Air-condition Trading LLC is the brainchild of a team of internationally experienced professionals
+            in
+            HVAC equipment and airside products. Founded with a vision to deliver excellence, innovation, and value,
+            MEPTECH has quickly established itself as a trusted name in the industry.
+        </p>
+        <p class="fade-up">
+            Within a short span of time, we have built strategic partnerships with leading contracting companies and
+            fit-out contractors, providing them with competitive, reliable, and innovative HVAC products and technical
+            solutions. Our commitment to quality, efficiency, and customer satisfaction continues to drive our growth
+            and success in the HVAC sector.
+        </p>
+    </section>
 
-    <div class="team">
-        <h3 class="heading">Our Team</h3>
+    <!-- Video Section -->
+    <section class="video-container">
+        <video #bgVideo autoplay muted loop playsinline>
+            <source src="/video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <button class="mute-btn" (click)="toggleMute(bgVideo)">
+            <i [class]="isMuted ? 'bi bi-volume-mute' : 'bi bi-volume-up'"></i>
+        </button>
+    </section>
 
-        <div class="gather">
-            <h4 class="sub">Team Gathering | Success Celebration</h4>
-            <p>We're proud to celebrate one of our biggest achievements yet—successfully handling a major Beach
-                Development
-                project for supply DAIKIN FAHU from Italy, DERV, ERV and VRVs Europe! Even better, our team hit the
-                month-end
-                sales target well ahead of schedule.Our talented group is not only ambitious and enthusiastic, but
-                always
-                dreams
-                big and delivers beyond expectations.
-                This success is a reflection of what's possible when passion meets determination.</p>
-            <img src="/team1.png" alt="Gathering">
-        </div>
-
-        <div class="gather">
-            <h4 class="sub mt-5">IFTAR</h4>
-            <p>Our recent Iftar gathering at Le Patio, Al Habtoor Palace was truly a night to remember. Surrounded by a
-                beautiful ambiance and delicious cuisine, we came together to celebrate not just the spirit of the
-                season, but also the strength of our partnerships and collective achievements.
-                We were especially honored to welcome the Daikin team, whose presence added warmth and meaning to the
-                occasion. Your participation truly enhanced the evening and created lasting memories for all.At Team
-                Meptech, we believe that success is rooted in strong relationships. This special evening was a
-                reflection of our shared values collaboration, gratitude, and a commitment to excellence.</p>
-            <img src="/team2.png" alt="Gathering">
-            <img src="/team3.png" alt="Gathering">
-        </div>
-
-        <div class="gather">
-            <h4 class="sub mt-5">MEPTECH DAIKIN COLLABORATION</h4>
-            <img src="/team4.png" alt="Gathering">
-        </div>
-
-    </div>
+    <!-- Mission -->
+    <section class="mission">
+        <h3 class="heading">Our Mission</h3>
+        <p class="fade-up">
+            At MEPTECH Air Condition Trading LLC, our mission is to deliver high-quality HVAC products and services
+            through innovative solutions that consistently meet and exceed customer expectations. We are a
+            market-focused, process-driven organization, committed to adopting the latest technologies and upholding the
+            highest standards of quality.
+        </p>
+        <p class="fade-up">
+            We take personal responsibility in ensuring every customer experience is marked by reliability, value, and
+            exceptional service. By representing many of the most trusted names in ventilation, air distribution, and
+            central system equipment, we aim to provide value-added solutions, competitive pricing, and timely
+            deliveries across the GCC market.
+        </p>
+        <p class="fade-up">
+            Our dedicated team works collaboratively, combining technical expertise with professional integrity, to
+            implement leading-edge technologies that challenge conventional practices, drive growth, and set new
+            benchmarks in the HVAC industry.
+        </p>
+    </section>
 </div>
