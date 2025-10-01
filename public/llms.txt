@@ -2,4 +2,4 @@ Allow: /
 
 Sitemap: https://meptechuae.com/sitemap.xml
 
-Contact: sales@meptechuaegmail.com
+Contact: sales@meptechuae.com
