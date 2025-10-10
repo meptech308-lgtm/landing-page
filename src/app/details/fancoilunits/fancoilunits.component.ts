@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
 import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-fancoilunits',
@@ -9,7 +10,7 @@ import { RandomlistComponent } from "../randomlist/randomlist.component";
   templateUrl: './fancoilunits.component.html',
   styleUrl: './fancoilunits.component.css'
 })
-export class FancoilunitsComponent {
+export class FancoilunitsComponent implements OnInit {
 
   product = {
     mainImg: '/products/fancoil/main.png',
@@ -121,6 +122,22 @@ export class FancoilunitsComponent {
         img: '/products/fancoil/5.png'
       }
     ]
+  }
+
+  constructor(private titleService: Title, private metaService: Meta) { }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('Fan Coil Units (FCU) | MEPTECH HVAC UAE');
+
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'High-quality Fan Coil Units (FCU) for chilled water systems. MEPTECH supplies efficient and durable HVAC equipment across UAE.'
+    });
+
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'CHILLED WATER FCU, FCU, FAN COIL UNITS, HVAC UAE, AIR CONDITION TRADING, DAIKIN DEALER UAE'
+    });
   }
 
 }

@@ -3,6 +3,7 @@ import { BannerComponent } from "../../shared/banner/banner.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Products } from '../../data/products';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -65,8 +66,12 @@ export class HomeComponent {
   products = Products
 
   constructor(
-    private router: Router
-  ) { }
+    private router: Router,
+    private titleService: Title,
+    private metaService: Meta
+  ) {
+    this.updateMetaTags();
+  }
 
   goToProducts(head: string) {
     const mapping: any = {
@@ -77,6 +82,28 @@ export class HomeComponent {
     };
 
     this.router.navigate(['/products'], { state: { category: mapping[head] || head } });
+  }
+
+  private updateMetaTags() {
+    this.titleService.setTitle('MEPTECH HVAC Solutions | Daikin Authorized Dealer in UAE');
+
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'MEPTECH Air-condition Trading LLC delivers innovative HVAC solutions in UAE including Daikin AC systems, VRV, Fan Coil Units (FCU), air distribution products, VAVs, Flowbars, and Louvers. Trusted partner for all HVAC projects.'
+    });
+
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'MEPTECH, DAIKIN AUTHORIZED DEALER, DAIKIN DEALER IN UAE, AIR CONDITION TRADING, AC UNITS, AC DEALER, AIR CONDITION, HVAC, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, FLOWBAR, HIDDEN FRAME DIFFUSER, VAV, PRESSURE INDEPENDENT VAV, BY PASS VAV, LOUVERS, SAND TRAP LOUVERS, CROSS TALK ATTENUATORS'
+    });
+
+    this.metaService.updateTag({ property: 'og:title', content: 'MEPTECH HVAC Solutions | Daikin Authorized Dealer in UAE' });
+    this.metaService.updateTag({ property: 'og:description', content: 'Innovative HVAC solutions including VRV, FCU, and Air Distribution Products. Trusted Daikin dealer in UAE.' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/logo1.png' });
+
+    this.metaService.updateTag({ property: 'twitter:title', content: 'MEPTECH HVAC Solutions | Daikin Authorized Dealer in UAE' });
+    this.metaService.updateTag({ property: 'twitter:description', content: 'End-to-end HVAC solutions including VRV, FCU, and airside products. Reliable Daikin dealer UAE.' });
+    this.metaService.updateTag({ property: 'twitter:image', content: 'https://meptechuae.com/logo1.png' });
   }
 
 }

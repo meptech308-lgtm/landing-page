@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vrvapt',
@@ -8,7 +9,7 @@ import { RandomlistComponent } from "../randomlist/randomlist.component";
   templateUrl: './vrvapt.component.html',
   styleUrl: './vrvapt.component.css'
 })
-export class VrvaptComponent {
+export class VrvaptComponent implements OnInit {
 
   product = {
     mainImg: '/products/vrvapt/main.png',
@@ -48,6 +49,22 @@ Additional Coating is applied to PCB for strengthening to cope with high ambient
         para: `The versatile operation range of the VRV Apt system works to reduce limitations on installation locations. The operation temperature range for heating goes all the way down to -20C, while cooling can be performed with outdoor temperatures as high as 54C. Both these achievements are due to the adoption of a high-pressure dome-type compressor which is specially designed for operation in extreme ambient conditions`
       }
     ]
+  }
+
+  constructor(private titleService: Title, private metaService: Meta) { }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('VRV Systems | MEPTECH HVAC Solutions UAE');
+
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'MEPTECH offers expert VRV and VRF installation and service in UAE. Authorized DAIKIN dealer providing efficient and reliable HVAC systems.'
+    });
+
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'VRV, VRF, VRV INSTALLATION, VRV SERVICE, DAIKIN AUTHORIZED DEALER, HVAC UAE, AIR CONDITION TRADING'
+    });
   }
 
 }

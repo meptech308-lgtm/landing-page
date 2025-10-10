@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vrviv',
@@ -8,7 +9,7 @@ import { RandomlistComponent } from "../randomlist/randomlist.component";
   templateUrl: './vrviv.component.html',
   styleUrl: './vrviv.component.css'
 })
-export class VrvivComponent {
+export class VrvivComponent implements OnInit {
 
   product = {
     mainImg: '/products/vrviv+/1.png',
@@ -51,6 +52,22 @@ export class VrvivComponent {
     short: 'Our new VRV IV heat recovery systems set pioneering  standards in all-round climate comfort performance.  Total design simplicity, offering rapid installation, full  f lexibility as well as absolute efficiency and comfort',
     work: 'Variable Refrigerant Temperature control for energy  saving in partial load condition. The capacity is controlled by the inverter compressor  AND variation of the evaporating (Te) and condens ing (Tc) temperature of the refrigerant in order to  achieve the highest seasonal efficiency',
     subImg: '/products/vrviv+/2.png'
+  }
+
+  constructor(private titleService: Title, private metaService: Meta) { }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('VRV Systems | MEPTECH HVAC Solutions UAE');
+
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'MEPTECH offers expert VRV and VRF installation and service in UAE. Authorized DAIKIN dealer providing efficient and reliable HVAC systems.'
+    });
+
+    this.metaService.updateTag({
+      name: 'keywords',
+      content: 'VRV, VRF, VRV INSTALLATION, VRV SERVICE, DAIKIN AUTHORIZED DEALER, HVAC UAE, AIR CONDITION TRADING'
+    });
   }
 
 }
