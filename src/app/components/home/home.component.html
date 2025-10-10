@@ -73,9 +73,17 @@
     <h4 class="heading">Featured Categories</h4>
 
     <div class="featured">
-        <div class="featured-card" *ngFor="let item of featured" [style.backgroundImage]="'url(' + item.img + ')'"
-            (click)="goToProducts(item.head)">
-            <h5>{{ item.head }}</h5>
+        <div class="featured-card wrap" *ngFor="let item of featured">
+            <div class="image-content" [style.backgroundImage]="'url(' + item.img + ')'"></div>
+            <h5 class="card-heading">{{ item.head }}</h5>
+
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p>{{ item.description }}</p>
+                    <button class="explore-btn"
+                        (click)="goToProducts(item.head); $event.stopPropagation()">Explore</button>
+                </div>
+            </div>
         </div>
     </div>
 

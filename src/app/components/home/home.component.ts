@@ -40,28 +40,32 @@ export class HomeComponent {
     },
   ]
 
-  featured: any[] = [
-    {
-      id: 1,
-      img: '/image1.png',
-      head: 'AC EQUIPMENTS'
-    },
-    {
-      id: 2,
-      img: '/images.jpeg',
-      head: 'AIR DISTRIBUTION PRODUCTS'
-    },
-    {
-      id: 1,
-      img: '/image3.png',
-      head: 'VENTILATIONS'
-    },
-    {
-      id: 1,
-      img: '/image4.png',
-      head: 'CONTROL UNITS'
-    },
-  ]
+featured: any[] = [
+  {
+    id: 1,
+    img: '/image1.png',
+    head: 'AC EQUIPMENTS',
+    description: 'Complete range of Daikin AC units, VRV systems, and energy-efficient air-conditioning solutions for residential, commercial, and industrial projects.'
+  },
+  {
+    id: 2,
+    img: '/images.jpeg',
+    head: 'AIR DISTRIBUTION PRODUCTS',
+    description: 'High-quality air distribution products including ducting, diffusers, grilles, and louvers designed to optimize airflow and comfort.'
+  },
+  {
+    id: 3,
+    img: '/image3.png',
+    head: 'VENTILATIONS',
+    description: 'Advanced ventilation solutions including VAVs, Flowbars, and air handling systems to maintain optimal indoor air quality.'
+  },
+  {
+    id: 4,
+    img: '/image4.png',
+    head: 'CONTROL UNITS',
+    description: 'Smart control systems and automation units for precise temperature, airflow, and energy management across HVAC setups.'
+  },
+]
 
   products = Products
 
