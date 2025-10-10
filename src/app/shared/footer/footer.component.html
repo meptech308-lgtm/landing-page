@@ -10,63 +10,66 @@
         <a href="tel:+97144919004" class="btn-call">Call: +971 4 491 9004</a>
     </div>
     <div class="fourth">
-        <div class="left">
+        <!-- Left Column -->
+        <div class="column left">
             <img src="/logo1.png" alt="Logo">
-            <p>Authorized Daikin dealer providing
-                professional HVAC solutions,
-                system design, installation, and
+            <p>Authorized Daikin dealer providing professional HVAC solutions, system design, installation, and
                 maintenance services across the UAE.</p>
-            <ul>
+            <ul class="socials">
                 <li><i class="bi bi-instagram"></i></li>
                 <li><i class="bi bi-threads"></i></li>
                 <li><i class="bi bi-twitter-x"></i></li>
                 <li><i class="bi bi-linkedin"></i></li>
             </ul>
         </div>
-        <div class="right">
-            <div class="right-first">
-                <div class="right-left">
-                    <div class="links">
-                        <h6>QUICK LINKS</h6>
-                        <ul>
-                            <li (click)="goTo('/')">Home</li>
-                            <li (click)="goTo('/products')">Products</li>
-                            <!-- <li (click)="goTo('/services')">Service</li> -->
-                            <li (click)="goTo('/projects')">Projects</li>
-                            <li (click)="goTo('/contact')">Contact</li>
-                        </ul>
-                    </div>
 
-                    <div class="contacts">
-                        <h6>Contacts</h6>
-                        <ul>
-                            <li>
-                                <i class="bi bi-envelope"></i>
-                                <a href="mailto:sales@meptechuae.com">sales&#64;meptechuae.com</a>
-                            </li>
-                            <li>
-                                <i class="bi bi-telephone"></i>
-                                <a href="tel:+97144919004">+971 4 491 9004</a>
-                            </li>
-                            <li>
-                                <i class="bi bi-whatsapp"></i>
-                                <a href="https://wa.me/971503471731" target="_blank">+971 50 347 1731</a>
-                            </li>
-                            <li><i class="bi bi-geo-alt"></i> Office no.47, M floor, Land Rover Showroom Building, Manazel Tower,  Al Garhoud, Dubai</li>
-                            <li><i class="bi bi-calendar3"></i> Mon - Fri: 8:30 am - 6:00 pm, Sat: 8:30 am - 2:00 pm</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="right-right">
-                    <h6>PRODUCTS</h6>
-                    <ul>
-                        <li (click)="goTo('/products/vrviv')">VRV Systems</li>
-                        <li (click)="goTo('/products/rooftoppackage')">Rooftop Unit</li>
-                        <li (click)="goTo('/products/fancoilunits')">Fancoil Units</li>
-                        <li (click)="goTo('/products/thermostat')">Controls and Thermostats</li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Quick Links -->
+        <div class="column links">
+            <h6>QUICK LINKS</h6>
+            <ul>
+                <li (click)="goTo('/')">Home</li>
+                <li (click)="goTo('/products')">Products</li>
+                <li (click)="goTo('/projects')">Projects</li>
+                <li (click)="goTo('/contact')">Contact</li>
+            </ul>
+        </div>
+
+        <!-- Contacts -->
+        <div class="column contacts">
+            <h6>CONTACTS</h6>
+            <ul>
+                <li>
+                    <i class="bi bi-envelope"></i>
+                    <a href="mailto:sales@meptechuae.com">sales&#64;meptechuae.com</a>
+                </li>
+                <li>
+                    <i class="bi bi-telephone"></i>
+                    <a href="tel:+97144919004">+971 4 491 9004</a>
+                </li>
+                <li>
+                    <i class="bi bi-whatsapp"></i>
+                    <a href="https://wa.me/971503471731" target="_blank">+971 50 347 1731</a>
+                </li>
+                <li>
+                    <i class="bi bi-geo-alt"></i>
+                    Office no.47, M floor, Land Rover Showroom Building, Manazel Tower, Al Garhoud, Dubai
+                </li>
+                <li>
+                    <i class="bi bi-calendar3"></i>
+                    Mon - Fri: 8:30 am - 6:00 pm, Sat: 8:30 am - 2:00 pm
+                </li>
+            </ul>
+        </div>
+
+        <!-- Products -->
+        <div class="column products">
+            <h6>PRODUCTS</h6>
+            <ul>
+                <li (click)="goTo('/products/vrviv')">VRV Systems</li>
+                <li (click)="goTo('/products/rooftoppackage')">Rooftop Unit</li>
+                <li (click)="goTo('/products/fancoilunits')">Fancoil Units</li>
+                <li (click)="goTo('/products/thermostat')">Controls and Thermostats</li>
+            </ul>
         </div>
     </div>
 </footer>
