@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class FooterComponent implements OnInit {
 
+  currentYear = new Date().getFullYear();
+
   footerData: any = {
     '/': {
       heading: 'Ready to Start Your HVAC Project?',
