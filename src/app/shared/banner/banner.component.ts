@@ -34,8 +34,8 @@ export class BannerComponent {
     },
     '/products': {
       img: '/banner2.png',
-      title: 'HVAC Solutions Hub',
-      subtitle: 'Discover the complete Daikin range  Systems, Controls, and Accessories with warranty and expert support.'
+      title: 'Explore Our Products',
+      subtitle: 'Explore our full range of AC Equipment, Air Distribution, Ventilation, and Controls. As an Authorized Daikin Dealer, we deliver genuine, high-performance products supported by precision-engineered solutions—ensuring comfort, efficiency, and reliability in every project.'
     },
     'default': {
       img: '/banner1.png',
@@ -56,7 +56,7 @@ export class BannerComponent {
     return matchingKey ? this.bannerData[matchingKey] : this.bannerData['default'];
   }
 
-  goTo(url:string){
+  goTo(url: string) {
     this.router.navigate([`${url}`])
   }
 }
