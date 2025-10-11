@@ -35,7 +35,7 @@ Project Details: ${formValues.details}`;
 
       const encodedMessage = encodeURIComponent(message);
 
-      const whatsappNumber = '971503471731';
+      const whatsappNumber = '971523124576';
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
       window.open(whatsappUrl, '_blank');
