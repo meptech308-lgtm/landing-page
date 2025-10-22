@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [BannerComponent, ReactiveFormsModule, CommonModule],
+  imports: [BannerComponent, ReactiveFormsModule, CommonModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -47,7 +48,7 @@ Project Details: ${formValues.details}`;
   }
 
   openMap() {
-    const mapUrl = 'https://maps.app.goo.gl/2wPdFbUEN1iMPjxX6';
+    const mapUrl = 'https://share.google/wiHKuxZiVfYb826jz';
     window.open(mapUrl, '_blank');
   }
 
