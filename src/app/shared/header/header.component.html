@@ -38,13 +38,13 @@
                         [routerLinkActiveOptions]="{ exact: true }">Home</a>
                 </li>
 
+                <!-- Multilevel Dropdown -->
                 <li class="nav-item dropdown" [class.show]="dropdownOpen" (mouseleave)="dropdownOpen=false">
                     <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
                         (click)="toggleDropdown($event)" [attr.aria-expanded]="dropdownOpen">
                         Products
                     </a>
 
-                    <!-- Multilevel dropdown -->
                     <ul class="dropdown-menu multilevel-dropdown" [class.show]="dropdownOpen"
                         aria-labelledby="productsDropdown">
                         <ng-container *ngFor="let cat of categories">
@@ -56,7 +56,7 @@
                                 </a>
 
                                 <ul class="child dropdown-menu" [class.show]="cat.open">
-                                    <!-- Direct products without subCat -->
+                                    <!-- Direct items -->
                                     <li *ngFor="let item of cat.directItems">
                                         <a class="dropdown-item" [routerLink]="['/products', item.route]"
                                             (click)="closeNavbar()">
@@ -64,10 +64,9 @@
                                         </a>
                                     </li>
 
-                                    <!-- Subcategories with items -->
+                                    <!-- Subcategories -->
                                     <li *ngFor="let sub of cat.items" class="parent" [class.open]="sub.open"
                                         (mouseenter)="openCategory(sub)" (mouseleave)="sub.open=false">
-
                                         <a href="#" class="dropdown-item"
                                             (click)="sub.items ? toggleCategory($event, sub) : closeNavbar()">
                                             {{ sub.name }}
@@ -90,10 +89,6 @@
                     </ul>
                 </li>
 
-                <!-- <li class="nav-item">
-                    <a class="nav-link" routerLink="/services" (click)="closeNavbar()"
-                        routerLinkActive="active">Services</a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/projects" (click)="closeNavbar()"
                         routerLinkActive="active">Projects</a>

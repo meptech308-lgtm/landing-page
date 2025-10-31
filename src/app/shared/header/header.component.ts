@@ -5,6 +5,7 @@ import { Products } from '../../data/products';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
@@ -16,20 +17,17 @@ export class HeaderComponent {
   constructor() {
     const grouped: { [category: string]: { [subCat: string]: any[] } } = {};
 
-    // Group products by category → subcategory
     Products.forEach(p => {
       if (!grouped[p.category]) grouped[p.category] = {};
       if (p.subCat) {
         if (!grouped[p.category][p.subCat]) grouped[p.category][p.subCat] = [];
         grouped[p.category][p.subCat].push(p);
       } else {
-        // Direct items without subCat
         if (!grouped[p.category]['_direct']) grouped[p.category]['_direct'] = [];
         grouped[p.category]['_direct'].push(p);
       }
     });
 
-    // Convert structure into menu hierarchy
     this.categories = Object.keys(grouped).map(category => ({
       name: category,
       open: false,
@@ -61,5 +59,6 @@ export class HeaderComponent {
   closeNavbar() {
     const navbar = document.getElementById('mainNavbar');
     if (navbar && navbar.classList.contains('show')) navbar.classList.remove('show');
+    this.dropdownOpen = false;
   }
 }
