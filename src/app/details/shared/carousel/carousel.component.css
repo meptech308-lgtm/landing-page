@@ -1,0 +1,37 @@
+.carousel-inner .row {
+    margin: 0;
+}
+
+.carousel-inner .col-md-4 {
+    padding: 0 5px;
+}
+
+.carousel img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(54, 54, 54, 0.447);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: rgba(80, 80, 80, 0.9);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-indicators {
+    bottom: -30px;
+}

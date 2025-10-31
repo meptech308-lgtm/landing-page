@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RandomlistComponent } from "../randomlist/randomlist.component";
 import { Meta, Title } from '@angular/platform-browser';
+import { CarouselComponent } from "../shared/carousel/carousel.component";
 
 @Component({
   selector: 'app-vrvapt',
-  imports: [CommonModule, RandomlistComponent],
+  imports: [CommonModule, RandomlistComponent, CarouselComponent],
   templateUrl: './vrvapt.component.html',
   styleUrl: './vrvapt.component.css'
 })
@@ -13,6 +14,13 @@ export class VrvaptComponent implements OnInit {
 
   product = {
     mainImg: '/products/vrvapt/main.png',
+    mainImgs: [
+      '/products/vrvapt/main1.webp',
+      '/products/vrvapt/main2.webp',
+      '/products/vrvapt/1.png',
+      '/products/vrvapt/2.png',
+      '/products/vrvapt/3.png',
+    ],
     name: 'VRV APT',
     short: 'VRV Apt is the ideal air conditioning system as it replaces multiple outdoor units with only one unit maintaining the picturesque view of the building. VRV Apt is ideally suited for residences as it offers a range of indoor units, which can be connected with a centralized outdoor unit.',
     about: 'The versatile operation range of the VRV Apt system works to reduce limitations on installation locations. The operation temperature range for heating goes all the way down to -20C, while cooling can be performed with outdoor temperatures as high as 54C. Both these achievements are due to the adoption of a high-pressure dome-type compressor which is specially designed for operation in extreme ambient conditions.',

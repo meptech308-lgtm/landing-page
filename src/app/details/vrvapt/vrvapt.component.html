@@ -1,7 +1,10 @@
 <div class="vrvapt-container">
-    <div class="main-img">
+    <!-- <div class="main-img">
         <img [src]="product.mainImg" [alt]="product.name">
-    </div>
+    </div> -->
+
+    <app-carousel [images]="product.mainImgs"></app-carousel>
+
 
     <div class="short">
         <h2>{{ product.name }}</h2>

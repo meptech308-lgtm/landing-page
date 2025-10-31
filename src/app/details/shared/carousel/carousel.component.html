@@ -1,0 +1,27 @@
+<div id="multiImageCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button *ngFor="let group of groupedImages; let i = index" type="button" data-bs-target="#multiImageCarousel"
+            [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i === 0 ? 'true' : null"
+            [attr.aria-label]="'Slide ' + (i + 1)">
+        </button>
+    </div>
+
+    <div class="carousel-inner">
+        <div *ngFor="let group of groupedImages; let i = index" class="carousel-item" [class.active]="i === 0">
+            <div class="row">
+                <div class="col-md-4 col-12" *ngFor="let img of group">
+                    <img [src]="img" class="d-block w-100 rounded" alt="Carousel image" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#multiImageCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#multiImageCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
