@@ -7,8 +7,8 @@
 }
 
 .carousel img {
-    height: 250px;
-    object-fit: cover;
+    height: 300px;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -22,7 +22,7 @@
 
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
-    background-color: rgba(54, 54, 54, 0.447);
+    background-color: rgba(54, 54, 54, 0.6);
 }
 
 .carousel-indicators [data-bs-target] {
@@ -32,6 +32,16 @@
     border-radius: 50%;
 }
 
+.carousel-indicators .active {
+    background-color: #fff;
+}
+
 .carousel-indicators {
     bottom: -30px;
+}
+
+@media (max-width: 767px) {
+    .carousel img {
+        height: 300px;
+    }
 }

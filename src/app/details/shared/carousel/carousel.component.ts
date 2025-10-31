@@ -10,6 +10,7 @@ import { Component, Input } from '@angular/core';
 export class CarouselComponent {
   @Input() images: string[] = [];
   imagesPerSlide = 3;
+
   get groupedImages() {
     const groups: string[][] = [];
     for (let i = 0; i < this.images.length; i += this.imagesPerSlide) {

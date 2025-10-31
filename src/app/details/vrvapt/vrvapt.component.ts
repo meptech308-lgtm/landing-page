@@ -16,10 +16,7 @@ export class VrvaptComponent implements OnInit {
     mainImg: '/products/vrvapt/main.png',
     mainImgs: [
       '/products/vrvapt/main1.webp',
-      '/products/vrvapt/main2.webp',
-      '/products/vrvapt/1.png',
-      '/products/vrvapt/2.png',
-      '/products/vrvapt/3.png',
+      '/products/vrvapt/main2.webp'
     ],
     name: 'VRV APT',
     short: 'VRV Apt is the ideal air conditioning system as it replaces multiple outdoor units with only one unit maintaining the picturesque view of the building. VRV Apt is ideally suited for residences as it offers a range of indoor units, which can be connected with a centralized outdoor unit.',
