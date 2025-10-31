@@ -33,10 +33,6 @@
         <!-- Menu -->
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
             <ul class="navbar-nav gap-3">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeNavbar()"
-                        [routerLinkActiveOptions]="{ exact: true }">Home</a>
-                </li>
 
                 <!-- Multilevel Dropdown -->
                 <li class="nav-item dropdown" [class.show]="dropdownOpen" (mouseleave)="dropdownOpen=false">
@@ -87,6 +83,11 @@
                             </li>
                         </ng-container>
                     </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeNavbar()"
+                        [routerLinkActiveOptions]="{ exact: true }">Home</a>
                 </li>
 
                 <li class="nav-item">
