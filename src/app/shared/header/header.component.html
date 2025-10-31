@@ -52,7 +52,7 @@
                                 (mouseleave)="cat.open=false">
                                 <a href="#" class="dropdown-item" (click)="toggleCategory($event, cat)">
                                     {{ cat.name }}
-                                    <span class="expand" *ngIf="cat.items?.length">›</span>
+                                    <span class="expand" *ngIf="cat.items?.length || cat.directItems?.length">›</span>
                                 </a>
 
                                 <ul class="child dropdown-menu" [class.show]="cat.open">
