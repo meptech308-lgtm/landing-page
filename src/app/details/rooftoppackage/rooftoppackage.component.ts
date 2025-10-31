@@ -13,7 +13,7 @@ import { RandomlistComponent } from "../randomlist/randomlist.component";
 export class RooftoppackageComponent {
 
   product = {
-    mainImg: '/products/rooftoppackage/main.png',
+    mainImg: '/products/rooftoppackage/main1.png',
     name: 'Roof top Package',
     short: 'Rooftop systems offer a flexible way to provide treated air for one- to eight-story buildings. Many options and configurations are available to satisfy a wide number of applications. Fresh outside air is mixed with return air from the occupied space and then filtered, conditioned, and supplied back into the building.',
     about: 'A rooftop air conditioning unit is a basic ‘plug and play’ solution, ideal for medium to large spaces where an economical yet effective system is required. As well as delivering heating and cooling, roof air conditioners provide the option to switch to ‘free cooling’ as an energy saving mode in mid-season.',

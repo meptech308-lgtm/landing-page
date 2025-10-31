@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RandomlistComponent } from "../randomlist/randomlist.component";
 import { Meta, Title } from '@angular/platform-browser';
+import { CarouselComponent } from "../shared/carousel/carousel.component";
 
 @Component({
   selector: 'app-vrviv',
-  imports: [CommonModule, RandomlistComponent],
+  imports: [CommonModule, RandomlistComponent, CarouselComponent],
   templateUrl: './vrviv.component.html',
   styleUrl: './vrviv.component.css'
 })
@@ -13,6 +14,13 @@ export class VrvivComponent implements OnInit {
 
   product = {
     mainImg: '/products/vrviv+/1.png',
+    mainImgs: [
+      '/products/vrviv+/main1.jpg',
+      '/products/vrviv+/main2.png',
+      '/products/vrviv+/main3.webp',
+      '/products/vrviv+/main4.jpg',
+      '/products/vrviv+/main5.jpg',
+    ],
     imgPoints: [
       {
         no: 1,

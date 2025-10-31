@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
 import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { CarouselComponent } from "../shared/carousel/carousel.component";
 
 @Component({
   selector: 'app-wallsplit',
-  imports: [CommonModule, ProductCardComponent, RandomlistComponent],
+  imports: [CommonModule, ProductCardComponent, RandomlistComponent, CarouselComponent],
   templateUrl: './wallsplit.component.html',
   styleUrl: './wallsplit.component.css'
 })
@@ -13,6 +14,11 @@ export class WallsplitComponent {
 
   product = {
     mainImg: '/products/wallsplit/main.png',
+    mainImgs: [
+      '/products/wallsplit/main1.png',
+      '/products/wallsplit/main2.jpg',
+      '/products/wallsplit/main3.jpg',
+    ],
     name: 'Wall Split',
     short: 'Daikin Multi Split Systems can heat or cool multiple rooms using only one outdoor unit connected to multiple indoor units. Each indoor unit can also be individually controlled, scheduled and set to the desired room temperature.',
     cards: [

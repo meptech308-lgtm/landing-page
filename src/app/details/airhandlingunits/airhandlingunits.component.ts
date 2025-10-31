@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
 import { FeaturesComponent } from "../shared/features/features.component";
 import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { CarouselComponent } from "../shared/carousel/carousel.component";
 
 @Component({
   selector: 'app-airhandlingunits',
-  imports: [CommonModule, ProductCardComponent, FeaturesComponent, RandomlistComponent],
+  imports: [CommonModule, ProductCardComponent, FeaturesComponent, RandomlistComponent, CarouselComponent],
   templateUrl: './airhandlingunits.component.html',
   styleUrl: './airhandlingunits.component.css'
 })
@@ -14,6 +15,11 @@ export class AirhandlingunitsComponent {
 
   product = {
     mainImg: '/products/airhandling/main.png',
+    mainImgs: [
+      '/products/airhandling/main1.jpg',
+      '/products/airhandling/main2.png',
+      '/products/airhandling/main3.png',
+    ],
     name: 'Air Handling Units',
     short: 'From medium-sized heat recovery ventilation to large-scale air handling units, we ensure optimal climate conditions by providing a fresh, healthy, and comfortable environment for buildings of all sizes and different applications.',
     cards: [
