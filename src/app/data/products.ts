@@ -4,49 +4,56 @@ export const Products = [
         img: '/products/vrviv+/main.png',
         name: 'VRV IV +',
         route: 'vrviv',
-        category: 'AC Equipments'
+        category: 'AC Equipments',
+        subCat: 'VRV'
     },
     {
         id: 2,
         img: '/products/vrvx/main.png',
         name: 'VRV X',
         route: 'vrvx',
-        category: 'AC Equipments'
+        category: 'AC Equipments',
+        subCat: 'VRV'
     },
     {
         id: 3,
         img: '/products/vrvapt/main.png',
         name: 'VRV APT',
         route: 'vrvapt',
-        category: 'AC Equipments'
+        category: 'AC Equipments',
+        subCat: 'VRV'
     },
     {
         id: 4,
         img: '/products/concealedac/main.jpg',
         name: 'Concealed AC Unit',
         route: 'concealedac',
-        category: 'AC Equipments'
+        category: 'AC Equipments',
+        subCat: 'DX'
     },
     {
         id: 5,
         img: '/products/wallsplit/main.png',
         name: 'Wall Split',
         route: 'wallsplit',
-        category: 'AC Equipments'
+        category: 'AC Equipments',
+        subCat: 'DX'
     },
     {
         id: 6,
         img: '/products/rooftoppackage/main.png',
         name: 'Roof top Package',
         route: 'rooftoppackage',
-        category: 'AC Equipments'
+        category: 'AC Equipments',
+        subCat: 'DX'
     },
     {
         id: 7,
         img: '/products/cassette/main.png',
         name: 'Cassette Solutions',
         route: 'cassette',
-        category: 'AC Equipments'
+        category: 'AC Equipments',
+        subCat: 'DX'
     },
     {
         id: 8,

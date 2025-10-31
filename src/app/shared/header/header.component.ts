@@ -10,21 +10,37 @@ import { Products } from '../../data/products';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  menuOpen = false;
   dropdownOpen = false;
   categories: any[] = [];
 
   constructor() {
-    const grouped: { [key: string]: any[] } = {};
+    const grouped: { [category: string]: { [subCat: string]: any[] } } = {};
+
+    // Group products by category → subcategory
     Products.forEach(p => {
-      if (!grouped[p.category]) grouped[p.category] = [];
-      grouped[p.category].push(p);
+      if (!grouped[p.category]) grouped[p.category] = {};
+      if (p.subCat) {
+        if (!grouped[p.category][p.subCat]) grouped[p.category][p.subCat] = [];
+        grouped[p.category][p.subCat].push(p);
+      } else {
+        // Direct items without subCat
+        if (!grouped[p.category]['_direct']) grouped[p.category]['_direct'] = [];
+        grouped[p.category]['_direct'].push(p);
+      }
     });
 
-    this.categories = Object.keys(grouped).map(key => ({
-      name: key,
-      items: grouped[key],
-      open: false 
+    // Convert structure into menu hierarchy
+    this.categories = Object.keys(grouped).map(category => ({
+      name: category,
+      open: false,
+      items: Object.keys(grouped[category])
+        .filter(subCat => subCat !== '_direct')
+        .map(subCat => ({
+          name: subCat,
+          open: false,
+          items: grouped[category][subCat]
+        })),
+      directItems: grouped[category]['_direct'] || []
     }));
   }
 
@@ -34,22 +50,16 @@ export class HeaderComponent {
   }
 
   openCategory(cat: any) {
-    if (window.innerWidth >= 992) {
-      cat.open = true;
-    }
+    if (window.innerWidth >= 992) cat.open = true;
   }
 
   toggleCategory(event: Event, cat: any) {
     event.preventDefault();
-    if (window.innerWidth < 992) {
-      cat.open = !cat.open;
-    }
+    if (window.innerWidth < 992) cat.open = !cat.open;
   }
 
   closeNavbar() {
     const navbar = document.getElementById('mainNavbar');
-    if (navbar && navbar.classList.contains('show')) {
-      navbar.classList.remove('show');
-    }
+    if (navbar && navbar.classList.contains('show')) navbar.classList.remove('show');
   }
 }

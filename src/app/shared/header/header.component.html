@@ -55,26 +55,31 @@
                                     <span class="expand" *ngIf="cat.items?.length">›</span>
                                 </a>
 
-                                <!-- Recursive submenus -->
-                                <ul class="child dropdown-menu" [class.show]="cat.open" *ngIf="cat.items?.length">
-                                    <li *ngFor="let item of cat.items" [class.parent]="item.items?.length"
-                                        [class.open]="item.open" (mouseenter)="openCategory(item)"
-                                        (mouseleave)="item.open=false">
-
-                                        <a class="dropdown-item" href="#"
-                                            (click)="item.items ? toggleCategory($event, item) : closeNavbar()"
-                                            [routerLink]="!item.items ? ['/products', item.route] : null">
+                                <ul class="child dropdown-menu" [class.show]="cat.open">
+                                    <!-- Direct products without subCat -->
+                                    <li *ngFor="let item of cat.directItems">
+                                        <a class="dropdown-item" [routerLink]="['/products', item.route]"
+                                            (click)="closeNavbar()">
                                             {{ item.name }}
-                                            <span class="expand" *ngIf="item.items?.length">›</span>
+                                        </a>
+                                    </li>
+
+                                    <!-- Subcategories with items -->
+                                    <li *ngFor="let sub of cat.items" class="parent" [class.open]="sub.open"
+                                        (mouseenter)="openCategory(sub)" (mouseleave)="sub.open=false">
+
+                                        <a href="#" class="dropdown-item"
+                                            (click)="sub.items ? toggleCategory($event, sub) : closeNavbar()">
+                                            {{ sub.name }}
+                                            <span class="expand" *ngIf="sub.items?.length">›</span>
                                         </a>
 
-                                        <!-- Nested children -->
-                                        <ul class="child dropdown-menu" [class.show]="item.open"
-                                            *ngIf="item.items?.length">
-                                            <li *ngFor="let sub of item.items">
-                                                <a class="dropdown-item" [routerLink]="['/products', sub.route]"
+                                        <ul class="child dropdown-menu" [class.show]="sub.open"
+                                            *ngIf="sub.items?.length">
+                                            <li *ngFor="let item of sub.items">
+                                                <a class="dropdown-item" [routerLink]="['/products', item.route]"
                                                     (click)="closeNavbar()">
-                                                    {{ sub.name }}
+                                                    {{ item.name }}
                                                 </a>
                                             </li>
                                         </ul>
@@ -98,7 +103,8 @@
                         Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/newsletter" (click)="closeNavbar()" routerLinkActive="active">Newsletter</a>
+                    <a class="nav-link" routerLink="/newsletter" (click)="closeNavbar()"
+                        routerLinkActive="active">Newsletter</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/contact" (click)="closeNavbar()"
