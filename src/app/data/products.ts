@@ -166,5 +166,12 @@ export const Products = [
         name: 'Energy Recovery Ventilator',
         route: 'erv',
         category: 'AC Equipments'
+    },
+    {
+        id: 24,
+        img: '/products/fww/main.png',
+        name: 'Chilled Water FCU',
+        route: 'fww',
+        category: 'AC Equipments'
     }
 ];
