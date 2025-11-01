@@ -1,0 +1,42 @@
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.short h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #222;
+    font-weight: bolder;
+}
+
+.short p {
+    font-size: 1rem;
+    color: #222;
+    font-weight: bold;
+}
+
+.about {
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}

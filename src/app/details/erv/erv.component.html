@@ -1,0 +1,23 @@
+<div class="container">
+    <app-carousel [images]="product.mainImgs"></app-carousel>
+
+    <div class="short">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.short }}</p>
+    </div>
+
+    <div class="about">
+        <p>{{ product.about }}</p>
+    </div>
+
+    <div class="short">
+        <h2>Component Description</h2>
+    </div>
+
+    <div class="cards">
+        <app-product-card-with-image *ngFor="let card of product.cards" [imageUrl]="card.img" [head]="card.head"
+            [points]="card.points"></app-product-card-with-image>
+    </div>
+
+    <app-randomlist></app-randomlist>
+</div>

@@ -159,5 +159,12 @@ export const Products = [
         name: 'Thermostat',
         route: 'thermostat2',
         category: 'Controls'
+    },
+    {
+        id: 23,
+        img: '/products/erv/main1.png',
+        name: 'Energy Recovery Ventilator',
+        route: 'erv',
+        category: 'AC Equipments'
     }
 ];
