@@ -25,6 +25,7 @@ import { RegistersComponent } from './registers/registers.component';
 import { Thermostat2Component } from './thermostat2/thermostat2.component';
 import { ThermostatComponent } from './thermostat/thermostat.component';
 import { ErvComponent } from './erv/erv.component';
+import { FwwComponent } from './fww/fww.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -51,7 +52,8 @@ const routes: Routes = [
   { path: 'registers', component: RegistersComponent },
   { path: 'thermostat2', component: Thermostat2Component },
   { path: 'thermostat', component: ThermostatComponent },
-  { path: 'erv', component: ErvComponent }
+  { path: 'erv', component: ErvComponent },
+  { path: 'fww', component: FwwComponent }
 ];
 
 @NgModule({

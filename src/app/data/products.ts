@@ -60,7 +60,7 @@ export const Products = [
         img: '/products/airhandling/main.png',
         name: 'Air Handling Units',
         route: 'airhandling',
-        category: 'Air Distribution'
+        category: 'AC Equipments'
     },
     {
         id: 9,
