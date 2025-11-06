@@ -6,6 +6,7 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { ZohoComponent } from './components/zoho/zoho.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'newsletter', component: NewsletterComponent },
+    { path: 'zoho', component: ZohoComponent },
     { path: 'products', loadChildren: () => import('./details/details.module').then(m => m.DetailsModule) }
 ];
