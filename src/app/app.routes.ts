@@ -6,6 +6,9 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { ZohoComponent } from './components/zoho/zoho.component';
+import {HvacAccessoriesSuppliersInUaeComponent } from './components/seopages/hvac-accessories-suppliers-in-uae/hvac-accessories-suppliers-in-uae.component';
+import { HvacAccessoriesSuppliersInDubaiComponent } from './components/seopages/hvac-accessories-suppliers-in-dubai/hvac-accessories-suppliers-in-dubai.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, data: { title: 'Home' } },
@@ -15,5 +18,9 @@ export const routes: Routes = [
     { path: 'about', component: AboutComponent, data: { title: 'About Us' } },
     { path: 'contact', component: ContactComponent, data: { title: 'Contact' } },
     { path: 'newsletter', component: NewsletterComponent },
-    { path: 'products', loadChildren: () => import('./details/details.module').then(m => m.DetailsModule), data: { title: 'Products' } }
+    { path: 'zoho', component: ZohoComponent },
+    { path: 'products', loadChildren: () => import('./details/details.module').then(m => m.DetailsModule) },
+
+    { path: 'hvac-accessories-suppliers-in-uae', component: HvacAccessoriesSuppliersInUaeComponent },
+    { path: 'hvac-accessories-suppliers-in-dubai', component: HvacAccessoriesSuppliersInDubaiComponent },
 ];

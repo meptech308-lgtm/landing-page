@@ -3,10 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
 import { RandomlistComponent } from "../randomlist/randomlist.component";
 import { Meta, Title } from '@angular/platform-browser';
+import { CarouselComponent } from "../shared/carousel/carousel.component";
 
 @Component({
   selector: 'app-vrvx',
-  imports: [CommonModule, ProductCardComponent, RandomlistComponent],
+  imports: [CommonModule, ProductCardComponent, RandomlistComponent, CarouselComponent],
   templateUrl: './vrvx.component.html',
   styleUrl: './vrvx.component.css'
 })
@@ -14,6 +15,14 @@ export class VrvxComponent implements OnInit {
 
   product = {
     mainImg: '/products/vrvx/main.png',
+    mainImgs:[
+      '/products/vrvx/main1.webp',
+      '/products/vrvx/main2.png',
+      '/products/vrvx/main3.JPG',
+      '/products/vrvx/main4.JPG',
+      '/products/vrvx/main5.JPG',
+      '/products/vrvx/main6.jpg',
+    ],
     name: 'VRV X',
     short: 'The new VRV X Cooling Only system now features VRT technology in IDU & ODU. VRT automatically adjusts refrigerant temperature to individual building load and climate requirement, thus further this technology, running costs are reduced',
     about: 'First launched in Japan in 1982, the Daikin VRV system has been embraced by the world markets for over three decades. Now, we at Daikin introduce the next generation VRV X Cooling Only System to reinforce our industry leadership. The system offers an enhanced lineup to meet an ever-widening variety of needs, while improving energy savings, comfort and ease of installation.',

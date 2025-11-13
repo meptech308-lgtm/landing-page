@@ -1,0 +1,11 @@
+<div class="product-card">
+    <div class="image-container" *ngIf="imageUrl">
+        <img [src]="imageUrl" [alt]="head" class="product-image">
+    </div>
+
+    <h3>{{ head }}</h3>
+
+    <ul>
+        <li *ngFor="let p of points">{{ p }}</li>
+    </ul>
+</div>

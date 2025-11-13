@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { ProductCardComponent } from "../shared/product-card/product-card.component";
 import { BenefitsComponent } from "../shared/benefits/benefits.component";
 import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { CarouselComponent } from "../shared/carousel/carousel.component";
 
 @Component({
   selector: 'app-concealedac',
-  imports: [CommonModule, ProductCardComponent, BenefitsComponent, RandomlistComponent],
+  imports: [CommonModule, ProductCardComponent, BenefitsComponent, RandomlistComponent, CarouselComponent],
   templateUrl: './concealedac.component.html',
   styleUrl: './concealedac.component.css'
 })
@@ -14,6 +15,12 @@ export class ConcealedacComponent {
 
   product = {
     mainImg: '/products/concealedac/main.jpg',
+    mainImgs: [
+      '/products/concealedac/main1.png',
+      '/products/concealedac/main2.png',
+      '/products/concealedac/main3.jpg',
+      '/products/concealedac/main4.jpg'
+    ],
     name: 'Concealed AC Unit',
     short: 'Efficient Concealed Daikin Ducted Air Conditioners for home ',
     about: 'A Daikin ducted air conditioner consists of an indoor and outdoor unit and flexible ducting. The indoor unit is concealed out of sight in your ceiling or under the floor, with flexible ducting distributing conditioned air through vents located throughout your home. An outdoor unit is positioned in a discreet location outside your home.',

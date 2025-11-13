@@ -21,7 +21,7 @@ export class RandomlistComponent implements OnInit {
 
   getRandomProducts() {
     const shuffled = [...this.products].sort(() => 0.5 - Math.random());
-    this.randomProducts = shuffled.slice(0, 3);
+    this.randomProducts = shuffled.slice(0, 4);
   }
 
   goToListPage() {
