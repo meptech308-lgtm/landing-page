@@ -11,12 +11,12 @@ import {HvacAccessoriesSuppliersInUaeComponent } from './components/seopages/hva
 import { HvacAccessoriesSuppliersInDubaiComponent } from './components/seopages/hvac-accessories-suppliers-in-dubai/hvac-accessories-suppliers-in-dubai.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'services', component: ServicesComponent },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'projects/:id', component: ProjectDetailComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'contact', component: ContactComponent },
+    { path: '', component: HomeComponent, data: { title: 'Home' } },
+    { path: 'services', component: ServicesComponent, data: { title: 'Services' } },
+    { path: 'projects', component: ProjectsComponent, data: { title: 'Projects' } },
+    { path: 'projects/:id', component: ProjectDetailComponent, data: { title: 'Project Details' } },
+    { path: 'about', component: AboutComponent, data: { title: 'About Us' } },
+    { path: 'contact', component: ContactComponent, data: { title: 'Contact' } },
     { path: 'newsletter', component: NewsletterComponent },
     { path: 'zoho', component: ZohoComponent },
     { path: 'products', loadChildren: () => import('./details/details.module').then(m => m.DetailsModule) },
