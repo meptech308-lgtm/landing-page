@@ -6,18 +6,18 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  margin-top: 3rem;
   margin-bottom: 5rem;
+  margin-top: 3rem;
   gap: 3rem;
 }
-.hero-tile h1 {
+.hero-title h1 {
   font-size: 2.4rem;
   color: #000;
   margin-bottom: 1rem;
   line-height: 1.3;
 }
 
-.hero-tile p {
+.hero-title p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
@@ -42,7 +42,6 @@
     transform: translateY(-3px);
 }
 
-
 .about-section {
   text-align: center;
   padding: 3rem 2rem;
@@ -51,9 +50,9 @@
   align-items: center;
   background: linear-gradient(135deg, #ffffff, #f4f5f9);
   border-radius: 12px;
-  margin: 2rem auto 5rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .about-section h2 {
@@ -82,7 +81,7 @@
 
 
 
-.benefit-section {
+.why-section {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -90,13 +89,13 @@
   margin-bottom: 5rem;
 }
 
-.benefit-section h2 {
+.why-section h2 {
   font-size: 1.8rem;
   color: #000;
   margin-bottom: 1.5rem;
 }
 
-.benefit-section h2::after {
+.why-section h2::after {
   content: "";
   display: block;
   width: 80px;
@@ -106,7 +105,7 @@
   border-radius: 2px;
 }
 
-.benefit-cards {
+.why-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
@@ -115,7 +114,7 @@
   margin: 0 auto;
 }
 
-.benefit-card {
+.why-card {
   background: #fff;
   border: 1px solid #ea4c4433;
   border-radius: 12px;
@@ -127,19 +126,19 @@
   animation: fadeUp 1s ease forwards;
 }
 
-.benefit-card:hover {
+.why-card:hover {
   transform: translateY(-10px) scale(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   border-color: #EA4D44;
 }
 
-.benefit-card h3 {
+.why-card h3 {
   font-size: 18px;
   margin-bottom: 0.5rem;
   color: #111;
 }
 
-.benefit-card p {
+.why-card p {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
@@ -166,7 +165,6 @@
   margin: 12px auto 0;
   border-radius: 2px;
 }
-
 .image-text-section-left,
 .image-text-section-right {
   flex: 1;
@@ -193,14 +191,13 @@
 
 .image-text-section-right img {
   max-width: 100%;
-  height: 433px;
   border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
 
-.our-section {
+.for-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -212,13 +209,13 @@
   animation: fadeUp 1s ease 0.5s forwards;
 }
 
-.our-section h2 {
+.for-section h2 {
   text-align: center;
   font-size: 1.8rem;
   color: black;
   margin-bottom: 1.5rem;
 }
-.our-section h2::after{
+.for-section h2::after{
   content: "";
   display: block;
   width: 80px;
@@ -227,45 +224,44 @@
   margin: 12px auto 0;
   border-radius: 2px;
 }
-.our-section-left,
-.our-section-right {
+.for-section-left,
+.for-section-right {
   flex: 1;
 }
 
-.our-section-left {
+.for-section-left {
   display: flex;
   justify-content: center;
 }
 
-.our-section-left img {
+.for-section-left img {
   max-width: 100%;
-  height: 433px;
   border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
 
-.our-section-right p {
+.for-section-right p {
   color: #555;
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 1rem;
 }
-.for-section {
+
+
+
+.faq-section {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
-.for-section h2 {
+.faq-section h2 {
   font-size: 1.8rem;
   color: #000;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.for-section h2::after {
+.faq-section h2::after {
   content: "";
   display: block;
   width: 80px;
@@ -274,12 +270,66 @@
   margin: 12px auto 0;
   border-radius: 2px;
 }
-.for-section p{
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1rem;
+
+.faq-cards {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 900px;
 }
+
+.faq-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-card:hover {
+  border-color: #EA4D44;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-header h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin: 0;
+}
+
+.icon i {
+  font-size: 1.2rem;
+  color: #EA4D44;
+  transition: transform 0.3s ease;
+}
+
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-body.open {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 0.8rem;
+}
+
+.faq-body p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
 
 
 @keyframes fadeUp {
@@ -292,15 +342,15 @@
 
 
 @media (max-width: 1024px) {
-  .hero-tile h1 {
+  .hero-title h1 {
     font-size: 2rem;
   }
 
-  .hero-tile p {
+  .hero-title p {
     font-size: 1rem;
   }
 
-  .benefit-cards {
+  .why-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -308,20 +358,23 @@
     flex-direction: column;
     text-align: center;
   }
-  .our-section {
+  .for-section {
     flex-direction: column-reverse;
     text-align: center;
   }
 
   .image-text-section img,
-  .our-section img {
+  .for-section img {
     max-width: 80%;
   }
 }
 
 @media (max-width: 900px) {
+  .hero-section {
+    min-height: 55vh;
+  }
 
-  .hero-tile h1 {
+  .hero-title h1 {
     font-size: 1.6rem;
     line-height: 1.3;
   }
@@ -333,63 +386,70 @@
   .about-section h2 {
     font-size: 1.5rem;
   }
+
+  .faq-card {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
-  .hero-section{
+  .hero-section {
     margin-top: 1rem;
-    margin-bottom: 1rem;
-    gap: 1rem;
-  }
-    .hero-section a.btn-call {
-    padding: 10px 20px;
-    font-size: 15px;
-  }
-  .hero-tile h1 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    min-height: 45vh;
+    gap: 2rem;
   }
 
-  .hero-tile p {
+  .hero-title h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-title p {
     font-size: 0.9rem;
     line-height: 1.4;
   }
- .about-section{
-  gap: 0.1rem;
- }
+  .hero-section a.btn-call {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+   
   .about-section,
-  .benefit-section,
+  .why-section,
   .image-text-section,
-  .our-section,
-  .for-section{
-    margin-bottom: 2rem;
+  .for-section,
+  .faq-section {
+    margin-bottom: 1rem;
     padding: 1.5rem 1rem;
   }
 
   .about-section h2,
-  .benefit-section h2,
+  .why-section h2,
   .image-text-section h2,
-  .our-section h2,
   .for-section h2 {
     font-size: 1.3rem;
   }
 
   .about-section p,
   .image-text-section p,
-  .our-section p ,
-  .for-section p{
+  .for-section p {
     font-size: 0.9rem;
   }
 
-  .benefit-cards {
+  .why-cards {
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
+  .faq-header h3 {
+    font-size: 0.9rem;
+  }
+
+  .faq-body p {
+    font-size: 0.85rem;
+  }
+
   .image-text-section img,
-  .our-section img {
+  .for-section img {
     width: 100%;
-    height: 210px;
     border-radius: 10px;
   }
 }

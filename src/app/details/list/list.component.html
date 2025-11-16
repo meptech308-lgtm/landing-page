@@ -19,7 +19,7 @@
                 <img [src]="product.img" class="product-img" [alt]="product.name">
                 <div class="card-body">
                     <h5>{{ product.name }}</h5>
-                    <button [routerLink]="['/products', product.route]">View More Detail</button>
+                    <button (click)="navigateToProduct(product)">View More Detail</button>
                 </div>
             </div>
         </div>

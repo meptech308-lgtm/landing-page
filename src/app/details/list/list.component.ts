@@ -19,10 +19,10 @@ export class ListComponent implements OnInit {
   selectedCategory: string = '';
 
   categories: string[] = [
-    'AC Equipments',
-    'Air Distribution',
-    'Ventilation',
-    'Controls'
+    'AC EQUIPMENTS',
+    'AIR DISTRIBUTION',
+    'VENTILATION',
+    'CONTROLS'
   ];
 
   category: string = '';
@@ -47,5 +47,21 @@ export class ListComponent implements OnInit {
 
       return matchesSearch && matchesCategory;
     });
+    this.filteredProducts = [...this.filteredProducts];
   }
+
+  // Add this method to handle product navigation
+navigateToProduct(product: any) {
+  console.log('Navigating to product:', product);
+  
+  if (product.hasDetails === false || product.route === 'contactusdefault') {
+    // Navigate to ROOT level (not inside /products/)
+    this.router.navigate(['/contact-default'], { 
+      queryParams: { product: product.name } 
+    });
+  } else {
+    // Navigate to product details page
+    this.router.navigate(['/products', product.route]);
+  }
+}
 }

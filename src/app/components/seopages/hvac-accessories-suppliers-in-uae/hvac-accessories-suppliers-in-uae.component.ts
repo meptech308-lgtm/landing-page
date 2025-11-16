@@ -103,7 +103,7 @@ faqs: any[] = [
 
     this.metaService.updateTag({ property: 'og:title', content: 'HVAC accessories suppliers in UAE | Daikin dealer Dubai  | AC spare part suppliers' });
     this.metaService.updateTag({ property: 'og:description', content: 'We are best hvac accessories suppliers in uae. our ac, air conditioner spare part and services available all over uae like dubai etc. for air condition parts suppliers, call us!' });
-    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/logo1.png' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/HVAC accessories suppliers in UAE.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-uae' });
   }
   toggleFAQ(index: number): void {

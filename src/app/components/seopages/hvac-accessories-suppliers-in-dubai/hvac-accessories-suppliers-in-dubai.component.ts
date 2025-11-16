@@ -70,7 +70,7 @@ export class HvacAccessoriesSuppliersInDubaiComponent {
 
     this.metaService.updateTag({ property: 'og:title', content: 'HVAC accessories suppliers in Dubai, UAE | AC spare parts supplier' });
     this.metaService.updateTag({ property: 'og:description', content: "Why not meptech's HVAC accessories suppliers in dubai? we are not just ac spare parts in dubai uae. we are best choice for air conditioner, compressor and refrigerant gas supplier." });
-    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/logo1.png' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/HVAC accessories suppliers in Dubai.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-dubai' });
   }
 }

@@ -9,7 +9,9 @@ import { NewsletterComponent } from './components/newsletter/newsletter.componen
 import { ZohoComponent } from './components/zoho/zoho.component';
 import {HvacAccessoriesSuppliersInUaeComponent } from './components/seopages/hvac-accessories-suppliers-in-uae/hvac-accessories-suppliers-in-uae.component';
 import { HvacAccessoriesSuppliersInDubaiComponent } from './components/seopages/hvac-accessories-suppliers-in-dubai/hvac-accessories-suppliers-in-dubai.component';
-
+import { HvacAccessoriesSuppliersInAbuDhabiComponent } from './components/seopages/hvac-accessories-suppliers-in-abu-dhabi/hvac-accessories-suppliers-in-abu-dhabi.component';
+import { HvacAccessoriesSuppliersInSharjahComponent } from './components/seopages/hvac-accessories-suppliers-in-sharjah/hvac-accessories-suppliers-in-sharjah.component';
+import { ContactusdefaultComponent } from './details/contactusdefault/contactusdefault.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent, data: { title: 'Home' } },
     { path: 'services', component: ServicesComponent, data: { title: 'Services' } },
@@ -19,8 +21,10 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent, data: { title: 'Contact' } },
     { path: 'newsletter', component: NewsletterComponent },
     { path: 'zoho', component: ZohoComponent },
+    { path: 'contact-default', component: ContactusdefaultComponent },
     { path: 'products', loadChildren: () => import('./details/details.module').then(m => m.DetailsModule) },
-
     { path: 'hvac-accessories-suppliers-in-uae', component: HvacAccessoriesSuppliersInUaeComponent },
     { path: 'hvac-accessories-suppliers-in-dubai', component: HvacAccessoriesSuppliersInDubaiComponent },
+    { path: 'hvac-accessories-suppliers-in-abu-dhabi', component: HvacAccessoriesSuppliersInAbuDhabiComponent },
+    { path: 'hvac-accessories-suppliers-in-sharjah', component: HvacAccessoriesSuppliersInSharjahComponent },
 ];

@@ -1,0 +1,63 @@
+<!-- contactusdefault.component.html -->
+<div class="contact-default-container">
+  <div class="content-wrapper">
+    <!-- Icon Section -->
+    <div class="icon-section">
+      <div class="icon-circle">
+        <i class="bi bi-info-circle"></i>
+      </div>
+    </div>
+
+    <!-- Message Section -->
+    <div class="message-section">
+      <h1 class="title">{{ productName }}</h1>
+      <p class="subtitle">Product Details Coming Soon</p>
+      <p class="description">
+        We're currently updating the detailed information for this product. 
+        Our team is working hard to provide you with comprehensive specifications, 
+        images, and technical details.
+      </p>
+      <p class="contact-prompt">
+        Meanwhile, feel free to reach out to us directly for immediate assistance!
+      </p>
+    </div>
+
+    <!-- Contact Options -->
+    <div class="contact-options">
+      <!-- Call Button -->
+      <button class="contact-btn call-btn" (click)="callNow()">
+        <i class="bi bi-telephone-fill"></i>
+        <div class="btn-content">
+          <span class="btn-label">Call Us Now</span>
+          <span class="btn-value">+971 44919004</span>
+        </div>
+      </button>
+
+      <!-- WhatsApp Button -->
+      <button class="contact-btn whatsapp-btn" (click)="whatsappNow()">
+        <i class="bi bi-whatsapp"></i>
+        <div class="btn-content">
+          <span class="btn-label">WhatsApp Us</span>
+          <span class="btn-value">+971 503471731</span>
+        </div>
+      </button>
+
+      <!-- Email Button -->
+      <button class="contact-btn email-btn" (click)="emailNow()">
+        <i class="bi bi-envelope-fill"></i>
+        <div class="btn-content">
+          <span class="btn-label">Email Us</span>
+          <span class="btn-value">sales&#64;meptechuae.com</span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="additional-info">
+      <p class="info-text">
+        <i class="bi bi-shield-check"></i>
+        MEPTECH | Authorized DAIKIN Dealer | Professional HVAC Solutions
+      </p>
+    </div>
+  </div>
+</div>

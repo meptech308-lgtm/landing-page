@@ -13,7 +13,7 @@ export class ThermostatComponent {
 
   product = {
     mainImg: '/products/thermostat/main.png',
-    name: 'Thermostat',
+    name: 'Cross Talk Attenuators (CTA)',
     short: `MEPTECH manufactures Cross talk attenuators (CTA) to avoid noise interface between inter-
 connected Areas or rooms. It provides a low resistance to air flow whilst maintaining a high
 

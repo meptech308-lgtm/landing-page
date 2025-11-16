@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Increase Zoho SalesIQ Floating Icon Size */
+#zsiq_float {
+    transform: scale(1.3) !important; /* Increase size (1.0 = default) */
+    transform-origin: center bottom !important;
+}
+
+/* Adjust placement if it goes off-screen */
+#zsiq_float:hover {
+    transform: scale(1.2) !important; 
+    transition: all 0.3s ease;
+}
