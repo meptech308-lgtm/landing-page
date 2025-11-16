@@ -1,0 +1,244 @@
+.contact-default-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.content-wrapper {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icon-section {
+  margin-bottom: 2rem;
+}
+
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #E94C44 0%, #d43f38 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite;
+}
+
+.icon-circle i {
+  font-size: 3rem;
+  color: #fff;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(233, 76, 68, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(233, 76, 68, 0);
+  }
+}
+
+.message-section {
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1E1E1E;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #E94C44;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.contact-prompt {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1E1E1E;
+  margin-top: 1.5rem;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn i {
+  font-size: 1.8rem;
+  min-width: 40px;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.btn-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.btn-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.call-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: #fff;
+}
+
+.call-btn:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366 0%, #1da851 100%);
+  color: #fff;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #1da851 0%, #128c3f 100%);
+}
+
+.email-btn {
+  background: linear-gradient(135deg, #E94C44 0%, #d43f38 100%);
+  color: #fff;
+}
+
+.email-btn:hover {
+  background: linear-gradient(135deg, #d43f38 0%, #b8332c 100%);
+}
+
+.additional-info {
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.info-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.info-text i {
+  color: #E94C44;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-circle i {
+    font-size: 2.5rem;
+  }
+
+  .contact-btn {
+    padding: 1rem 1.25rem;
+  }
+
+  .btn-value {
+    font-size: 1rem;
+  }
+
+  .info-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-btn {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .btn-content {
+    gap: 0.15rem;
+  }
+
+  .btn-label {
+    font-size: 0.8rem;
+  }
+
+  .btn-value {
+    font-size: 0.95rem;
+  }
+}

@@ -61,11 +61,136 @@
     gtag('config', 'G-2ML3SZ46T9');
   </script>
 
-<!-- Sales IQ -->
-  <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
+  <!-- NUCLEAR OPTION: Complete Zoho Cleanup -->
+  <script>
+    (function() {
+      'use strict';
+      
+      console.log('🧹 Starting Zoho cleanup...');
+      
+      // 1. Destroy all existing Zoho instances
+      if (window.$zoho) {
+        try {
+          if (window.$zoho.salesiq && window.$zoho.salesiq.chat && window.$zoho.salesiq.chat.close) {
+            window.$zoho.salesiq.chat.close();
+          }
+        } catch(e) {}
+      }
+      
+      // 2. Delete all Zoho window objects
+      delete window.$zoho;
+      delete window.zsiqchat;
+      delete window.zsiqwidget;
+      delete window.$ZSIQChat;
+      delete window.zsiq;
+      
+      // 3. Remove old script tags
+      const oldScripts = document.querySelectorAll('script[src*="salesiq"], script[id*="zsiq"]');
+      oldScripts.forEach(script => script.remove());
+      
+      // 4. Clear localStorage
+      try {
+        const lsKeys = Object.keys(localStorage);
+        lsKeys.forEach(key => {
+          if (key.toLowerCase().includes('siq') || 
+              key.toLowerCase().includes('zoho') || 
+              key.toLowerCase().includes('zsiq') ||
+              key.toLowerCase().includes('meptech')) {
+            console.log('Removing localStorage key:', key);
+            localStorage.removeItem(key);
+          }
+        });
+      } catch(e) {
+        console.warn('Could not clear localStorage:', e);
+      }
+      
+      // 5. Clear sessionStorage
+      try {
+        const ssKeys = Object.keys(sessionStorage);
+        ssKeys.forEach(key => {
+          if (key.toLowerCase().includes('siq') || 
+              key.toLowerCase().includes('zoho') || 
+              key.toLowerCase().includes('zsiq') ||
+              key.toLowerCase().includes('meptech')) {
+            console.log('Removing sessionStorage key:', key);
+            sessionStorage.removeItem(key);
+          }
+        });
+      } catch(e) {
+        console.warn('Could not clear sessionStorage:', e);
+      }
+      
+      // 6. Clear all Zoho-related cookies
+      const cookies = document.cookie.split(';');
+      cookies.forEach(cookie => {
+        const cookieName = cookie.split('=')[0].trim().toLowerCase();
+        if (cookieName.includes('siq') || 
+            cookieName.includes('zoho') || 
+            cookieName.includes('zsiq') ||
+            cookieName.includes('meptech')) {
+          console.log('Removing cookie:', cookieName);
+          document.cookie = cookie.trim().split('=')[0] + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+          document.cookie = cookie.trim().split('=')[0] + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=' + window.location.hostname;
+          document.cookie = cookie.trim().split('=')[0] + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.' + window.location.hostname;
+        }
+      });
+      
+      // 7. Clear IndexedDB
+      try {
+        indexedDB.databases().then(databases => {
+          databases.forEach(db => {
+            if (db.name && (db.name.toLowerCase().includes('zoho') || 
+                           db.name.toLowerCase().includes('siq'))) {
+              console.log('Deleting IndexedDB:', db.name);
+              indexedDB.deleteDatabase(db.name);
+            }
+          });
+        });
+      } catch(e) {
+        console.warn('Could not clear IndexedDB:', e);
+      }
+      
+      console.log('✅ Zoho cleanup completed');
+      
+      // 8. Initialize fresh Zoho instance
+      window.$zoho = {};
+      window.$zoho.salesiq = window.$zoho.salesiq || { 
+        ready: function() {
+          console.log('✅ NEW Zoho Widget Loaded');
+          console.log('Widget ID: siq139b0396a4ae18cef4d3c8717fe5e681e1bad8165d4baa9452939ee956d6a0e086a57824eb837db16c86bd8777e74216');
+        }
+      };
+    })();
+  </script>
+
+  <!-- Load ONLY the correct widget with timestamp cache buster -->
   <script id="zsiqscript"
-    src="https://salesiq.zohopublic.com/widget?wc=siq139b0396a4ae18cef4d3c8717fe5e681e1bad8165d4baa9452939ee956d6a0e086a57824eb837db16c86bd8777e74216"
+    src="https://salesiq.zohopublic.com/widget?wc=siq139b0396a4ae18cef4d3c8717fe5e681e1bad8165d4baa9452939ee956d6a0e086a57824eb837db16c86bd8777e74216&t=1732000000"
     defer></script>
+
+  <!-- Verify correct widget loaded -->
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        if (window.$zoho && window.$zoho.salesiq) {
+          console.log('🔍 Zoho SalesIQ Status Check:');
+          console.log('Widget loaded:', !!window.$zoho.salesiq);
+          
+          // Get the actual script src that was loaded
+          const script = document.getElementById('zsiqscript');
+          if (script) {
+            console.log('Script src:', script.src);
+            if (!script.src.includes('siq139b0396a4ae18cef4d3c8717fe5e681e1bad8165d4baa9452939ee956d6a0e086a57824eb837db16c86bd8777e74216')) {
+              console.error('❌ WRONG WIDGET DETECTED!');
+              alert('Wrong Zoho widget detected. Please clear your browser cache completely and reload.');
+            } else {
+              console.log('✅ Correct widget loaded');
+            }
+          }
+        }
+      }, 3000);
+    });
+  </script>
 </head>
 
 <body>

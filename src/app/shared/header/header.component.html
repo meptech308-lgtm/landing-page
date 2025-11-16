@@ -2,7 +2,7 @@
     <!-- Top bar -->
     <div class="text-white topbar">
         <div class="dealer">
-            <p class="mb-0 small">A Daikin Authorized Dealer</p>
+            <p class="mb-0 small">A DAIKIN AUTHORIZED DEALER</p>
         </div>
         <div class="topbar-contact">
             <p class="mb-0">
@@ -32,7 +32,7 @@
 
         <!-- Menu -->
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-            <ul class="navbar-nav gap-3">
+            <ul class="navbar-nav gap-5">
 
                 <!-- Multilevel Dropdown -->
                 <li class="nav-item dropdown" [class.show]="dropdownOpen" (mouseleave)="dropdownOpen=false">
@@ -44,7 +44,8 @@
                     <ul class="dropdown-menu multilevel-dropdown" [class.show]="dropdownOpen"
                         aria-labelledby="productsDropdown">
                         <ng-container *ngFor="let cat of categories">
-                            <li class="parent" [class.open]="cat.open" (mouseenter)="openCategory(cat)"
+                            <li class="parent" [class.open]="cat.open" 
+                                (mouseenter)="openCategory(cat, $event)"
                                 (mouseleave)="cat.open=false">
                                 <a href="#" class="dropdown-item" (click)="toggleCategory($event, cat)">
                                     {{ cat.name }}
@@ -54,15 +55,16 @@
                                 <ul class="child dropdown-menu" [class.show]="cat.open">
                                     <!-- Direct items -->
                                     <li *ngFor="let item of cat.directItems">
-                                        <a class="dropdown-item" [routerLink]="['/products', item.route]"
-                                            (click)="closeNavbar()">
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            (click)="navigateToProduct($event, item)">
                                             {{ item.name }}
                                         </a>
                                     </li>
 
                                     <!-- Subcategories -->
                                     <li *ngFor="let sub of cat.items" class="parent" [class.open]="sub.open"
-                                        (mouseenter)="openCategory(sub)" (mouseleave)="sub.open=false">
+                                        (mouseenter)="openCategory(sub, $event)" 
+                                        (mouseleave)="sub.open=false">
                                         <a href="#" class="dropdown-item"
                                             (click)="sub.items ? toggleCategory($event, sub) : closeNavbar()">
                                             {{ sub.name }}
@@ -72,8 +74,8 @@
                                         <ul class="child dropdown-menu" [class.show]="sub.open"
                                             *ngIf="sub.items?.length">
                                             <li *ngFor="let item of sub.items">
-                                                <a class="dropdown-item" [routerLink]="['/products', item.route]"
-                                                    (click)="closeNavbar()">
+                                                <a class="dropdown-item" href="javascript:void(0)"
+                                                    (click)="navigateToProduct($event, item)">
                                                     {{ item.name }}
                                                 </a>
                                             </li>
