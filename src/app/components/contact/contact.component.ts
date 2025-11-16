@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [BannerComponent, ReactiveFormsModule, CommonModule],
+  imports: [BannerComponent, ReactiveFormsModule, CommonModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -35,7 +36,7 @@ Project Details: ${formValues.details}`;
 
       const encodedMessage = encodeURIComponent(message);
 
-      const whatsappNumber = '971503471731';
+      const whatsappNumber = '971523124576';
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
       window.open(whatsappUrl, '_blank');
@@ -47,7 +48,7 @@ Project Details: ${formValues.details}`;
   }
 
   openMap() {
-    const mapUrl = 'https://maps.app.goo.gl/2wPdFbUEN1iMPjxX6';
+    const mapUrl = 'https://share.google/wiHKuxZiVfYb826jz';
     window.open(mapUrl, '_blank');
   }
 
