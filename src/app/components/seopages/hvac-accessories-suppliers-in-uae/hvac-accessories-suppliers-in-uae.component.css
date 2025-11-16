@@ -1,5 +1,4 @@
 .hero-section {
-  background: url('/seo/HVAC accessories suppliers in UAE.jpg') center center/cover no-repeat;
   min-height: 75vh;
   display: flex;
   align-items: center;
@@ -9,36 +8,44 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 5rem;
+  margin-top: 3rem;
+  gap: 3rem;
 }
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 0;
+.hero-section img{
+  width: 100%;
+  height: 433px;
 }
-
-.hero-tile {
-  z-index: 2;
-  padding: 3rem;
-  max-width: 1000px;
-}
-
-.hero-tile h1 {
+.hero-title h1 {
   font-size: 2.4rem;
-  color: #EA4D44;
+  color: #000;
   margin-bottom: 1rem;
   line-height: 1.3;
 }
 
-.hero-tile p {
+.hero-title p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #fff;
+  color: #333;
+}
+.hero-section a.btn-call {
+    padding: 14px 32px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #EA4D44;
+    background-color: #EA4D44;
+    color: #fff;
+    text-decoration: none;
+    display: inline-flex;
+    gap:10px;
 }
 
-
+.hero-section a.btn-call:hover {
+    background: #EA4D44;
+    transform: translateY(-3px);
+}
 
 .about-section {
   text-align: center;
@@ -48,9 +55,9 @@
   align-items: center;
   background: linear-gradient(135deg, #ffffff, #f4f5f9);
   border-radius: 12px;
-  margin: 2rem auto 5rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
   gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .about-section h2 {
@@ -340,11 +347,11 @@
 
 
 @media (max-width: 1024px) {
-  .hero-tile h1 {
+  .hero-title h1 {
     font-size: 2rem;
   }
 
-  .hero-tile p {
+  .hero-title p {
     font-size: 1rem;
   }
 
@@ -372,7 +379,7 @@
     min-height: 55vh;
   }
 
-  .hero-tile h1 {
+  .hero-title h1 {
     font-size: 1.6rem;
     line-height: 1.3;
   }
@@ -392,29 +399,33 @@
 
 @media (max-width: 600px) {
   .hero-section {
+    margin-top: 1rem;
     min-height: 45vh;
+    gap: 2rem;
   }
-
-  .hero-tile {
-    padding: 1rem;
+  .hero-section img{
+    width: 100%;
+    height: 100%;
   }
-
-  .hero-tile h1 {
+  .hero-title h1 {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
   }
 
-  .hero-tile p {
+  .hero-title p {
     font-size: 0.9rem;
     line-height: 1.4;
   }
-
+  .hero-section a.btn-call {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+   
   .about-section,
   .why-section,
   .image-text-section,
   .for-section,
   .faq-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding: 1.5rem 1rem;
   }
 
