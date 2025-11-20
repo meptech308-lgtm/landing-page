@@ -16,31 +16,107 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <video:tag>MEPTECH</video:tag>
       </video:video>
   </url>
+
   <url>
-    <loc>https://meptechuae.com/</loc>
+    <loc>https://meptechuae.com/about</loc>  
   </url>
   <url>
-    <loc>https://meptechuae.com/about</loc>
+    <loc>https://meptechuae.com/contact</loc> 
   </url>
   <url>
-    <loc>https://meptechuae.com/contact</loc>
+    <loc>https://meptechuae.com/projects</loc>  
   </url>
   <url>
-    <loc>https://meptechuae.com/projects</loc>
+    <loc>https://meptechuae.com/products</loc> 
+  </url>
+
+  <url>
+    <loc>https://meptechuae.com/hvac-accessories-suppliers-in-uae</loc> 
   </url>
   <url>
-    <loc>https://meptechuae.com/products</loc>
+    <loc>https://meptechuae.com/hvac-accessories-suppliers-in-dubai</loc> 
   </url>
   <url>
-    <loc>https://meptechuae.com/hvac-accessories-suppliers-in-uae</loc>
-  </url>
-  <url>
-    <loc>https://meptechuae.com/hvac-accessories-suppliers-in-dubai</loc>
-  </url>
-  <url>
-    <loc>https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi</loc>
+    <loc>https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi</loc>  
   </url>
   <url>
     <loc>https://meptechuae.com/hvac-accessories-suppliers-in-sharjah</loc>
   </url>
+
+  <url>
+    <loc>https://meptechuae.com/products/airhandling</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/cassette</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/ceilingdiffu</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/concealedac</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/controlunits</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/ecologyunit</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/erv</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/fancoil</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/firedamper</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/fvw</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/lineargrills</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/linearslot</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/motorized</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/nonreturndam</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/registers</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/rooftoppackage</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/soundatte</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/thermostat</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/thermostat2</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/variablereturn</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/volumecontrol</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/vrvapt</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/vrviv+</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/vrvx</loc>
+  </url>
+  <url>
+    <loc>https://meptechuae.com/products/wallsplit</loc>
+  </url>
+
 </urlset>

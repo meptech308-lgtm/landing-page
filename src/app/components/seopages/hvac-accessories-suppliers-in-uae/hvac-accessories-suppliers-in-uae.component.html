@@ -5,7 +5,7 @@
             <p>We are an authorized Daikin HVAC supplier providing high-quality HVAC accessories that meet the needs of every setting — from large industrial projects to villas and bungalows.</p>
         </div>
         <a href="tel:+97144919004" class="btn-call"><i class="bi bi-telephone-fill"></i> Call Now</a>
-        <img src="/seo/HVAC accessories suppliers in UAE.jpg" alt="">
+        <img src="/seo/featuredUAE.jpg" alt="">
     </div>
 
     <div class="about-section">
@@ -13,7 +13,7 @@
         <p>We are an authorized Daikin HVAC products supplier and a complete solutions provider in UAE. With years of industrial experience, we have built a loyal customer base across the region. Our team efficiently supplies industries with the products they need, quickly and according to customer urgency. Whether it’s central or cassette air conditioners or any types, our HVAC experts provide world-class accessories through authorized Daikin dealers. Focused on customer satisfaction, product quality, and timely delivery, we are recognized among the top HVAC companies in UAE.</p>
         <p>If your Looking for trusted HVAC equipment suppliers in UAE, As a Daikin authorized dealer, we provide high-quality HVAC products and accessories across the UAE. Our ready stock includes VRV IV +, VRV X, Wall Split, VRV APT, compressor, ecology unit, concealed ac unit, fan coil units, Volume Control Damper, Variable Return Damper, Thermostat, Sound Attenuators, Roof Top Package, and other essential HVAC system accessories.</p>
         <p>We also supply reliable HVAC tools and air conditioning equipment for service providers and technicians. Whether you need a single component or a complete system, we deliver to any location in the UAE like Dubai, Abu Dhabi, Sharjah etc. Our products are recommended for their quality and performance. For professional service and trusted HVAC accessories suppliers in UAE, choose us for fast, dependable delivery and support.</p>
-
+        <a href="tel:+97144919004" class="btn-call"><i class="bi bi-telephone-fill"></i> Call Now</a>
     </div>
 
     <div class="why-section">
@@ -48,22 +48,25 @@
         </div>
     </div>
 
-    <div class="faq-section">
-        <h2>FAQ’s</h2>
-        <div class="faq-cards">
-            <div class="faq-card" *ngFor="let faq of faqs; let i = index" [class.open]="faq.open" (click)="toggleFAQ(i)">
-                <div class="faq-header">
-                    <h3>{{ faq.qns }}</h3>
-                    <span class="icon">
-                        <i [class]="faq.open ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"></i>
-                    </span>
-                </div>
+    <div class="faq-sectionmain">
+        <div class="faq-section">
+            <h2>FAQ’s</h2>
+            <div class="faq-cards">
+                <div class="faq-card" *ngFor="let faq of faqs; let i = index" [class.open]="faq.open" (click)="toggleFAQ(i)">
+                    <div class="faq-header">
+                        <h3>{{ faq.qns }}</h3>
+                        <span class="icon">
+                            <i [class]="faq.open ? 'bi bi-chevron-up' : 'bi bi-chevron-down'"></i>
+                        </span>
+                    </div>
 
-                <div class="faq-body" [class.open]="faq.open">
-                    <p>{{ faq.ans }}</p>
+                    <div class="faq-body" [class.open]="faq.open">
+                        <p>{{ faq.ans }}</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <a href="tel:+97144919004" class="btn-call"><i class="bi bi-telephone-fill"></i> Call Now</a>
     </div>
 
 </div>
