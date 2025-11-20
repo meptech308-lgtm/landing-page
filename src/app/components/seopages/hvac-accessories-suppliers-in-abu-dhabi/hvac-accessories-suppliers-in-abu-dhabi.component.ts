@@ -57,13 +57,6 @@ export class HvacAccessoriesSuppliersInAbuDhabiComponent {
 
   ngOnInit(): void {
 
-    // Remove default index.html OG tags
-    this.metaService.removeTag("property='og:title'");
-    this.metaService.removeTag("property='og:description'");
-    this.metaService.removeTag("property='og:image'");
-    this.metaService.removeTag("property='og:url'");
-
-
     this.titleService.setTitle('HVAC suppliers in Abu Dhabi, UAE | Best HVAC companies | HVAC equipment');
 
     this.metaService.updateTag({
@@ -80,5 +73,12 @@ export class HvacAccessoriesSuppliersInAbuDhabiComponent {
     this.metaService.updateTag({ property: 'og:description', content: "We are daikin authorized hvac suppliers in abu dhabi uae. including dubai we are supplying hvac equipment and air conditioning spare parts in uae. for more call us!" });
     this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredABUDHABI.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi' });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'HVAC suppliers in Abu Dhabi, UAE | Best HVAC companies | HVAC equipment' });
+    this.metaService.updateTag({ name: 'twitter:description', content: "We are daikin authorized hvac suppliers in abu dhabi uae. including dubai we are supplying hvac equipment and air conditioning spare parts in uae. for more call us!" });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://meptechuae.com/seo/featuredABUDHABI.jpg' });
+    this.metaService.updateTag({ name: 'twitter:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi' });
+
   }
 }

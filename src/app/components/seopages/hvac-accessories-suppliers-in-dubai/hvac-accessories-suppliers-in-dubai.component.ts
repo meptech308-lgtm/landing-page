@@ -56,12 +56,6 @@ export class HvacAccessoriesSuppliersInDubaiComponent {
     constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    // Remove default index.html OG tags
-    this.metaService.removeTag("property='og:title'");
-    this.metaService.removeTag("property='og:description'");
-    this.metaService.removeTag("property='og:image'");
-    this.metaService.removeTag("property='og:url'");
-
 
     this.titleService.setTitle('HVAC accessories suppliers in Dubai, UAE | AC spare parts supplier');
 
@@ -79,5 +73,12 @@ export class HvacAccessoriesSuppliersInDubaiComponent {
     this.metaService.updateTag({ property: 'og:description', content: "Why not meptech's HVAC accessories suppliers in dubai? we are not just ac spare parts in dubai uae. we are best choice for air conditioner, compressor and refrigerant gas supplier." });
     this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredDUBAI.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-dubai' });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'HVAC accessories suppliers in Dubai, UAE | AC spare parts supplier' });
+    this.metaService.updateTag({ name: 'twitter:description', content: "Why not meptech's HVAC accessories suppliers in dubai? we are not just ac spare parts in dubai uae. we are best choice for air conditioner, compressor and refrigerant gas supplier." });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://meptechuae.com/seo/featuredDUBAI.jpg' });
+    this.metaService.updateTag({ name: 'twitter:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-dubai' });
+
   }
 }
