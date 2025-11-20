@@ -102,12 +102,12 @@ faqs: any[] = [
 
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'HVAC accessories suppliers UAE, Daikin dealer Dubai, AC spare parts suppliers UAE'
+      content: 'MEPTECH, DAIKIN AUTHORIZED DEALER, DAIKIN DEALER IN UAE, AIR CONDITION TRADING, AC UNITS, AC DEALER, AIR CONDITION, HVAC, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, FLOWBAR, HIDDEN FRAME DIFFUSER, VAV, PRESSURE INDEPENDENT VAV, BY PASS VAV, LOUVERS, SAND TRAP LOUVERS, CROSS TALK ATTENUATORS'
     });
 
     this.metaService.updateTag({ property: 'og:title', content: ' HVAC suppliers in Sharjah, UAE | Daikin company HVAC systems dealer dealers in UAE' });
     this.metaService.updateTag({ property: 'og:description', content: ' Choose best hvac suppliers in sharjah based on your equipment. yes we are hvac equipment, hvac systems dealers in sharjah to supplying daikin brand solution.' });
-    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/HVAC accessories suppliers in UAE.jpg' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredSHARJAH.jpg'});
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-sharjah' });
   }
   toggleFAQ(index: number): void {
