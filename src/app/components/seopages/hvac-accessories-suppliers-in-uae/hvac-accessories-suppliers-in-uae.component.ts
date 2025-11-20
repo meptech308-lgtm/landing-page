@@ -90,12 +90,6 @@ faqs: any[] = [
 
   ngOnInit(): void {
 
-    // Remove default index.html OG tags
-    this.metaService.removeTag("property='og:title'");
-    this.metaService.removeTag("property='og:description'");
-    this.metaService.removeTag("property='og:image'");
-    this.metaService.removeTag("property='og:url'");
-
     this.titleService.setTitle('HVAC accessories suppliers in UAE | Daikin dealer Dubai  | AC spare part suppliers');
 
     this.metaService.updateTag({
@@ -112,6 +106,12 @@ faqs: any[] = [
     this.metaService.updateTag({ property: 'og:description', content: 'We are best hvac accessories suppliers in uae. our ac, air conditioner spare part and services available all over uae like dubai etc. for air condition parts suppliers, call us!' });
     this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredUAE.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-uae' });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'HVAC accessories suppliers in UAE | Daikin dealer Dubai | AC spare part suppliers' });
+    this.metaService.updateTag({ name: 'twitter:description', content: 'We are best hvac accessories suppliers in uae. our ac, air conditioner spare part and services available all over uae like dubai etc. for air condition parts suppliers, call us!' });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://meptechuae.com/seo/featuredUAE.jpg' });
+    this.metaService.updateTag({ name: 'twitter:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-uae' });
   }
   toggleFAQ(index: number): void {
     this.faqs.forEach((faq, i) => {

@@ -109,6 +109,13 @@ faqs: any[] = [
     this.metaService.updateTag({ property: 'og:description', content: ' Choose best hvac suppliers in sharjah based on your equipment. yes we are hvac equipment, hvac systems dealers in sharjah to supplying daikin brand solution.' });
     this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredSHARJAH.jpg'});
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-sharjah' });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'HVAC suppliers in Sharjah, UAE | Daikin company HVAC systems dealer dealers in UAE' });
+    this.metaService.updateTag({ name: 'twitter:description', content: 'Choose best hvac suppliers in sharjah based on your equipment. yes we are hvac equipment, hvac systems dealers in sharjah to supplying daikin brand solution.' });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://meptechuae.com/seo/featuredSHARJAH.jpg' });
+    this.metaService.updateTag({ name: 'twitter:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-sharjah' });
+
   }
   toggleFAQ(index: number): void {
     this.faqs.forEach((faq, i) => {

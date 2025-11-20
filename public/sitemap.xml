@@ -16,7 +16,6 @@ xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
         <video:tag>MEPTECH</video:tag>
       </video:video>
   </url>
-
   <url>
     <loc>https://meptechuae.com/about</loc>  
   </url>
