@@ -18,7 +18,7 @@ export class HvacAccessoriesSuppliersInAbuDhabiComponent {
     {
       id: 2,
       head: 'Strong Stock and Fast Delivery Across the UAE',
-      para: 'As one of the leading HVAC suppliers in Abu Dhabi, we maintain a large inventory of Daikin air conditioners, VRF systems, fan coil units, chillers, heat pumps, compressors, and refrigeration spare parts. Our pre-stocked warehouse supports fast delivery across Dubai, Sharjah, and the United Arab Emirates, minimizing project delays. Whether you need ductwork materials, flexible ducts, copper pipes, or closed cell elastomeric insulation, we provide high-quality HVAC tools and accessories to keep your projects running efficiently.'
+      para: 'As one of the leading HVAC suppliers in Abu Dhabi, we maintain a large inventory of Daikin air conditioners, VRF systems, fan coil units, chillers, heat pumps, compressors, and refrigeration spare parts. Our pre-stocked warehouse supports fast delivery across Dubai, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-sharjah" class="internal-link">Sharjah</a>, and the United Arab Emirates, minimizing project delays. Whether you need ductwork materials, flexible ducts, copper pipes, or closed cell elastomeric insulation, we provide high-quality HVAC tools and accessories to keep your projects running efficiently.'
     },
     {
       id: 3,
@@ -33,12 +33,12 @@ export class HvacAccessoriesSuppliersInAbuDhabiComponent {
     {
       id: 5,
       head: 'Focused on Contractor Partnerships',
-      para: 'We value long-term relationships with HVAC contractors in Abu Dhabi and across the UAE. As a professional HVAC supplier, we provide customized HVAC solutions, quick communication, and dedicated project support. Our team collaborates with MEP contractors, HVAC consultants, and HVAC manufacturing companies in Abu Dhabi to supply reliable heating, ventilation, and air conditioning equipment for diverse industries.'
+      para: 'We value <a href="https://meptechuae.com/products/cassette" class="internal-link">long-term relationships with HVAC contractors</a> in Abu Dhabi and across the UAE. As a professional HVAC supplier, we provide customized HVAC solutions, quick communication, and dedicated project support. Our team collaborates with MEP contractors, HVAC consultants, and HVAC manufacturing companies in Abu Dhabi to supply reliable heating, ventilation, and air conditioning equipment for diverse industries.'
     },
     {
       id: 6,
       head: 'Commitment to Quality and International Standards',
-      para: 'As one of the top HVAC companies in the UAE, our operations follow strict international standards of performance, safety, and quality control. Every Daikin product we offer — from air ducts and duct accessories to compressors, refrigerants, and refrigeration components — is tested for durability and compliance. Our focus on sustainability, innovation, and high-quality products makes us a market leader in commercial hvac suppliers and residential air conditioning supply.'
+      para: 'As one of the top <a href="https://meptechuae.com/hvac-accessories-suppliers-in-uae" class="internal-link">HVAC companies in the UAE</a>, our operations follow strict international standards of performance, safety, and quality control. Every Daikin product we offer — from air ducts and duct accessories to compressors, refrigerants, and refrigeration components — is tested for durability and compliance. Our focus on sustainability, innovation, and high-quality products makes us a market leader in commercial hvac suppliers and residential air conditioning supply.'
     },
     {
       id: 7,
@@ -48,7 +48,7 @@ export class HvacAccessoriesSuppliersInAbuDhabiComponent {
     {
       id: 8,
       head: 'UAE-Wide Reach and Easy Accessibility',
-      para: 'Headquartered in Abu Dhabi, our HVAC company proudly serves Dubai, Sharjah, Ajman, and Ras Al Khaimah. Our strong logistics network supports quick supply of HVAC systems, air conditioning equipment, and ventilation solutions throughout the country. Whether it’s a commercial HVAC project or a residential installation, we guarantee reliable delivery, support, and on-site assistance.'
+      para: 'Headquartered in Abu Dhabi, our HVAC company proudly serves Dubai, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-sharjah" class="internal-link">Sharjah</a>, Ajman, and Ras Al Khaimah. Our strong logistics network supports quick supply of HVAC systems, air conditioning equipment, and ventilation solutions throughout the country. Whether it’s a commercial HVAC project or a residential installation, we guarantee reliable delivery, support, and on-site assistance.'
     },
   ]
 

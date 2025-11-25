@@ -25,7 +25,7 @@ export class HvacAccessoriesSuppliersInUaeComponent {
     {
       id: 3,
       head: 'Competitive Pricing & Flexible Terms',
-      para: 'We offer fair pricing, bulk discounts, and flexible payment options for UAE HVAC companies. Our deals on air conditioning accessories spare parts in Dubai, and HVAC accessories make purchasing cost-effective without compromising quality.'
+      para: 'We offer fair pricing, bulk discounts, and flexible payment options for UAE HVAC companies. Our deals on <a href="https://meptechuae.com/hvac-accessories-suppliers-in-dubai" class="internal-link">air conditioning accessories spare parts in Dubai</a>, and HVAC accessories make purchasing cost-effective without compromising quality.'
     },
     {
       id: 4,
