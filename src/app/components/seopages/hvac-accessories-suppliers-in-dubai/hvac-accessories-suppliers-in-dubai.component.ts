@@ -33,7 +33,7 @@ export class HvacAccessoriesSuppliersInDubaiComponent {
     {
       id: 5,
       head: 'Fast Delivery & Reliable Logistics',
-      para: 'Meptech supplies HVAC equipment, AC parts, and HVAC accessories across all UAE emirates, including Dubai, Abu Dhabi, Sharjah, and Ras Al Khaimah. With ready stock of HVAC products and careful logistics, we guarantee timely delivery for industrial projects.'
+      para: 'Meptech supplies HVAC equipment, AC parts, and HVAC accessories across all UAE emirates, including Dubai, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi" class="internal-link">Abu Dhabi</a>, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-sharjah" class="internal-link">Sharjah</a>, and Ras Al Khaimah. With ready stock of HVAC products and careful logistics, we guarantee timely delivery for industrial projects.'
     },
     {
       id: 6,

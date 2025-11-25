@@ -19,12 +19,12 @@ export class HvacAccessoriesSuppliersInSharjahComponent {
     {
       id: 2,
       head: 'Strong Inventory Across All Daikin Categories',
-      para: 'Our Sharjah warehouse keeps a complete range of Daikin commercial HVAC systems, VRV IV+, VRV X, AHUs, FCUs, compressors, ecology units, and HVAC accessories. We also stock ductwork materials from HVAC duct manufacturers in Sharjah, including GI, galvanized, and Betec CAD products. With strong inventory and ac wholesale supply, contractors can finish installations without delays.'
+      para: 'Our Sharjah warehouse keeps a complete range of Daikin commercial HVAC systems, <a href="https://meptechuae.com/products/vrviv" class="internal-link">VRV IV+</a>, <a href="https://meptechuae.com/products/vrvx" class="internal-link">VRV X</a>, AHUs, FCUs, compressors, ecology units, and HVAC accessories. We also stock ductwork materials from HVAC duct manufacturers in Sharjah, including GI, galvanized, and Betec CAD products. With strong inventory and ac wholesale supply, contractors can finish installations without delays.'
     },
     {
       id: 3,
       head: 'Fast Delivery Across Sharjah & the UAE',
-      para: 'We provide fast delivery to all areas of Sharjah—industrial zones, commercial hubs, and residential neighborhoods. We also supply HVAC companies in Dubai, Abu Dhabi, Ajman, and across the Middle East. Our efficient logistics help contractors complete air conditioning, chiller, ventilation, and outdoor setup tasks on schedule.'
+      para: 'We provide fast delivery to all areas of Sharjah—industrial zones, commercial hubs, and residential neighborhoods. We also supply HVAC companies in <a href="https://meptechuae.com/hvac-accessories-suppliers-in-dubai" class="internal-link">Dubai</a>, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi" class="internal-link">Abu Dhabi</a>, Ajman, and across the Middle East. Our efficient logistics help contractors complete air conditioning, chiller, ventilation, and outdoor setup tasks on schedule.'
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ export class HvacAccessoriesSuppliersInSharjahComponent {
     {
       id: 8,
       head: 'Latest Daikin Models & Market Updates',
-      para: 'We supply the newest Daikin heating and cooling technologies, VRV X series, advanced AHUs, cutting-edge air-conditioning systems, and energy-efficient HVAC units used by leading HVAC companies in Sharjah. Contractors also receive insights from global HVAC equipment manufacturers, allowing them to stay updated with the latest climate-control solutions and industry trends in the Middle East.'
+      para: 'We supply the newest Daikin heating and cooling technologies, <a href="https://meptechuae.com/products/vrvx" class="internal-link">VRV X</a> series, advanced AHUs, cutting-edge air-conditioning systems, and energy-efficient HVAC units used by leading HVAC companies in Sharjah. Contractors also receive insights from global HVAC equipment manufacturers, allowing them to stay updated with the latest climate-control solutions and industry trends in the Middle East.'
     },
   ]
 faqs: any[] = [
