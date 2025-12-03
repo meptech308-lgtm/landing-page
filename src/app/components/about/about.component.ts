@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild ,OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,13 +8,17 @@ import { Meta, Title } from '@angular/platform-browser';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent implements AfterViewInit {
+export class AboutComponent implements AfterViewInit,OnInit {
   noteBackground = 'url(/banner2.png)';
 
   isMuted = true;
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
 
   constructor(private titleService: Title, private metaService: Meta) { }
+
+   ngOnInit() {
+    this.updateMetaTags();
+  }
 
   ngAfterViewInit() {
     this.bgVideo.nativeElement.muted = this.isMuted;

@@ -11,15 +11,18 @@
     </div>
 
     <div class="enquire">
-        <button>Enquire Now</button>
-    </div>
+  <a href="tel:+971523124576">
+    <button>Call Now</button>
+  </a>
+</div>
+
 
     <app-features [features]="product.features"></app-features>
 
     <div class="images-grid">
-        <div class="image-card full-width" *ngIf="product.subImages.length > 0">
+        <!-- <div class="image-card full-width" *ngIf="product.subImages.length > 0">
             <img [src]="product.subImages[0]" alt="Product image">
-        </div>
+        </div> -->
 
         <div class="image-card centered" *ngIf="product.subImages.length > 1">
             <img [src]="product.subImages[1]" alt="Product image">
