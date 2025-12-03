@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Router  } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -10,10 +11,11 @@ import { RouterModule } from '@angular/router';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   contactForm: FormGroup;
+  showPopup: boolean = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private router: Router,private title: Title) {
     this.contactForm = this.fb.group({
       fullName: ['', Validators.required],
       phone: ['', Validators.required],
@@ -22,6 +24,11 @@ export class ContactComponent {
       details: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
+
+  ngOnInit(): void {
+  this.title.setTitle('Contact | MEPTECH Air-condition Trading LLC');
+  }
+
 
   onSubmit() {
     if (this.contactForm.valid) {
@@ -41,11 +48,18 @@ Project Details: ${formValues.details}`;
 
       window.open(whatsappUrl, '_blank');
 
+      this.showPopup = true;
+
       this.contactForm.reset();
     } else {
       this.contactForm.markAllAsTouched();
     }
   }
+
+  goTo(path: string) {
+  this.showPopup = false;     // hide popup
+  this.router.navigate([path]); // navigate to home
+}
 
   openMap() {
     const mapUrl = 'https://share.google/wiHKuxZiVfYb826jz';
