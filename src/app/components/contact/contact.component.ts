@@ -31,30 +31,44 @@ export class ContactComponent implements OnInit {
 
 
   onSubmit() {
-    if (this.contactForm.valid) {
-      const formValues = this.contactForm.value;
 
-      const message = `New Quote Request:
+  if (this.contactForm.invalid) {
+
+    (window as any).dataLayer.push({
+      event: 'form_error',
+      form_name: 'contact_page_form'
+    });
+
+    this.contactForm.markAllAsTouched();
+    return;
+  }
+
+  const formValues = this.contactForm.value;
+
+  const message = `New Quote Request:
 Full Name: ${formValues.fullName}
 Phone: ${formValues.phone}
 Email: ${formValues.email}
 Enquiry Type: ${formValues.enquiry}
 Project Details: ${formValues.details}`;
 
-      const encodedMessage = encodeURIComponent(message);
+  const encodedMessage = encodeURIComponent(message);
 
-      const whatsappNumber = '971523124576';
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+  const whatsappNumber = '971523124576';
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-      window.open(whatsappUrl, '_blank');
+  window.open(whatsappUrl, '_blank');
 
-      this.showPopup = true;
+  this.showPopup = true;
 
-      this.contactForm.reset();
-    } else {
-      this.contactForm.markAllAsTouched();
-    }
-  }
+  (window as any).dataLayer.push({
+    event: 'form_success',
+    form_name: 'contact_page_form'
+  });
+
+  this.contactForm.reset();
+}
+
 
   goTo(path: string) {
   this.showPopup = false;     // hide popup
