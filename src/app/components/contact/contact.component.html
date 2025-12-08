@@ -78,6 +78,10 @@
 
             <!-- Button -->
             <button type="submit" class="btn-submit">Request a Quote</button>
+            <div *ngIf="showPopup" class="success-message">
+                <i class="bi bi-check-circle-fill"></i>
+                <div>Thank you! Your request has been submitted successfully.</div>
+            </div>
         </form>
     </div>
 
@@ -113,16 +117,9 @@
             </div>
         </div>
     </div>
-</div>
+    <button type="button" (click)="showPopup = true" class="btn-submit" style="margin-top: 20px;">
+  Show Success Message (Test)
+</button>
 
-<div class="thankyou" *ngIf="showPopup">
-    <div class="popup-card">
-        <div class="tick">
-            <i class="bi bi-check"></i>
-        </div>
-        <h3>Thank You!</h3>
-        <p>Your request has been submitted successfully.</p>
-        <button (click)="goTo('/')">Go to Home</button>
-    </div>
 </div>
 
