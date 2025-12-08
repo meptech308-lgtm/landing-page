@@ -2,12 +2,11 @@ import { Component,OnInit } from '@angular/core';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterModule,Router  } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
-  imports: [BannerComponent, ReactiveFormsModule, CommonModule, RouterModule],
+  imports: [BannerComponent, ReactiveFormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -15,7 +14,7 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   showPopup: boolean = false;
 
-  constructor(private fb: FormBuilder,private router: Router,private title: Title) {
+  constructor(private fb: FormBuilder,private title: Title) {
     this.contactForm = this.fb.group({
       fullName: ['', Validators.required],
       phone: ['', Validators.required],
@@ -60,6 +59,9 @@ Project Details: ${formValues.details}`;
   window.open(whatsappUrl, '_blank');
 
   this.showPopup = true;
+  setTimeout(() => {
+    this.showPopup = false;
+  }, 1000);
 
   (window as any).dataLayer.push({
     event: 'form_success',
@@ -69,11 +71,6 @@ Project Details: ${formValues.details}`;
   this.contactForm.reset();
 }
 
-
-  goTo(path: string) {
-  this.showPopup = false;     // hide popup
-  this.router.navigate([path]); // navigate to home
-}
 
   openMap() {
     const mapUrl = 'https://share.google/wiHKuxZiVfYb826jz';
