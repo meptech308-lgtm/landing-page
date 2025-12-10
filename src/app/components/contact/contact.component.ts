@@ -61,7 +61,7 @@ Project Details: ${formValues.details}`;
   this.showPopup = true;
   setTimeout(() => {
     this.showPopup = false;
-  }, 1000);
+  }, 3000);
 
   (window as any).dataLayer.push({
     event: 'form_success',
@@ -69,6 +69,8 @@ Project Details: ${formValues.details}`;
   });
 
   this.contactForm.reset();
+  this.contactForm.markAsPristine();
+  (this.contactForm as any).markAsUntouched?.();
 }
 
 
