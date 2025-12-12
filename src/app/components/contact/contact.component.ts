@@ -59,9 +59,6 @@ Project Details: ${formValues.details}`;
   window.open(whatsappUrl, '_blank');
 
   this.showPopup = true;
-  setTimeout(() => {
-    this.showPopup = false;
-  }, 3000);
 
   (window as any).dataLayer.push({
     event: 'form_success',
