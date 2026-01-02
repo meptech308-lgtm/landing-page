@@ -182,6 +182,34 @@ textarea.form-control {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(234, 77, 68, 0.25);
 }
+.success-message {
+  margin-top: 25px;
+  padding: 15px;
+  background: #e6ffe9;
+  border: 1px solid #28a745;
+  border-radius: 8px;
+  color: #155724;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.success-message .bi-check-circle-fill {
+  font-size: 1.3rem;
+  color: #28a745;
+}
+.success-message {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
 
 @media (max-width: 768px) {
     .row {
@@ -202,6 +230,16 @@ textarea.form-control {
 
     .location .val button {
         width: 100%;
+    }
+    .success-message {
+        margin-top: 25px;
+        padding: 12px;
+        font-size: 0.9rem;
+        gap: 9px;
+    }
+
+    .success-message .bi-check-circle-fill {
+        font-size: 1.1rem;
     }
 }
 
@@ -231,5 +269,15 @@ textarea.form-control {
 
     .location .val p {
         font-size: 0.9rem;
+    }
+    .success-message {
+        margin-top: 25px;
+        padding: 10px;
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+
+    .success-message .bi-check-circle-fill {
+        font-size: 1rem;
     }
 }

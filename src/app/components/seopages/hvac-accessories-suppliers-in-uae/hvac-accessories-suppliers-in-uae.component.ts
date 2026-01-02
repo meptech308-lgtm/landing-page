@@ -25,7 +25,7 @@ export class HvacAccessoriesSuppliersInUaeComponent {
     {
       id: 3,
       head: 'Competitive Pricing & Flexible Terms',
-      para: 'We offer fair pricing, bulk discounts, and flexible payment options for UAE HVAC companies. Our deals on air conditioning accessories spare parts in Dubai, and HVAC accessories make purchasing cost-effective without compromising quality.'
+      para: 'We offer fair pricing, bulk discounts, and flexible payment options for UAE HVAC companies. Our deals on <a href="https://meptechuae.com/hvac-accessories-suppliers-in-dubai" class="internal-link">air conditioning accessories spare parts in Dubai</a>, and HVAC accessories make purchasing cost-effective without compromising quality.'
     },
     {
       id: 4,
@@ -89,6 +89,7 @@ faqs: any[] = [
     constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
+
     this.titleService.setTitle('HVAC accessories suppliers in UAE | Daikin dealer Dubai  | AC spare part suppliers');
 
     this.metaService.updateTag({
@@ -98,13 +99,19 @@ faqs: any[] = [
 
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'HVAC accessories suppliers UAE, Daikin dealer Dubai, AC spare parts suppliers UAE'
+      content: 'MEPTECH, DAIKIN AUTHORIZED DEALER, DAIKIN DEALER IN UAE, AIR CONDITION TRADING, AC UNITS, AC DEALER, AIR CONDITION, HVAC, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, FLOWBAR, HIDDEN FRAME DIFFUSER, VAV, PRESSURE INDEPENDENT VAV, BY PASS VAV, LOUVERS, SAND TRAP LOUVERS, CROSS TALK ATTENUATORS'
     });
 
     this.metaService.updateTag({ property: 'og:title', content: 'HVAC accessories suppliers in UAE | Daikin dealer Dubai  | AC spare part suppliers' });
     this.metaService.updateTag({ property: 'og:description', content: 'We are best hvac accessories suppliers in uae. our ac, air conditioner spare part and services available all over uae like dubai etc. for air condition parts suppliers, call us!' });
-    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/HVAC accessories suppliers in UAE.jpg' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredUAE.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-uae' });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'HVAC accessories suppliers in UAE | Daikin dealer Dubai | AC spare part suppliers' });
+    this.metaService.updateTag({ name: 'twitter:description', content: 'We are best hvac accessories suppliers in uae. our ac, air conditioner spare part and services available all over uae like dubai etc. for air condition parts suppliers, call us!' });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://meptechuae.com/seo/featuredUAE.jpg' });
+    this.metaService.updateTag({ name: 'twitter:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-uae' });
   }
   toggleFAQ(index: number): void {
     this.faqs.forEach((faq, i) => {

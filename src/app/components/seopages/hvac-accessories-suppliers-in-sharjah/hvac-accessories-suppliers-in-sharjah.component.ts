@@ -19,12 +19,12 @@ export class HvacAccessoriesSuppliersInSharjahComponent {
     {
       id: 2,
       head: 'Strong Inventory Across All Daikin Categories',
-      para: 'Our Sharjah warehouse keeps a complete range of Daikin commercial HVAC systems, VRV IV+, VRV X, AHUs, FCUs, compressors, ecology units, and HVAC accessories. We also stock ductwork materials from HVAC duct manufacturers in Sharjah, including GI, galvanized, and Betec CAD products. With strong inventory and ac wholesale supply, contractors can finish installations without delays.'
+      para: 'Our Sharjah warehouse keeps a complete range of Daikin commercial HVAC systems, <a href="https://meptechuae.com/products/vrviv" class="internal-link">VRV IV+</a>, <a href="https://meptechuae.com/products/vrvx" class="internal-link">VRV X</a>, AHUs, FCUs, compressors, ecology units, and HVAC accessories. We also stock ductwork materials from HVAC duct manufacturers in Sharjah, including GI, galvanized, and Betec CAD products. With strong inventory and ac wholesale supply, contractors can finish installations without delays.'
     },
     {
       id: 3,
       head: 'Fast Delivery Across Sharjah & the UAE',
-      para: 'We provide fast delivery to all areas of Sharjah—industrial zones, commercial hubs, and residential neighborhoods. We also supply HVAC companies in Dubai, Abu Dhabi, Ajman, and across the Middle East. Our efficient logistics help contractors complete air conditioning, chiller, ventilation, and outdoor setup tasks on schedule.'
+      para: 'We provide fast delivery to all areas of Sharjah—industrial zones, commercial hubs, and residential neighborhoods. We also supply HVAC companies in <a href="https://meptechuae.com/hvac-accessories-suppliers-in-dubai" class="internal-link">Dubai</a>, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi" class="internal-link">Abu Dhabi</a>, Ajman, and across the Middle East. Our efficient logistics help contractors complete air conditioning, chiller, ventilation, and outdoor setup tasks on schedule.'
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ export class HvacAccessoriesSuppliersInSharjahComponent {
     {
       id: 8,
       head: 'Latest Daikin Models & Market Updates',
-      para: 'We supply the newest Daikin heating and cooling technologies, VRV X series, advanced AHUs, cutting-edge air-conditioning systems, and energy-efficient HVAC units used by leading HVAC companies in Sharjah. Contractors also receive insights from global HVAC equipment manufacturers, allowing them to stay updated with the latest climate-control solutions and industry trends in the Middle East.'
+      para: 'We supply the newest Daikin heating and cooling technologies, <a href="https://meptechuae.com/products/vrvx" class="internal-link">VRV X</a> series, advanced AHUs, cutting-edge air-conditioning systems, and energy-efficient HVAC units used by leading HVAC companies in Sharjah. Contractors also receive insights from global HVAC equipment manufacturers, allowing them to stay updated with the latest climate-control solutions and industry trends in the Middle East.'
     },
   ]
 faqs: any[] = [
@@ -102,13 +102,20 @@ faqs: any[] = [
 
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'HVAC accessories suppliers UAE, Daikin dealer Dubai, AC spare parts suppliers UAE'
+      content: 'MEPTECH, DAIKIN AUTHORIZED DEALER, DAIKIN DEALER IN UAE, AIR CONDITION TRADING, AC UNITS, AC DEALER, AIR CONDITION, HVAC, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, FLOWBAR, HIDDEN FRAME DIFFUSER, VAV, PRESSURE INDEPENDENT VAV, BY PASS VAV, LOUVERS, SAND TRAP LOUVERS, CROSS TALK ATTENUATORS'
     });
 
     this.metaService.updateTag({ property: 'og:title', content: ' HVAC suppliers in Sharjah, UAE | Daikin company HVAC systems dealer dealers in UAE' });
     this.metaService.updateTag({ property: 'og:description', content: ' Choose best hvac suppliers in sharjah based on your equipment. yes we are hvac equipment, hvac systems dealers in sharjah to supplying daikin brand solution.' });
-    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/HVAC accessories suppliers in UAE.jpg' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredSHARJAH.jpg'});
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-sharjah' });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'HVAC suppliers in Sharjah, UAE | Daikin company HVAC systems dealer dealers in UAE' });
+    this.metaService.updateTag({ name: 'twitter:description', content: 'Choose best hvac suppliers in sharjah based on your equipment. yes we are hvac equipment, hvac systems dealers in sharjah to supplying daikin brand solution.' });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://meptechuae.com/seo/featuredSHARJAH.jpg' });
+    this.metaService.updateTag({ name: 'twitter:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-sharjah' });
+
   }
   toggleFAQ(index: number): void {
     this.faqs.forEach((faq, i) => {

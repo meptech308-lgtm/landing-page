@@ -71,6 +71,9 @@
     transition: all 0.3s ease;
     min-width: 180px;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .explore-btn {
@@ -78,6 +81,7 @@
     color: #FFFFFF;
     border: none;
     box-shadow: 0 4px 12px rgba(234, 77, 68, 0.4);
+    text-decoration: none;
 }
 
 .explore-btn:hover {

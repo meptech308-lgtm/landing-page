@@ -193,7 +193,7 @@
     line-height: 1.6;
 }
 
-.explore-btn {
+.call-btn {
     background: linear-gradient(135deg, #EA4D44, #d73b3b);
     color: #FFFFFF;
     border: none;
@@ -203,9 +203,10 @@
     border-radius: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(234, 77, 68, 0.35);
+    text-decoration: none;
 }
 
-.explore-btn:hover {
+.call-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 18px rgba(234, 77, 68, 0.5);
 }
@@ -426,7 +427,7 @@
     line-height: 1.5;
 }
 
-.explore-btn {
+.call-btn {
     background: linear-gradient(135deg, #EA4D44, #D73B3B);
     border: none;
     color: #fff;

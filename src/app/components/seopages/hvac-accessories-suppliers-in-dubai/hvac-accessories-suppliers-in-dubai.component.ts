@@ -33,7 +33,7 @@ export class HvacAccessoriesSuppliersInDubaiComponent {
     {
       id: 5,
       head: 'Fast Delivery & Reliable Logistics',
-      para: 'Meptech supplies HVAC equipment, AC parts, and HVAC accessories across all UAE emirates, including Dubai, Abu Dhabi, Sharjah, and Ras Al Khaimah. With ready stock of HVAC products and careful logistics, we guarantee timely delivery for industrial projects.'
+      para: 'Meptech supplies HVAC equipment, AC parts, and HVAC accessories across all UAE emirates, including Dubai, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-abu-dhabi" class="internal-link">Abu Dhabi</a>, <a href="https://meptechuae.com/hvac-accessories-suppliers-in-sharjah" class="internal-link">Sharjah</a>, and Ras Al Khaimah. With ready stock of HVAC products and careful logistics, we guarantee timely delivery for industrial projects.'
     },
     {
       id: 6,
@@ -56,6 +56,7 @@ export class HvacAccessoriesSuppliersInDubaiComponent {
     constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
+
     this.titleService.setTitle('HVAC accessories suppliers in Dubai, UAE | AC spare parts supplier');
 
     this.metaService.updateTag({
@@ -65,12 +66,19 @@ export class HvacAccessoriesSuppliersInDubaiComponent {
 
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'HVAC accessories suppliers Dubai, Daikin dealer Dubai, AC spare parts suppliers Dubai'
+      content: 'MEPTECH, DAIKIN AUTHORIZED DEALER, DAIKIN DEALER IN UAE, AIR CONDITION TRADING, AC UNITS, AC DEALER, AIR CONDITION, HVAC, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, FLOWBAR, HIDDEN FRAME DIFFUSER, VAV, PRESSURE INDEPENDENT VAV, BY PASS VAV, LOUVERS, SAND TRAP LOUVERS, CROSS TALK ATTENUATORS'
     });
 
     this.metaService.updateTag({ property: 'og:title', content: 'HVAC accessories suppliers in Dubai, UAE | AC spare parts supplier' });
     this.metaService.updateTag({ property: 'og:description', content: "Why not meptech's HVAC accessories suppliers in dubai? we are not just ac spare parts in dubai uae. we are best choice for air conditioner, compressor and refrigerant gas supplier." });
-    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/HVAC accessories suppliers in Dubai.jpg' });
+    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/seo/featuredDUBAI.jpg' });
     this.metaService.updateTag({ property: 'og:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-dubai' });
+
+    this.metaService.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.metaService.updateTag({ name: 'twitter:title', content: 'HVAC accessories suppliers in Dubai, UAE | AC spare parts supplier' });
+    this.metaService.updateTag({ name: 'twitter:description', content: "Why not meptech's HVAC accessories suppliers in dubai? we are not just ac spare parts in dubai uae. we are best choice for air conditioner, compressor and refrigerant gas supplier." });
+    this.metaService.updateTag({ name: 'twitter:image', content: 'https://meptechuae.com/seo/featuredDUBAI.jpg' });
+    this.metaService.updateTag({ name: 'twitter:url', content: 'https://meptechuae.com/hvac-accessories-suppliers-in-dubai' });
+
   }
 }
