@@ -1,144 +1,300 @@
-.vrvx-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+.fcu-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1f2937;
+  animation: zoomInFade 0.7s ease-out forwards;
 }
 
-.top-section {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
+/* ================= HERO ================= */
+
+.fcu-hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.main-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.fcu-hero img {
+  max-width: 420px;
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.main-img img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    object-fit: cover;
+.fcu-hero img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
 }
 
-.short h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #222;
-    font-weight: bolder;
+.fcu-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
 }
 
-.about {
-    margin: 2rem 0;
-    font-size: 1rem;
-    color: #444;
+.subtitle {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-.cards {
-    display: grid;
+/* ================= SECTIONS ================= */
+
+.fcu-about,
+.fcu-features {
+  margin: 3rem auto;
+  max-width: 900px;
+}
+
+.fcu-about h2,
+.fcu-features h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: #EA4D44;
+  position: relative;
+}
+
+.fcu-about h2::after,
+.fcu-features h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #EA4D44;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
+
+.fcu-about p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+/* ================= FEATURES ================= */
+
+.fcu-features ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem 2rem;
+  padding-left: 0;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.fcu-features li {
+  background: #f9fafb;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #374151;
+  position: relative;
+  padding-left: 2.2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.fcu-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0.9rem;
+  top: 1rem;
+  color: #EA4D44;
+  font-weight: bold;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.cta button {
+  background: linear-gradient(135deg, #EA4D44, #c63c36);
+  color: #fff;
+  border: none;
+  padding: 1rem 2.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(234, 77, 68, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(234, 77, 68, 0.45);
+}
+/* ================= HIGHLIGHTS ================= */
+
+.fcu-highlights {
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.highlight-card {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+}
+
+.highlight-card h3 {
+  color: #EA4D44;
+  margin-bottom: 0.6rem;
+}
+
+/* ================= APPLICATIONS ================= */
+
+.fcu-applications {
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.applications-grid span {
+  background: #f9fafb;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+/* ================= COMPARISON ================= */
+
+.fcu-comparison {
+  margin: 5rem auto;
+}
+
+.fcu-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.fcu-comparison th,
+.fcu-comparison td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.fcu-comparison th {
+  background: #f9fafb;
+  color: #EA4D44;
+}
+/* ================= COUNTERS ================= */
+
+.fcu-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f9fafb, #ffffff);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.stat .value {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #EA4D44;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .fcu-stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    justify-content: center;
-    margin: 2rem auto;
-    max-width: 900px;
+  }
 }
 
-.enquire {
-    text-align: start;
-    margin-top: 2rem;
+@media (max-width: 500px) {
+  .fcu-stats {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
-.enquire button {
-    background-color: #EA4D44;
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .applications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.enquire button:hover {
-    background-color: #c63c36;
+@media (max-width: 600px) {
+  .highlight-grid,
+  .applications-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.groups {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+@keyframes zoomInFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.group {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-}
 
-.group-text {
-    flex: 2;
-}
-
-.group-text h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: #EA4D44;
-    font-weight: bold;
-}
-
-.group-text ul {
-    margin: 0;
-    padding-left: 1.2rem;
-    list-style-type: disc;
-    color: #444;
-}
-
-.group-img {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.group-img img {
-    max-width: 500px;
-    width: 100%;
-    border-radius: 6px;
-    object-fit: cover;
-}
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
-    .top-section {
-        flex-direction: column;
-        text-align: center;
-    }
+  .fcu-hero h1 {
+    font-size: 2rem;
+  }
 
-    .main-img img {
-        max-width: 100%;
-    }
+  .fcu-features ul {
+    grid-template-columns: 1fr;
+  }
 
-    .cards {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
-
-    .group {
-        flex-direction: column;
-    }
-
-    .group-img {
-        margin-top: 1rem;
-    }
-
-    .group-img img {
-        max-width: 100%;
-    }
+  .fcu-container {
+    margin: 2.5rem auto;
+  }
 }

@@ -1,16 +1,25 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ElementRef,
+  ViewChild
+} from '@angular/core';
 import { RandomlistComponent } from "../randomlist/randomlist.component";
-import { Meta, Title } from '@angular/platform-browser';
 import { CarouselComponent } from "../shared/carousel/carousel.component";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-vrviv',
+  standalone: true,
   imports: [CommonModule, RandomlistComponent, CarouselComponent],
   templateUrl: './vrviv.component.html',
   styleUrl: './vrviv.component.css'
 })
-export class VrvivComponent implements OnInit {
+export class VrvivComponent implements OnInit, AfterViewInit {
+
+  /* ================= PRODUCT DATA ================= */
 
   product = {
     mainImg: '/products/vrviv+/1.png',
@@ -24,58 +33,135 @@ export class VrvivComponent implements OnInit {
     imgPoints: [
       {
         no: 1,
-        head: 'DC fan motor',
+        head: 'DC Fan Motor',
         points: [
-          'Increases efficiency',
-          'Larger diameter of the rotor results in great force using the same magnetic field.',
-          'Improved control results in more fan steps that match the actual capacity.'
+          'Higher efficiency and reduced power consumption',
+          'Larger rotor diameter for improved airflow',
+          'Precise fan speed control matching load demand'
         ]
       },
       {
         no: 2,
-        head: 'Gas cooled PC',
+        head: 'Gas-Cooled PCB',
         points: [
-          'Reliable cooling is not influenced by ambient temperatures.',
-          'A smaller switchbox creates a smoother airflow through the heat exchanger.'
+          'Reliable cooling independent of ambient temperature',
+          'Compact switch box for smoother airflow'
         ]
       },
       {
         no: 3,
-        head: '4-sided heat exchanger',
+        head: '4-Sided Heat Exchanger',
         points: [
-          'A 50% increase in the heat exchange surface (235m2) increases efficiency by up to 30%.'
+          '50% larger heat exchange surface',
+          'Up to 30% improvement in efficiency'
         ]
       },
       {
         no: 4,
-        head: 'Newly developed compressor',
+        head: 'Advanced Inverter Compressor',
         points: [
-          'UNIQUE back-pressure control preventing refrigerant leak and increasing efficiency in low load operation.',
-          'Full inverter enables Variable Refrigerant Temperature and low start-up currents.',
-          'Reluctance brushless DC motor increases efficiency when compared to AC motors by using simultaneous normal and reluctance torque.'
+          'Back-pressure control improves part-load efficiency',
+          'Full inverter enables Variable Refrigerant Temperature (VRT)',
+          'Brushless DC motor for higher efficiency'
         ]
       }
     ],
-    name: 'VRV IV +',
-    short: 'Our new VRV IV heat recovery systems set pioneering  standards in all-round climate comfort performance.  Total design simplicity, offering rapid installation, full  f lexibility as well as absolute efficiency and comfort',
-    work: 'Variable Refrigerant Temperature control for energy  saving in partial load condition. The capacity is controlled by the inverter compressor  AND variation of the evaporating (Te) and condens ing (Tc) temperature of the refrigerant in order to  achieve the highest seasonal efficiency',
+    name: 'Daikin VRV IV+',
+    short:
+      'Advanced VRV system delivering exceptional energy efficiency, flexible design, and superior comfort.',
+    work:
+      'Variable Refrigerant Temperature (VRT) control dynamically optimizes refrigerant conditions to achieve maximum seasonal efficiency at partial load.',
     subImg: '/products/vrviv+/2.png'
-  }
+  };
 
-  constructor(private titleService: Title, private metaService: Meta) { }
+  /* ================= SEO ================= */
+
+  constructor(private titleService: Title, private metaService: Meta) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('VRV Systems | MEPTECH HVAC Solutions UAE');
+    this.titleService.setTitle(
+      'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH'
+    );
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'MEPTECH offers expert VRV and VRF installation and service in UAE. Authorized DAIKIN dealer providing efficient and reliable HVAC systems.'
+      content:
+        'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Authorized Daikin dealer – MEPTECH.'
     });
 
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'VRV, VRF, VRV INSTALLATION, VRV SERVICE, DAIKIN AUTHORIZED DEALER, HVAC UAE, AIR CONDITION TRADING'
+      content:
+        'Daikin VRV IV+, VRV system UAE, VRV HVAC Dubai, VRF system UAE, Daikin VRV dealer'
     });
+     this.titleService.setTitle(
+        'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH'
+      );
+
+      this.metaService.updateTag({
+        name: 'description',
+        content:
+          'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Supplied and supported by MEPTECH, authorized Daikin dealer.'
+      });
+
+      this.metaService.updateTag({
+        name: 'keywords',
+        content:
+          'Daikin VRV IV+, VRV system UAE, VRV HVAC supplier, Daikin VRV dealer UAE, VRF system Dubai, HVAC installation UAE'
+      });
+
   }
 
+  /* ================= COUNTERS ================= */
+
+  @ViewChild('statsSection') statsSection!: ElementRef;
+
+  indoorUnits = 0;
+  savings = 0;
+  piping = 0;
+  experience = 0;
+
+  private animated = false;
+
+  ngAfterViewInit(): void {
+    if (!this.statsSection) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting && !this.animated) {
+          this.animateCounters();
+          this.animated = true;
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(this.statsSection.nativeElement);
+  }
+
+  animateCounters(): void {
+    this.runCounter('indoorUnits', 64, 1200);
+    this.runCounter('savings', 50, 1200);
+    this.runCounter('piping', 1000, 1400);
+    this.runCounter('experience', 25, 1000);
+  }
+
+  runCounter(
+    key: 'indoorUnits' | 'savings' | 'piping' | 'experience',
+    target: number,
+    duration: number
+  ): void {
+    const startTime = performance.now();
+
+    const animate = (time: number) => {
+      const progress = Math.min((time - startTime) / duration, 1);
+      this[key] = Math.floor(progress * target);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }
 }

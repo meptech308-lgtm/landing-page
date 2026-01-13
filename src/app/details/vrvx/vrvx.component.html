@@ -1,32 +1,90 @@
-<div class="vrvx-container">
-    <!-- <div class="top-section">
-        <div class="main-img">
-            <img [src]="product.mainImg" [alt]="product.name">
-        </div>
-    </div> -->
+<section class="vrvx-container">
 
+  <!-- HERO -->
+  <header class="vrvx-hero">
+
+    <!-- LCP-SAFE HERO IMAGE -->
+    <figure class="hero-image">
+      <img
+        src="/products/vrvx/hero-daikin-vrv-x.webp"
+        alt="Daikin VRV X cooling only system outdoor unit installed in UAE"
+        width="1200"
+        height="700"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <figcaption>
+        Daikin VRV X Cooling Only system supplied and supported by Meptech,
+        Authorized Daikin Dealer in the UAE.
+      </figcaption>
+    </figure>
+
+    <!-- NON-BLOCKING CAROUSEL -->
     <app-carousel [images]="product.mainImgs"></app-carousel>
 
-    <div class="short">
-        <h2>{{ product.name }}</h2>
-        <p>{{ product.short }}</p>
-    </div>
+    <h1 class="title"> VRV X </h1>
+    <p class="subtitle">
+      High-efficiency cooling-only VRV system with advanced VRT technology.
+    </p>
 
-    <div class="about">
-        <p>{{ product.about }}</p>
-    </div>
+  </header>
 
-    <div class="enquire">
-  <a href="tel:+971523124576">
-    <button>Call Now</button>
-  </a>
-</div>
+  <!-- ABOUT -->
+  <section class="vrvx-about reveal">
+    <h2>About VRV X</h2>
 
+    <p>
+      Daikin VRV X is an advanced cooling-only VRV system designed to deliver
+      superior energy efficiency, intelligent refrigerant control, and reliable
+      cooling performance across a wide range of building applications.
+    </p>
+
+    <p>
+      Featuring Variable Refrigerant Temperature (VRT) technology in both indoor
+      and outdoor units, VRV X dynamically adjusts refrigerant conditions to match
+      real-time load demand and climatic variations. This results in reduced
+      operating costs, improved seasonal efficiency, and consistent indoor comfort.
+    </p>
+
+    <p>
+      With an extensive lineup of indoor and outdoor units, VRV X offers design
+      flexibility, simplified installation, and stable performance under high
+      ambient temperatures—making it an ideal solution for UAE conditions.
+    </p>
+  </section>
+
+  <!-- WHY SPECIFY -->
+  <section class="vrvx-specify reveal">
+    <h2>Why Specify Daikin VRV X?</h2>
+
+    <ul class="spec-list">
+      <li><strong>Cooling-Only Optimization:</strong> Designed specifically for projects where cooling is the primary requirement.</li>
+      <li><strong>VRT + Inverter Technology:</strong> Optimized part-load performance and reduced energy consumption.</li>
+      <li><strong>High Operational Efficiency:</strong> Enhanced efficiency during actual operating conditions.</li>
+      <li><strong>Extended Reliability:</strong> Advanced protection features and stable system operation.</li>
+      <li><strong>Wide Product Range:</strong> Extensive indoor and outdoor unit combinations.</li>
+    </ul>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="vrvx-features reveal">
+    <h2>Key Features & Benefits</h2>
 
     <div class="cards">
-        <app-product-card *ngFor="let c of product.cards" [head]="c.head" [points]="c.points">
-        </app-product-card>
+      <app-product-card
+        *ngFor="let c of product.cards"
+        [head]="c.head"
+        [points]="c.points">
+      </app-product-card>
     </div>
+  </section>
 
-    <app-randomlist></app-randomlist>
-</div>
+  <!-- CTA -->
+  <div class="cta">
+    <a href="tel:+971523124576">
+      <button>Consult Meptech for VRV X Solutions</button>
+    </a>
+  </div>
+
+  <app-randomlist></app-randomlist>
+</section>

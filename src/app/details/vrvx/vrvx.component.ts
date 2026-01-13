@@ -80,6 +80,20 @@ export class VrvxComponent implements OnInit {
       name: 'keywords',
       content: 'VRV, VRF, VRV INSTALLATION, VRV SERVICE, DAIKIN AUTHORIZED DEALER, HVAC UAE, AIR CONDITION TRADING'
     });
-  }
+    this.titleService.setTitle(
+      'Daikin VRV X Cooling Only System | VRV HVAC Supplier UAE | Meptech'
+    );
 
+    this.metaService.updateTag({
+      name: 'description',
+      content:
+        'Daikin VRV X cooling-only VRV system with advanced VRT technology. Supplied and supported by Meptech, Authorized Daikin Dealer in the UAE.'
+    });
+
+    this.metaService.updateTag({
+      name: 'keywords',
+      content:
+        'Daikin VRV X, VRV cooling only system, VRV HVAC UAE, Daikin VRV dealer Dubai, VRF system UAE'
+    });
+  }
 }

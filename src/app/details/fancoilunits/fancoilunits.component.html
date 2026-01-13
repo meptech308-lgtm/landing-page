@@ -1,44 +1,135 @@
-<div class="vrvx-container">
-    <div class="top-section">
-        <div class="main-img">
-            <img [src]="product.mainImg" [alt]="product.name">
+<section class="fcu-container">
+  <header class="fcu-hero">
+    <img [src]="product.mainImg" 
+    fetchpriority="high" 
+    [alt]="product.name + ' Daikin Chilled Water FCU'" 
+    loading="eager">
+    <h1>Chilled Water Fan Coil Units (FCU)</h1>
+    <p class="subtitle">
+      Energy Efficient with Quiet, Compact Design
+    </p>
+  </header>
+
+  <section class="fcu-about">
+    <h2>About Fan Coil Units</h2>
+    <p>
+      FWW chilled-water FCUs are built with high-efficiency centrifugal fans and optimized 
+      heat exchange coils (copper tubes with hydrophilic aluminum fins) that deliver efficient heat 
+      transfer with lower power consumption and stable performance.
+      Units are designed for compact installation height and low sound levels, which facilitates
+     ceiling-concealed mounting and minimizes noise impact in occupied spaces.
+    </p>
+  </section>
+
+  <section class="fcu-features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>High-efficiency chilled water cooling for HVAC systems</li>
+      <li>Compact design with flexible mounting options</li>
+      <li>Low-noise operation with optimized airflow distribution</li>
+      <li>Durable construction with easy maintenance access</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <a href="tel:+971523124576" aria-label="Call MEPTECH HVAC">
+      <button>Call Now for FCU Pricing</button>
+    </a>
+  </div>
+
+  <!-- <section class="fcu-types">
+    <article class="fcu-type" *ngFor="let g of product.groups">
+      <div class="text">
+        <h3>{{ g.name }}</h3>
+        <ul>
+          <li *ngFor="let p of g.points">{{ p }}</li>
+        </ul>
+      </div>
+      <div class="image">
+        <img [src]="g.img" [alt]="g.name + ' Daikin FCU'">
+      </div>
+    </article>
+  </section> -->
+
+  <section class="fcu-highlights">
+    <h2>Why Daikin FCUs?</h2>
+
+    <div class="highlight-grid">
+        <div class="highlight-card">
+        <h3>Energy Efficient</h3>
+        <p>Optimized chilled water heat exchange reduces operational energy consumption.</p>
+        </div>
+
+        <div class="highlight-card">
+        <h3>Quiet Operation</h3>
+        <p>Designed for low sound pressure levels in noise-sensitive environments.</p>
+        </div>
+
+        <div class="highlight-card">
+        <h3>Flexible Installation</h3>
+        <p>Supports concealed, exposed, wall-mounted, and floor-mounted configurations.</p>
+        </div>
+
+        <div class="highlight-card">
+        <h3>Easy Maintenance</h3>
+        <p>Washable filters and accessible panels reduce service downtime.</p>
         </div>
     </div>
+    </section>
 
-    <div class="short">
-        <h2>{{ product.name }}</h2>
-    </div>
+    <section class="fcu-applications">
+    <section class="fcu-comparison">
+    <h2>Model Comparison</h2>
 
-    <div class="about">
-        <p>{{ product.about }}</p>
-    </div>
+    <table>
+        <tr>
+        <th>Feature</th>
+        <th>FWWVA</th>
+        <th>FWWTA</th>
+        </tr>
+        <tr>
+        <td>Installation Type</td>
+        <td>Concealed Ceiling</td>
+        <td>Exposed Ceiling</td>
+        </tr>
+        <tr>
+        <td>Noise Level</td>
+        <td>Very Low</td>
+        <td>Low</td>
+        </tr>
+        <tr>
+        <td>Visual Impact</td>
+        <td>Hidden</td>
+        <td>Visible</td>
+        </tr>
+        <tr>
+        <td>Maintenance</td>
+        <td>Bottom Access</td>
+        <td>Front Access</td>
+        </tr>
+    </table>
+    </section>
+<section class="fcu-stats" #statsSection>
+  <div class="stat">
+    <span class="value">{{ years }}+</span>
+    <p>Years of HVAC Expertise</p>
+  </div>
 
-    <div class="enquire">
-  <a href="tel:+971523124576">
-    <button>Call Now</button>
-  </a>
-</div>
+  <div class="stat">
+    <span class="value">{{ savings }}%</span>
+    <p>Energy Optimisation</p>
+  </div>
 
+  <div class="stat">
+    <span class="value">{{ noise }}</span>
+    <p>Low Noise Level (dB)</p>
+  </div>
 
+  <div class="stat">
+    <span class="value">{{ projects }}+</span>
+    <p>Projects Supported</p>
+  </div>
+</section>
 
-    <div class="cards">
-        <app-product-card *ngFor="let c of product.cards" [head]="c.head" [points]="c.points">
-        </app-product-card>
-    </div>
-
-    <div class="groups">
-        <div class="group" *ngFor="let g of product.groups">
-            <div class="group-text">
-                <h3>{{ g.name }}</h3>
-                <ul>
-                    <li *ngFor="let p of g.points">{{ p }}</li>
-                </ul>
-            </div>
-            <div class="group-img">
-                <img [src]="g.img" [alt]="g.name">
-            </div>
-        </div>
-    </div>
-
-    <app-randomlist></app-randomlist>
-</div>
+  <app-randomlist></app-randomlist>
+</section>
