@@ -1,13 +1,20 @@
-<div class="container-fluid" [ngStyle]="{'background-image': 'url(' + currentBanner.img + ')'}">
-    <div class="headings">
-        <h4>{{ currentBanner.title }}</h4>
-        <p>{{ currentBanner.subtitle }}</p>
-    </div>
+<div
+  class="container-fluid hero"
+  [ngStyle]="{'background-image': 'url(' + currentBanner.img + ')'}"
+>
+  <div class="hero-content">
     <div class="label">
-        <h6>ENGINEERED WITH TRUST</h6>
+      <h6>ENGINEERED WITH TRUST</h6>
     </div>
+
+    <div class="headings">
+      <h4>{{ currentBanner.title }}</h4>
+      <p>{{ currentBanner.subtitle }}</p>
+    </div>
+
     <div class="buttons">
-        <button (click)="goTo('products')" class="explore-btn">Explore</button>
-        <button (click)="goTo('contact')" class="quote-btn">Request a Quote</button>
+      <button (click)="goTo('products')" class="explore-btn">Explore</button>
+      <button (click)="goTo('contact')" class="quote-btn">Request a Quote</button>
     </div>
+  </div>
 </div>

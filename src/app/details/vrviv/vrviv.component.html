@@ -1,43 +1,168 @@
-<div class="product-details">
+<section class="vrv-container">
+
+  <!-- HERO -->
+  <header class="vrv-hero">
+    <figure class="hero-image">
+        <img
+        src="/products/vrviv+/hero-daikin-vrv-iv-plus.webp"
+        alt="Daikin VRV IV+ outdoor unit installed on a commercial rooftop in Dubai UAE"
+        width="1200"
+        height="700"
+        loading="eager"
+        fetchpriority="high"
+        />
+        <figcaption>
+        Daikin VRV IV+ outdoor unit installation in Dubai – supplied and supported by Meptech,
+        Authorized Daikin Dealer in the UAE.
+        </figcaption>
+    </figure>
     <app-carousel [images]="product.mainImgs"></app-carousel>
-    
-    <div class="top-section">
-        <div class="main-img">
-            <img [src]="product.mainImg" [alt]="product.name">
-        </div>
 
-        <div class="points">
-            <div class="point" *ngFor="let item of product.imgPoints">
-                <div class="point-header">
-                    <span class="circle">{{ item.no }}</span>
-                    <h4>{{ item.head }}</h4>
-                </div>
-                <ul>
-                    <li *ngFor="let p of item.points">{{ p }}</li>
-                </ul>
-            </div>
-        </div>
+    <h1> VRV IV+ </h1>
+    <p class="subtitle">
+      Authorized Daikin Dealer & HVAC Solution Provider delivering
+      energy-efficient, intelligent climate control solutions.
+    </p>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="vrv-about reveal">
+    <h2>About VRV IV+</h2>
+
+    <p>
+      Daikin VRV IV+, supplied and professionally supported by <strong>Meptech</strong>,
+      is a high-performance Variable Refrigerant Volume (VRV) HVAC system engineered
+      to deliver superior energy efficiency, precise zoning control, and long-term
+      operational reliability. As an <strong>Authorized Daikin Dealer</strong>,
+      Meptech ensures correct system selection, engineering compliance, and
+      seamless project execution.
+    </p>
+
+    <p>
+      Utilizing Daikin’s advanced <strong>Variable Refrigerant Temperature (VRT)</strong>
+      technology, VRV IV+ intelligently adjusts refrigerant conditions and inverter
+      compressor operation in real time to match actual building load demand.
+      This results in significantly improved seasonal efficiency, lower operating
+      costs, and enhanced occupant comfort.
+    </p>
+
+    <p>
+      Designed for commercial, hospitality, and premium residential projects,
+      VRV IV+ supports long piping runs, modular outdoor unit configurations,
+      and a wide selection of Daikin indoor units. Advanced inverter compressors,
+      high-efficiency heat exchangers, and DC fan motors ensure stable operation,
+      low sound levels, and reliable performance even under high ambient
+      temperatures—making the system ideal for UAE and Middle East climates.
+    </p>
+  </section>
+
+  <!-- HIGHLIGHT NOTE -->
+  <div class="highlight-note reveal">
+    Meptech delivers value beyond equipment supply by combining Daikin’s world-class
+    VRV IV+ technology with professional engineering support, ensuring efficient,
+    reliable, and future-ready HVAC solutions.
+  </div>
+
+  <!-- WHY SPECIFY -->
+  <section class="vrv-specify reveal">
+    <h2>Why Specify Daikin VRV IV+</h2>
+
+    <ul class="spec-list">
+      <li>
+        <strong>Proven VRV Technology:</strong>
+        A mature and globally proven platform backed by decades of Daikin VRV
+        system development and thousands of installed projects worldwide.
+      </li>
+
+      <li>
+        <strong>High Seasonal Efficiency at Part Load:</strong>
+        VRT control optimizes operation during partial load conditions,
+        significantly reducing energy consumption compared to conventional VRF systems.
+      </li>
+
+      <li>
+        <strong>Design Flexibility for Complex Projects:</strong>
+        Long piping allowances, modular outdoor units, and compatibility with a wide
+        range of indoor unit types support architecturally challenging layouts.
+      </li>
+
+      <li>
+        <strong>Low Noise & Superior Occupant Comfort:</strong>
+        Advanced inverter compressors and DC fan motors deliver quiet operation,
+        making VRV IV+ ideal for hotels, offices, healthcare, and residential buildings.
+      </li>
+
+      <li>
+        <strong>High Ambient Performance:</strong>
+        Engineered for reliable operation under extreme outdoor temperatures,
+        perfectly suited for UAE and Middle East conditions.
+      </li>
+
+      <li>
+        <strong>BMS & Centralized Control Integration:</strong>
+        Fully compatible with Daikin centralized controllers and Building Management
+        Systems for zoning, monitoring, diagnostics, and energy management.
+      </li>
+
+      <li>
+        <strong>Lifecycle Value & Serviceability:</strong>
+        Factory-tested components, built-in diagnostics, and accessible maintenance
+        design ensure long-term reliability and reduced lifecycle cost.
+      </li>
+    </ul>
+  </section>
+
+  <!-- STATS -->
+  <section class="vrv-stats reveal" #statsSection>
+    <div class="stat">
+      <span class="value">{{ indoorUnits }}+</span>
+      <p>Indoor Units</p>
     </div>
 
-    <div class="name-short">
-        <h2>{{ product.name }}</h2>
-        <p>{{ product.short }}</p>
+    <div class="stat">
+      <span class="value">{{ savings }}%</span>
+      <p>Seasonal Energy Efficiency</p>
     </div>
 
-    <div class="work">
-        <p>{{ product.work }}</p>
+    <div class="stat">
+      <span class="value">{{ piping }} m</span>
+      <p>Total Piping Length</p>
     </div>
 
-    <div class="enquire">
-  <a href="tel:+971523124576">
-    <button>Call Now</button>
-  </a>
-</div>
-
-
-    <div class="sub-img">
-        <img [src]="product.subImg" [alt]="product.name + ' Sub Image'">
+    <div class="stat">
+      <span class="value">{{ experience }}+</span>
+      <p>Years of VRV Innovation</p>
     </div>
+  </section>
+  <!-- SYSTEM IMAGE -->
+  <section class="vrv-system reveal">
+    <img
+      [src]="product.subImg"
+      alt="Daikin VRV IV+ system overview diagram"
+      loading="lazy"
+    />
+  </section>
+  <!-- FEATURES -->
+  <section class="vrv-features reveal">
+    <h2>Key Features & Benefits</h2>
 
-    <app-randomlist></app-randomlist>
-</div>
+    <div class="feature-grid">
+      <div class="feature-card" *ngFor="let item of product.imgPoints">
+        <span class="badge">{{ item.no }}</span>
+        <h3>{{ item.head }}</h3>
+        <ul>
+          <li *ngFor="let p of item.points">{{ p }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <a href="tel:+971523124576">
+      <button>Consult Meptech for VRV IV+ Solutions</button>
+    </a>
+  </div>
+
+  <app-randomlist></app-randomlist>
+</section>

@@ -35,9 +35,9 @@
             <ul class="navbar-nav gap-5">
 
                 <!-- Multilevel Dropdown -->
-                <li class="nav-item dropdown" [class.show]="dropdownOpen" (mouseleave)="dropdownOpen=false">
+                <li class="nav-item dropdown" [class.show]="dropdownOpen" (mouseenter)="onProductsHover(true)" (mouseleave)="onProductsHover(false)">
                     <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
-                        (click)="toggleDropdown($event)" [attr.aria-expanded]="dropdownOpen">
+                        (click)="onProductsClick($event)" [attr.aria-expanded]="dropdownOpen">
                         Products
                     </a>
 
@@ -53,15 +53,7 @@
                                 </a>
 
                                 <ul class="child dropdown-menu" [class.show]="cat.open">
-                                    <!-- Direct items -->
-                                    <li *ngFor="let item of cat.directItems">
-                                        <a class="dropdown-item" href="javascript:void(0)"
-                                            (click)="navigateToProduct($event, item)">
-                                            {{ item.name }}
-                                        </a>
-                                    </li>
-
-                                    <!-- Subcategories -->
+                                    <!-- Subcategories first -->
                                     <li *ngFor="let sub of cat.items" class="parent" [class.open]="sub.open"
                                         (mouseenter)="openCategory(sub, $event)" 
                                         (mouseleave)="sub.open=false">
@@ -80,6 +72,14 @@
                                                 </a>
                                             </li>
                                         </ul>
+                                    </li>
+
+                                    <!-- Direct items after subcategories -->
+                                    <li *ngFor="let item of cat.directItems">
+                                        <a class="dropdown-item" href="javascript:void(0)"
+                                            (click)="navigateToProduct($event, item)">
+                                            {{ item.name }}
+                                        </a>
                                     </li>
                                 </ul>
                             </li>

@@ -66,8 +66,6 @@
     (function() {
       'use strict';
       
-      console.log('🧹 Starting Zoho cleanup...');
-      
       // 1. Destroy all existing Zoho instances
       if (window.$zoho) {
         try {
@@ -150,8 +148,6 @@
         console.warn('Could not clear IndexedDB:', e);
       }
       
-      console.log('✅ Zoho cleanup completed');
-      
       // 8. Initialize fresh Zoho instance
       window.$zoho = {};
       window.$zoho.salesiq = window.$zoho.salesiq || { 
@@ -173,18 +169,14 @@
     window.addEventListener('load', function() {
       setTimeout(function() {
         if (window.$zoho && window.$zoho.salesiq) {
-          console.log('🔍 Zoho SalesIQ Status Check:');
-          console.log('Widget loaded:', !!window.$zoho.salesiq);
-          
           // Get the actual script src that was loaded
           const script = document.getElementById('zsiqscript');
           if (script) {
             console.log('Script src:', script.src);
             if (!script.src.includes('siq139b0396a4ae18cef4d3c8717fe5e681e1bad8165d4baa9452939ee956d6a0e086a57824eb837db16c86bd8777e74216')) {
-              console.error('❌ WRONG WIDGET DETECTED!');
               alert('Wrong Zoho widget detected. Please clear your browser cache completely and reload.');
             } else {
-              console.log('✅ Correct widget loaded');
+              console.log('Correct widget loaded');
             }
           }
         }
@@ -200,6 +192,39 @@
 
   gtag('config', 'AW-17847937788');
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Daikin VRV IV+?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Daikin VRV IV+ is a variable refrigerant volume HVAC system designed for high efficiency, zoning flexibility, and advanced climate control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between VRV IV+ and VRV 5?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VRV IV+ uses R410A refrigerant and advanced VRT control, while VRV 5 uses R32 refrigerant with improved sustainability and lower global warming potential."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is VRV IV+ suitable for UAE climate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, VRV IV+ is designed to operate reliably in high ambient temperatures, making it suitable for UAE conditions."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
 
 <body>

@@ -1,143 +1,251 @@
-.product-details {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+.vrv-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1f2937;
 }
 
-.top-section {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
-    margin-bottom: 2rem;
+/* ================= HERO ================= */
+.hero-image {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  text-align: center;
 }
 
-.main-img img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
 
-.points {
-    flex: 1;
+.hero-image figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: #6b7280;
 }
 
-.point {
-    margin-bottom: 2rem;
+.vrv-hero {
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
-.point-header {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.5rem;
+.vrv-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 2rem;
 }
 
-.point-header h4 {
-    font-size: 1.2rem;
-    color: #222;
-    margin: 0;
-    font-weight: bold;
+.subtitle {
+  color: #6b7280;
+  max-width: 720px;
+  margin: 0.8rem auto 0;
 }
 
-.circle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: #EA4D44;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1rem;
+/* ================= ABOUT ================= */
+
+.vrv-about {
+  max-width: 900px;
+  margin: 3rem auto;
 }
 
-.point ul {
-    margin: 0;
-    padding-left: 1.5rem;
+.vrv-about h2 {
+  color: #EA4D44;
+  margin-bottom: 1rem;
 }
 
-.point li {
-    margin-bottom: 0.4rem;
-    color: #333;
-    font-size: 0.95rem;
+.vrv-about p {
+  line-height: 1.75;
+}
+.vrv-specify {
+  max-width: 950px;
+  margin: 4rem auto;
 }
 
-.name-short {
-    margin: 2rem 0;
+.vrv-specify h2 {
+  color: #EA4D44;
+  margin-bottom: 1.5rem;
 }
 
-.name-short h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #222;
-    font-weight: bolder;
+.spec-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-.name-short p {
-    font-size: 1rem;
-    color: #222;
-    font-weight: bold;
+.spec-list li {
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.4rem;
+  background: #f9fafb;
+  border-radius: 10px;
+  line-height: 1.6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
-.work {
-    margin: 2rem 0;
+.spec-list strong {
+  color: #1f2937;
 }
 
-.work h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    color: #EA4D44;
+/* ================= FEATURES ================= */
+
+.vrv-features {
+  margin: 4rem auto;
 }
 
-.work p {
-    font-size: 1rem;
-    color: #444;
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.sub-img {
-    text-align: center;
-    margin-top: 2rem;
+.feature-card {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.06);
 }
 
-.sub-img img {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 8px;
-    object-fit: cover;
+.feature-card h3 {
+  color: #EA4D44;
+  margin-bottom: 0.6rem;
 }
 
-.enquire {
-    text-align: start;
-    margin-top: 2rem;
+.feature-card ul {
+  padding-left: 1.2rem;
+}
+.highlight-note {
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  background: #f9fafb;
+  border-left: 4px solid #EA4D44;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
-.enquire button {
-    background-color: #EA4D44;
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
+/* ================= CTA ================= */
+
+.cta {
+  margin: 4rem auto;
+  text-align: center;
 }
 
-.enquire button:hover {
-    background-color: #c63c36;
+.cta button {
+  background: linear-gradient(135deg, #EA4D44, #c63c36);
+  color: #fff;
+  padding: 1rem 2.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
+
+/* ================= APPLICATIONS ================= */
+
+.vrv-applications {
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.applications-grid span {
+  background: #f9fafb;
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+
+/* ================= SYSTEM IMAGE ================= */
+
+.vrv-system {
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.vrv-system img {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 12px;
+}
+.vrv-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f9fafb, #ffffff);
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.stat .value {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #EA4D44;
+}
+
+.stat p {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+}
+.vrv-comparison {
+  margin: 5rem auto;
+}
+
+.vrv-comparison h2 {
+  color: #EA4D44;
+  margin-bottom: 1.5rem;
+}
+
+.vrv-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vrv-comparison th,
+.vrv-comparison td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.vrv-comparison th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 0.8s ease forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .vrv-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
-    .top-section {
-        flex-direction: column;
-    }
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .main-img img {
-        max-width: 100%;
-    }
+  .applications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

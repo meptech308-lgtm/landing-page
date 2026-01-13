@@ -1,93 +1,110 @@
 .vrvx-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #1f2937;
 }
 
-.top-section {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
+/* HERO */
+.vrvx-hero {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 4rem;
 }
 
-.main-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.hero-image img {
+  width: 100%;
+  height: auto;            
+  max-height: 70vh;        
+  object-fit: cover;         
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
 }
 
-.main-img img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    object-fit: cover;
+
+.hero-image figcaption {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+.title {
+    font-weight: 700;
+}
+.subtitle {
+  color: #6b7280;
+  max-width: 720px;
+  margin: 0.8rem auto;
 }
 
-.short h2 {
-    font-size: 1.8rem;
+/* SECTIONS */
+.vrvx-about,
+.vrvx-specify {
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+.vrvx-about h2,
+.vrvx-specify h2 {
+  color: #EA4D44;
+  margin-bottom: 1rem;
+}
+
+/* SPEC LIST */
+.spec-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.spec-list li {
+  background: #f9fafb;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* FEATURES */
+.vrvx-features {
+  margin: 4rem auto;
+}
+.vrvx-features h2 {
+    text-align: center;
     margin-bottom: 1rem;
-    color: #222;
-    font-weight: bolder;
-}
-
-.short p {
-    font-size: 1rem;
-    color: #222;
-    font-weight: bold;
-}
-
-.about {
-    margin: 2rem 0;
-    font-size: 1rem;
-    color: #444;
+    font-weight: 700;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    justify-content: center;
-    margin: 2rem auto;
-    max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
-.enquire {
-    text-align: start;
-    margin-top: 2rem;
+/* CTA */
+.cta {
+  text-align: center;
+  margin: 4rem auto;
 }
 
-.enquire button {
-    background-color: #EA4D44;
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.cta button {
+  background: linear-gradient(135deg, #EA4D44, #c63c36);
+  color: #fff;
+  padding: 1rem 2.8rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.enquire button:hover {
-    background-color: #c63c36;
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .top-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-img img {
-        max-width: 100%;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .hero-image img {
+    border-radius: 12px;
+    max-height: 45vh;     
+  }
 }

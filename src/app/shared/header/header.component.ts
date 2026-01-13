@@ -52,6 +52,18 @@ export class HeaderComponent {
       directItems: grouped[category]['_direct'] || []
     }));
   }
+onProductsHover(state: boolean) {
+  if (window.innerWidth >= 992) {
+    this.dropdownOpen = state;
+  }
+}
+
+onProductsClick(event: Event) {
+  if (window.innerWidth < 992) {
+    event.preventDefault();
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+}
 
   toggleDropdown(event: Event) {
     event.preventDefault();
