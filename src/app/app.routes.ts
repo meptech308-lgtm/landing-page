@@ -12,6 +12,8 @@ import { HvacAccessoriesSuppliersInDubaiComponent } from './components/seopages/
 import { HvacAccessoriesSuppliersInAbuDhabiComponent } from './components/seopages/hvac-accessories-suppliers-in-abu-dhabi/hvac-accessories-suppliers-in-abu-dhabi.component';
 import { HvacAccessoriesSuppliersInSharjahComponent } from './components/seopages/hvac-accessories-suppliers-in-sharjah/hvac-accessories-suppliers-in-sharjah.component';
 import { ContactusdefaultComponent } from './details/contactusdefault/contactusdefault.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+
 export const routes: Routes = [
     { path: '', component: HomeComponent, data: { title: 'Home' } },
     { path: 'services', component: ServicesComponent, data: { title: 'Services' } },
@@ -27,4 +29,5 @@ export const routes: Routes = [
     { path: 'hvac-accessories-suppliers-in-dubai', component: HvacAccessoriesSuppliersInDubaiComponent },
     { path: 'hvac-accessories-suppliers-in-abu-dhabi', component: HvacAccessoriesSuppliersInAbuDhabiComponent },
     { path: 'hvac-accessories-suppliers-in-sharjah', component: HvacAccessoriesSuppliersInSharjahComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent },
 ];
