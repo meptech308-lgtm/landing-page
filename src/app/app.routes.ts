@@ -12,6 +12,8 @@ import { HvacAccessoriesSuppliersInDubaiComponent } from './components/seopages/
 import { HvacAccessoriesSuppliersInAbuDhabiComponent } from './components/seopages/hvac-accessories-suppliers-in-abu-dhabi/hvac-accessories-suppliers-in-abu-dhabi.component';
 import { HvacAccessoriesSuppliersInSharjahComponent } from './components/seopages/hvac-accessories-suppliers-in-sharjah/hvac-accessories-suppliers-in-sharjah.component';
 import { ContactusdefaultComponent } from './details/contactusdefault/contactusdefault.component';
+import { DaikinFcuSuppliersDubaiComponent } from './components/seopages/daikin-fcu-suppliers-in-dubai/daikin-fcu-suppliers-in-dubai.component';
+import { DaikinVrvSystemsDubaiComponent } from './components/seopages/daikin-vrv-systems-dubai/daikin-vrv-systems-dubai.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
@@ -29,5 +31,7 @@ export const routes: Routes = [
     { path: 'hvac-accessories-suppliers-in-dubai', component: HvacAccessoriesSuppliersInDubaiComponent },
     { path: 'hvac-accessories-suppliers-in-abu-dhabi', component: HvacAccessoriesSuppliersInAbuDhabiComponent },
     { path: 'hvac-accessories-suppliers-in-sharjah', component: HvacAccessoriesSuppliersInSharjahComponent },
+    { path: 'daikin-fcu-suppliers-in-dubai', component: DaikinFcuSuppliersDubaiComponent  },
+    { path: 'daikin-vrv-systems-dubai', component: DaikinVrvSystemsDubaiComponent  },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
 ];

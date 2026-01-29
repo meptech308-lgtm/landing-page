@@ -29,28 +29,54 @@ export class HeaderComponent {
     });
 
     const PRIORITY_ORDER = ['VRV', 'DX'];
+const CATEGORY_PRIORITY = [
+  'AC EQUIPMENTS',
+  'AIR DISTRIBUTION',
+  'VENTILATION'
+];
 
-    this.categories = Object.keys(grouped).map(category => ({
-      name: category,
-      open: false,
-      items: Object.keys(grouped[category])
-        .filter(subCat => subCat !== '_direct')
-        .sort((a, b) => {
-          const aIndex = PRIORITY_ORDER.indexOf(a);
-          const bIndex = PRIORITY_ORDER.indexOf(b);
+    this.categories = Object.keys(grouped)
+  .sort((a, b) => {
+    const aIndex = CATEGORY_PRIORITY.indexOf(a);
+    const bIndex = CATEGORY_PRIORITY.indexOf(b);
 
-          if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
-          if (aIndex === -1) return 1;
-          if (bIndex === -1) return -1;
-          return aIndex - bIndex;
-        })
-        .map(subCat => ({
-          name: subCat,
-          open: false,
-          items: grouped[category][subCat]
-        })),
-      directItems: grouped[category]['_direct'] || []
-    }));
+    // Both categories are in priority list
+    if (aIndex !== -1 && bIndex !== -1) {
+      return aIndex - bIndex;
+    }
+
+    // Only A is in priority list
+    if (aIndex !== -1) return -1;
+
+    // Only B is in priority list
+    if (bIndex !== -1) return 1;
+
+    // Neither in priority → alphabetical
+    return a.localeCompare(b);
+  })
+  .map(category => ({
+    name: category,
+    open: false,
+    items: Object.keys(grouped[category])
+      .filter(subCat => subCat !== '_direct')
+      .sort((a, b) => {
+        const PRIORITY_ORDER = ['VRV', 'DX'];
+        const aIndex = PRIORITY_ORDER.indexOf(a);
+        const bIndex = PRIORITY_ORDER.indexOf(b);
+
+        if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
+        if (aIndex === -1) return 1;
+        if (bIndex === -1) return -1;
+        return aIndex - bIndex;
+      })
+      .map(subCat => ({
+        name: subCat,
+        open: false,
+        items: grouped[category][subCat]
+      })),
+    directItems: grouped[category]['_direct'] || []
+  }));
+
   }
 onProductsHover(state: boolean) {
   if (window.innerWidth >= 992) {

@@ -67,7 +67,6 @@ export class FancoilunitsComponent implements OnInit, AfterViewInit {
 
   years = 0;
   savings = 0;
-  noise = 0;
   projects = 0;
 
   private animated = false;
@@ -87,14 +86,13 @@ export class FancoilunitsComponent implements OnInit, AfterViewInit {
   }
 
   animateCounters(): void {
-    this.runCounter('years', 30, 1200);
+    this.runCounter('years', 100, 1200);
     this.runCounter('savings', 40, 1200);
-    this.runCounter('noise', 25, 1200);
     this.runCounter('projects', 1000, 1400);
   }
 
   runCounter(
-    key: 'years' | 'savings' | 'noise' | 'projects',
+    key: 'years' | 'savings'  | 'projects',
     target: number,
     duration: number
   ): void {

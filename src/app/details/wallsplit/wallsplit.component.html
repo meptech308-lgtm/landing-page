@@ -1,28 +1,59 @@
 <div class="vrvx-container">
-    <!-- <div class="top-section">
-        <div class="main-img">
-            <img [src]="product.mainImg" [alt]="product.name">
-        </div>
-    </div> -->
 
-    <app-carousel [images]="product.mainImgs"></app-carousel>
+  <!-- IMAGE CAROUSEL -->
+  <app-carousel [images]="product.mainImgs"></app-carousel>
 
-    <div class="short">
-        <h2>{{ product.name }}</h2>
-        <p>{{ product.short }}</p>
-    </div>
+  <!-- PRODUCT INTRO -->
+  <section class="intro">
+    <h1>{{ product.name }}</h1>
+    <h3>{{ product.tagline }}</h3>
+    <p>{{ product.short }}</p>
 
     <div class="enquire">
-  <a href="tel:+971523124576">
-    <button>Call Now</button>
-  </a>
-</div>
-
-
-    <div class="cards">
-        <app-product-card *ngFor="let c of product.cards" [head]="c.head" [points]="c.points">
-        </app-product-card>
+      <a href="tel:+971523124576">
+        <button>Call Now</button>
+      </a>
     </div>
+  </section>
 
-    <app-randomlist></app-randomlist>
+  <!-- FEATURES -->
+  <section class="features">
+    <h2>Key Features & Benefits</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card" *ngFor="let f of product.features">
+        <h4>{{ f.title }}</h4>
+        <p>{{ f.desc }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPACITIES -->
+  <section class="capacities">
+    <h2>Available Capacities</h2>
+    <ul>
+      <li *ngFor="let c of product.capacities">{{ c }}</li>
+    </ul>
+  </section>
+
+  <!-- APPLICATIONS -->
+  <section class="applications">
+    <h2>Typical Applications</h2>
+    <ul>
+      <li *ngFor="let a of product.applications">{{ a }}</li>
+    </ul>
+  </section>
+
+  <!-- AUTHORIZED DEALER -->
+  <section class="dealer">
+    <h2>Authorized Daikin Dealer</h2>
+    <p>
+      MEPTECH, an Authorized Daikin Dealer, supplies genuine Daikin FTKF wall split units
+      with professional product selection, prompt availability, and reliable after-sales
+      coordination to ensure dependable HVAC solutions.
+    </p>
+  </section>
+
+  <!-- RANDOM PRODUCTS -->
+  <app-randomlist></app-randomlist>
 </div>
