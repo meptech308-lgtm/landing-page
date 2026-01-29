@@ -1,0 +1,125 @@
+.hero-section {
+  padding: clamp(20px, 4vw, 60px) 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.hero-section img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.hero-title h1 {
+  font-size: 2.4rem;
+  line-height: 1.3;
+  color: #000;
+}
+
+.hero-title p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+a.btn-call {
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50px;
+  background: #ea4d44;
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 10px;
+  align-self: center;
+}
+
+.about-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #ffffff, #f4f5f9);
+  border-radius: 12px;
+  margin-bottom: 5rem;
+}
+
+.about-section h2::after,
+.why-section h2::after,
+.image-text-section h2::after,
+.for-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ea4d44;
+  margin: 12px auto;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.why-section {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 2rem;
+}
+
+.why-card {
+  background: #fff;
+  border: 1px solid #ea4c4433;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  transition: 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image-text-section,
+.for-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.image-text-section img,
+.for-section img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+@media (max-width: 1024px) {
+  .why-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-text-section,
+  .for-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title h1 {
+    font-size: 1.3rem;
+  }
+
+  .why-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -142,7 +142,7 @@ export class VrvivComponent implements OnInit, AfterViewInit {
   animateCounters(): void {
     this.runCounter('indoorUnits', 64, 1200);
     this.runCounter('savings', 50, 1200);
-    this.runCounter('piping', 1000, 1400);
+    this.runCounter('piping', 10000, 1400);
     this.runCounter('experience', 25, 1000);
   }
 
