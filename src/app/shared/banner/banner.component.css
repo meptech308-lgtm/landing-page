@@ -596,7 +596,8 @@
   
   .feature-highlights {
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 34px;
+    justify-content: center;
     padding: 32px 20px;
   }
   
@@ -660,13 +661,16 @@
   
   .feature-highlights {
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
     padding: 24px 16px;
   }
   
   .feature-item {
     width: 100%;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 75px;
   }
   
   .scroll-indicator {
