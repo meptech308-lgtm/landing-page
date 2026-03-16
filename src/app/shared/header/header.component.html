@@ -1,114 +1,190 @@
 <header>
-    <!-- Top bar -->
-    <div class="text-white topbar">
-        <div class="dealer">
-            <p class="mb-0 small">A DAIKIN AUTHORIZED DEALER</p>
-        </div>
-        <div class="topbar-contact">
-            <p class="mb-0">
-                <a href="tel:+97144919004" class="text-white text-decoration-none">
-                    <i class="bi bi-telephone"></i> +971523124576
-                </a>
-            </p>
-            <p class="mb-0">
-                <a href="mailto:sales@meptechuae.com" class="text-white text-decoration-none">
-                    <i class="bi bi-envelope"></i> sales&#64;meptechuae.com
-                </a>
-            </p>
-        </div>
+  <!-- Top bar -->
+  <div class="text-white topbar">
+    <div class="dealer">
+      <p class="mb-0 small">A DAIKIN AUTHORIZED DEALER</p>
     </div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light px-3">
-        <a class="navbar-brand" href="#">
-            <img src="/logo.png" class="img-fluid d-block" alt="Logo" />
+    <div class="topbar-contact">
+      <p class="mb-0">
+        <a href="tel:+97144919004" class="text-white text-decoration-none">
+          <i class="bi bi-telephone"></i> +971523124576
         </a>
+      </p>
+      <p class="mb-0">
+        <a
+          href="mailto:sales@meptechuae.com"
+          class="text-white text-decoration-none"
+        >
+          <i class="bi bi-envelope"></i> sales&#64;meptechuae.com
+        </a>
+      </p>
+    </div>
+  </div>
 
-        <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light px-3">
+    <a class="navbar-brand" routerLink="/">
+      <img src="/logo.png" class="img-fluid d-block" alt="Logo" />
+    </a>
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-            <ul class="navbar-nav gap-5">
+    <!-- Toggler -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-                <!-- Multilevel Dropdown -->
-                <li class="nav-item dropdown" [class.show]="dropdownOpen" (mouseenter)="onProductsHover(true)" (mouseleave)="onProductsHover(false)">
-                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button"
-                        (click)="onProductsClick($event)" [attr.aria-expanded]="dropdownOpen">
-                        Products
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav gap-5">
+        <!-- Multilevel Dropdown -->
+        <li
+          class="nav-item dropdown"
+          [class.show]="dropdownOpen"
+          (mouseenter)="onProductsHover(true)"
+          (mouseleave)="onProductsHover(false)"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="productsDropdown"
+            role="button"
+            (click)="onProductsClick($event)"
+            [attr.aria-expanded]="dropdownOpen"
+          >
+            Products
+          </a>
+
+          <ul
+            class="dropdown-menu multilevel-dropdown"
+            [class.show]="dropdownOpen"
+            aria-labelledby="productsDropdown"
+          >
+            <ng-container *ngFor="let cat of categories">
+              <li
+                class="parent"
+                [class.open]="cat.open"
+                (mouseenter)="openCategory(cat, $event)"
+                (mouseleave)="cat.open = false"
+              >
+                <a
+                  href="#"
+                  class="dropdown-item"
+                  (click)="toggleCategory($event, cat)"
+                >
+                  {{ cat.name }}
+                  <span
+                    class="expand"
+                    *ngIf="cat.items?.length || cat.directItems?.length"
+                    >›</span
+                  >
+                </a>
+
+                <ul class="child dropdown-menu" [class.show]="cat.open">
+                  <!-- Subcategories first -->
+                  <li
+                    *ngFor="let sub of cat.items"
+                    class="parent"
+                    [class.open]="sub.open"
+                    (mouseenter)="openCategory(sub, $event)"
+                    (mouseleave)="sub.open = false"
+                  >
+                    <a
+                      href="#"
+                      class="dropdown-item"
+                      (click)="
+                        sub.items ? toggleCategory($event, sub) : closeNavbar()
+                      "
+                    >
+                      {{ sub.name }}
+                      <span class="expand" *ngIf="sub.items?.length">›</span>
                     </a>
 
-                    <ul class="dropdown-menu multilevel-dropdown" [class.show]="dropdownOpen"
-                        aria-labelledby="productsDropdown">
-                        <ng-container *ngFor="let cat of categories">
-                            <li class="parent" [class.open]="cat.open" 
-                                (mouseenter)="openCategory(cat, $event)"
-                                (mouseleave)="cat.open=false">
-                                <a href="#" class="dropdown-item" (click)="toggleCategory($event, cat)">
-                                    {{ cat.name }}
-                                    <span class="expand" *ngIf="cat.items?.length || cat.directItems?.length">›</span>
-                                </a>
-
-                                <ul class="child dropdown-menu" [class.show]="cat.open">
-                                    <!-- Subcategories first -->
-                                    <li *ngFor="let sub of cat.items" class="parent" [class.open]="sub.open"
-                                        (mouseenter)="openCategory(sub, $event)" 
-                                        (mouseleave)="sub.open=false">
-                                        <a href="#" class="dropdown-item"
-                                            (click)="sub.items ? toggleCategory($event, sub) : closeNavbar()">
-                                            {{ sub.name }}
-                                            <span class="expand" *ngIf="sub.items?.length">›</span>
-                                        </a>
-
-                                        <ul class="child dropdown-menu" [class.show]="sub.open"
-                                            *ngIf="sub.items?.length">
-                                            <li *ngFor="let item of sub.items">
-                                                <a class="dropdown-item" href="javascript:void(0)"
-                                                    (click)="navigateToProduct($event, item)">
-                                                    {{ item.name }}
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <!-- Direct items after subcategories -->
-                                    <li *ngFor="let item of cat.directItems">
-                                        <a class="dropdown-item" href="javascript:void(0)"
-                                            (click)="navigateToProduct($event, item)">
-                                            {{ item.name }}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ng-container>
+                    <ul
+                      class="child dropdown-menu"
+                      [class.show]="sub.open"
+                      *ngIf="sub.items?.length"
+                    >
+                      <li *ngFor="let item of sub.items">
+                        <a
+                          class="dropdown-item"
+                          [routerLink]="['/products', item.route]"
+                        >
+                        {{ item.name }}
+                        </a>
+                      </li>
                     </ul>
-                </li>
+                  </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeNavbar()"
-                        [routerLinkActiveOptions]="{ exact: true }">Home</a>
-                </li>
+                  <!-- Direct items after subcategories -->
+                  <li *ngFor="let item of cat.directItems">
+                    <a
+                      class="dropdown-item"
+                      [routerLink]="['/products', item.route]"
+                    >
+                    {{ item.name }}
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/projects" (click)="closeNavbar()"
-                        routerLinkActive="active">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/about" (click)="closeNavbar()" routerLinkActive="active">About
-                        Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/newsletter" (click)="closeNavbar()"
-                        routerLinkActive="active">Newsletter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact" (click)="closeNavbar()"
-                        routerLinkActive="active">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            (click)="closeNavbar()"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/projects"
+            (click)="closeNavbar()"
+            routerLinkActive="active"
+            >Projects</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/about"
+            (click)="closeNavbar()"
+            routerLinkActive="active"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/newsletter"
+            (click)="closeNavbar()"
+            routerLinkActive="active"
+            >Newsletter</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/contact"
+            (click)="closeNavbar()"
+            routerLinkActive="active"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
 </header>
