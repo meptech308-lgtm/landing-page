@@ -11,7 +11,7 @@
     </div>
     <div class="fourth">
         <div class="column left">
-            <img src="/logo1.png" alt="Logo">
+            <img src="/logo1.png" alt="Meptech Logo">
             <p>
                 Authorized Daikin dealer providing professional HVAC solutions, system design, installation,
                 and maintenance services across the UAE.
@@ -21,11 +21,20 @@
         <div class="column links">
             <h6>QUICK LINKS</h6>
             <ul>
-                <li (click)="goTo('/')">Home</li>
-                <li (click)="goTo('/products')">Products</li>
-                <li (click)="goTo('/projects')">Projects</li>
-                <li (click)="goTo('/contact')">Contact</li>
-                <li (click)="goTo('/privacy-policy')">Privacy Policy</li>
+                <li>
+                    <a routerLink="/">Home</a></li>
+                <li>
+                    <a routerLink="/products">Products</a>
+                </li>
+                <li>
+                    <a routerLink="/projects">Projects</a>
+                </li>
+                <li>
+                    <a routerLink="/contact">Contact</a>
+                </li>
+                <li>
+                    <a routerLink="/privacy-policy">Privacy Policy</a>
+                </li>
                 
             </ul>
         </div>
@@ -33,10 +42,15 @@
         <div class="column products">
             <h6>PRODUCTS</h6>
             <ul>
-                <li (click)="goTo('/products/vrviv')">VRV Systems</li>
-                <li (click)="goTo('/products/rooftoppackage')">Rooftop Unit</li>
-                <li (click)="goTo('/products/fancoilunits')">Fancoil Units</li>
-                <li (click)="goTo('/products/thermostat')">Controls & Thermostats</li>
+                <li>
+                    <a routerLink="/products/vrviv">Vrv Systems</a>
+                </li>
+                <li>
+                    <a routerLink="/products/rooftoppackage">Rooftop Unit</a></li>
+                <li>
+                    <a routerLink="/products/fancoilunits">Fancoil Units</a></li>
+                <li>
+                    <a routerLink="/products/thermostat">Controls & Thermostats</a></li>
             </ul>
         </div>
 
