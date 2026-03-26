@@ -11,7 +11,7 @@
     </div>
     <div class="fourth">
         <div class="column left">
-            <img src="/logo1.png" alt="Logo">
+            <img src="/logo1.png" alt="Meptech Logo">
             <p>
                 Authorized Daikin dealer providing professional HVAC solutions, system design, installation,
                 and maintenance services across the UAE.
@@ -21,11 +21,20 @@
         <div class="column links">
             <h6>QUICK LINKS</h6>
             <ul>
-                <li (click)="goTo('/')">Home</li>
-                <li (click)="goTo('/products')">Products</li>
-                <li (click)="goTo('/projects')">Projects</li>
-                <li (click)="goTo('/contact')">Contact</li>
-                <li (click)="goTo('/privacy-policy')">Privacy Policy</li>
+                <li>
+                    <a routerLink="/">Home</a></li>
+                <li>
+                    <a href="/products" routerLink="/products">Products</a>
+                </li>
+                <li>
+                    <a href="/projects" routerLink="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/contact" routerLink="/contact">Contact</a>
+                </li>
+                <li>
+                    <a href="/privacy-policy" routerLink="/privacy-policy">Privacy Policy</a>
+                </li>
                 
             </ul>
         </div>
@@ -33,10 +42,15 @@
         <div class="column products">
             <h6>PRODUCTS</h6>
             <ul>
-                <li (click)="goTo('/products/vrviv')">VRV Systems</li>
-                <li (click)="goTo('/products/rooftoppackage')">Rooftop Unit</li>
-                <li (click)="goTo('/products/fancoilunits')">Fancoil Units</li>
-                <li (click)="goTo('/products/thermostat')">Controls & Thermostats</li>
+                <li>
+                    <a href="/products/vrviv" routerLink="/products/vrviv">Vrv Systems</a>
+                </li>
+                <li>
+                    <a href="/products/rooftoppackage" routerLink="/products/rooftoppackage">Rooftop Unit</a></li>
+                <li>
+                    <a href="/products/fancoilunits" routerLink="/products/fancoilunits">Fancoil Units</a></li>
+                <li>
+                    <a href="/products/thermostat" routerLink="/products/thermostat">Controls & Thermostats</a></li>
             </ul>
         </div>
 
@@ -45,7 +59,7 @@
             <ul>
                 <li><i class="bi bi-envelope"></i> <a href="mailto:sales@meptechuae.com">sales&#64;meptechuae.com</a>
                 </li>
-                <li><i class="bi bi-telephone"></i> <a href="tel:+971523124576">+971 52 312 4576</a></li>
+                <li><i class="bi bi-telephone"></i> <a href="tel:+971523124576">+971523124576</a></li>
                 <!-- <li><i class="bi bi-whatsapp"></i> <a href="https://wa.me/971523124576" target="_blank">+971 50 347
                         1731</a></li> -->
                 <li><i class="bi bi-geo-alt"></i> Office no.47, M floor, Land Rover Showroom Building, Al Garhoud, Dubai

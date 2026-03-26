@@ -413,10 +413,13 @@
 }
 
 /* Extended hover area above dropdown */
-.dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
-  display: block !important;
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu,
+  .dropdown-menu:hover {
+    display: block !important;
+  }
 }
+
 
 /* Create invisible bridge between nav item and dropdown */
 .nav-item.dropdown::after {
@@ -569,6 +572,7 @@
   }
 
   .multilevel-dropdown .child {
+    display: none;
     position: static;
     box-shadow: none;
     background: linear-gradient(135deg, rgba(234, 77, 68, 0.04), rgba(234, 77, 68, 0.02));
@@ -585,7 +589,9 @@
   .nav-item.dropdown::after {
     display: none;
   }
-  
+  .multilevel-dropdown .parent.open > .child {
+    display: block;
+  }
   .dropdown-menu {
     background: linear-gradient(135deg, rgba(234, 77, 68, 0.04), rgba(234, 77, 68, 0.02));
     box-shadow: none;

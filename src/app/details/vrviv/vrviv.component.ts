@@ -4,21 +4,22 @@ import {
   OnInit,
   AfterViewInit,
   ElementRef,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
-import { RandomlistComponent } from "../randomlist/randomlist.component";
-import { CarouselComponent } from "../shared/carousel/carousel.component";
+import { RandomlistComponent } from '../randomlist/randomlist.component';
+import { CarouselComponent } from '../shared/carousel/carousel.component';
 import { Meta, Title } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-vrviv',
   standalone: true,
   imports: [CommonModule, RandomlistComponent, CarouselComponent],
   templateUrl: './vrviv.component.html',
-  styleUrl: './vrviv.component.css'
+  styleUrl: './vrviv.component.css',
 })
 export class VrvivComponent implements OnInit, AfterViewInit {
-
   /* ================= PRODUCT DATA ================= */
 
   product = {
@@ -37,24 +38,24 @@ export class VrvivComponent implements OnInit, AfterViewInit {
         points: [
           'Higher efficiency and reduced power consumption',
           'Larger rotor diameter for improved airflow',
-          'Precise fan speed control matching load demand'
-        ]
+          'Precise fan speed control matching load demand',
+        ],
       },
       {
         no: 2,
         head: 'Gas-Cooled PCB',
         points: [
           'Reliable cooling independent of ambient temperature',
-          'Compact switch box for smoother airflow'
-        ]
+          'Compact switch box for smoother airflow',
+        ],
       },
       {
         no: 3,
         head: '4-Sided Heat Exchanger',
         points: [
           '50% larger heat exchange surface',
-          'Up to 30% improvement in efficiency'
-        ]
+          'Up to 30% improvement in efficiency',
+        ],
       },
       {
         no: 4,
@@ -62,54 +63,56 @@ export class VrvivComponent implements OnInit, AfterViewInit {
         points: [
           'Back-pressure control improves part-load efficiency',
           'Full inverter enables Variable Refrigerant Temperature (VRT)',
-          'Brushless DC motor for higher efficiency'
-        ]
-      }
+          'Brushless DC motor for higher efficiency',
+        ],
+      },
     ],
     name: 'Daikin VRV IV+',
     short:
       'Advanced VRV system delivering exceptional energy efficiency, flexible design, and superior comfort.',
-    work:
-      'Variable Refrigerant Temperature (VRT) control dynamically optimizes refrigerant conditions to achieve maximum seasonal efficiency at partial load.',
-    subImg: '/products/vrviv+/2.png'
+    work: 'Variable Refrigerant Temperature (VRT) control dynamically optimizes refrigerant conditions to achieve maximum seasonal efficiency at partial load.',
+    subImg: '/products/vrviv+/2.png',
   };
 
   /* ================= SEO ================= */
 
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {}
 
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH'
+      'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH',
     );
 
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Authorized Daikin dealer – MEPTECH.'
+        'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Authorized Daikin dealer – MEPTECH.',
     });
 
     this.metaService.updateTag({
       name: 'keywords',
       content:
-        'Daikin VRV IV+, VRV system UAE, VRV HVAC Dubai, VRF system UAE, Daikin VRV dealer'
+        'Daikin VRV IV+, VRV system UAE, VRV HVAC Dubai, VRF system UAE, Daikin VRV dealer',
     });
-     this.titleService.setTitle(
-        'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH'
-      );
+    this.titleService.setTitle(
+      'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH',
+    );
 
-      this.metaService.updateTag({
-        name: 'description',
-        content:
-          'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Supplied and supported by MEPTECH, authorized Daikin dealer.'
-      });
+    this.metaService.updateTag({
+      name: 'description',
+      content:
+        'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Supplied and supported by MEPTECH, authorized Daikin dealer.',
+    });
 
-      this.metaService.updateTag({
-        name: 'keywords',
-        content:
-          'Daikin VRV IV+, VRV system UAE, VRV HVAC supplier, Daikin VRV dealer UAE, VRF system Dubai, HVAC installation UAE'
-      });
-
+    this.metaService.updateTag({
+      name: 'keywords',
+      content:
+        'Daikin VRV IV+, VRV system UAE, VRV HVAC supplier, Daikin VRV dealer UAE, VRF system Dubai, HVAC installation UAE',
+    });
   }
 
   /* ================= COUNTERS ================= */
@@ -126,17 +129,22 @@ export class VrvivComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     if (!this.statsSection) return;
 
-    const observer = new IntersectionObserver(
-      entries => {
-        if (entries[0].isIntersecting && !this.animated) {
-          this.animateCounters();
-          this.animated = true;
-        }
-      },
-      { threshold: 0.4 }
-    );
+    if (
+      isPlatformBrowser(this.platformId) &&
+      typeof IntersectionObserver !== 'undefined'
+    ) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting && !this.animated) {
+            this.animateCounters();
+            this.animated = true;
+          }
+        },
+        { threshold: 0.4 },
+      );
 
-    observer.observe(this.statsSection.nativeElement);
+      observer.observe(this.statsSection.nativeElement);
+    }
   }
 
   animateCounters(): void {
@@ -149,7 +157,7 @@ export class VrvivComponent implements OnInit, AfterViewInit {
   runCounter(
     key: 'indoorUnits' | 'savings' | 'piping' | 'experience',
     target: number,
-    duration: number
+    duration: number,
   ): void {
     const startTime = performance.now();
 

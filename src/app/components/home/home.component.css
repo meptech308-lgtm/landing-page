@@ -1025,9 +1025,13 @@
 }
 
 @media (max-width: 480px) {
+    .container {
+        /* align-items: stretch;   */
+        text-align: center;
+     }
     .section-title {
-        font-size: 1.75rem;
-        display: flex;
+        font-size: 1.65rem;
+        display: block;
         justify-content: center;
         align-items: center;
         align-self: center;
@@ -1045,6 +1049,8 @@
 
     .feature-card {
         padding: 32px 24px;
+        margin-top: -40px;
+        margin-bottom: -30px;
     }
 
     .card-icon-wrapper {
