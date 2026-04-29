@@ -4,9 +4,9 @@ import {
   OnInit,
   AfterViewInit,
   ElementRef,
-  ViewChild
+  ViewChild,
 } from '@angular/core';
-import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { RandomlistComponent } from '../randomlist/randomlist.component';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
@@ -14,10 +14,9 @@ import { Meta, Title } from '@angular/platform-browser';
   standalone: true,
   imports: [CommonModule, RandomlistComponent],
   templateUrl: './fancoilunits.component.html',
-  styleUrl: './fancoilunits.component.css'
+  styleUrl: './fancoilunits.component.css',
 })
 export class FancoilunitsComponent implements OnInit, AfterViewInit {
-
   /* ================= PRODUCT DATA ================= */
 
   product = {
@@ -32,32 +31,35 @@ export class FancoilunitsComponent implements OnInit, AfterViewInit {
           'Compact design',
           '4-way air discharge',
           'Built-in drain pump',
-          'Low noise operation'
+          'Low noise operation',
         ],
-        img: '/products/fancoil/1.png'
-      }
-    ]
+        img: '/products/fancoil/1.png',
+      },
+    ],
   };
 
   /* ================= SEO ================= */
 
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+  ) {}
 
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Daikin Chilled Water Fan Coil Units (FCU) | FWWVA & FWWTA | MEPTECH UAE'
+      'Daikin FCU UAE | Efficient Fan Coil Cooling Units | MEPTECH',
     );
 
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Daikin chilled water fan coil units (FCU) including FWWVA and FWWTA models for efficient HVAC cooling across UAE.'
+        'Choose Daikin FCU in UAE for flexible cooling solutions. Improve comfort with energy-efficient fan coil units for residential and commercial spaces.',
     });
 
     this.metaService.updateTag({
       name: 'keywords',
       content:
-        'Daikin FCU, Chilled Water Fan Coil Unit, FWWVA, FWWTA, HVAC UAE'
+        'Daikin FCU, Chilled Water Fan Coil Unit, FWWVA, FWWTA, HVAC UAE',
     });
   }
 
@@ -73,13 +75,13 @@ export class FancoilunitsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     const observer = new IntersectionObserver(
-      entries => {
+      (entries) => {
         if (entries[0].isIntersecting && !this.animated) {
           this.animateCounters();
           this.animated = true;
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     observer.observe(this.statsSection.nativeElement);
@@ -92,9 +94,9 @@ export class FancoilunitsComponent implements OnInit, AfterViewInit {
   }
 
   runCounter(
-    key: 'years' | 'savings'  | 'projects',
+    key: 'years' | 'savings' | 'projects',
     target: number,
-    duration: number
+    duration: number,
   ): void {
     const startTime = performance.now();
 

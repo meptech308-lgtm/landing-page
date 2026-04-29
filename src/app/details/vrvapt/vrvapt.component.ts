@@ -59,11 +59,11 @@ Additional Coating is applied to PCB for strengthening to cope with high ambient
   constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
-    this.titleService.setTitle('VRV Systems | MEPTECH HVAC Solutions UAE');
+    this.titleService.setTitle('Daikin VRV APT Systems UAE | Apartment HVAC | MEPTECH');
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'MEPTECH offers expert VRV and VRF installation and service in UAE. Authorized DAIKIN dealer providing efficient and reliable HVAC systems.'
+      content: 'Choose Daikin VRV APT in UAE for modern apartments. Enjoy compact design, energy-efficient cooling, and reliable HVAC built for residential comfort.'
     });
 
     this.metaService.updateTag({

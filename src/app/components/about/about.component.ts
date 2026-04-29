@@ -1,22 +1,31 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild ,OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  ViewChild,
+  OnInit,
+} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
   imports: [CommonModule],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
 })
-export class AboutComponent implements AfterViewInit,OnInit {
+export class AboutComponent implements AfterViewInit, OnInit {
   noteBackground = 'url(/banner2.png)';
 
   isMuted = true;
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
 
-  constructor(private titleService: Title, private metaService: Meta) { }
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+  ) {}
 
-   ngOnInit() {
+  ngOnInit() {
     this.updateMetaTags();
   }
 
@@ -30,27 +39,50 @@ export class AboutComponent implements AfterViewInit,OnInit {
   }
 
   private updateMetaTags() {
-    this.titleService.setTitle('About Us | MEPTECH HVAC Solutions UAE');
+    this.titleService.setTitle(
+      'About MEPTECH UAE | Authorized Daikin HVAC Dealer',
+    );
 
     this.metaService.updateTag({
       name: 'description',
-      content: 'Learn about MEPTECH Air-condition Trading LLC – a trusted Daikin Authorized Dealer in UAE delivering VRV, FCU, VAV, air distribution, and ventilation solutions with expertise, innovation, and reliability.'
+      content:
+        ' Learn about MEP Tech UAE, a trusted Daikin HVAC partner. Discover expertise, quality solutions, and commitment to delivering reliable cooling systems.',
     });
 
     this.metaService.updateTag({
       name: 'keywords',
-      content: 'MEPTECH, DAIKIN AUTHORIZED DEALER, AIR CONDITION TRADING, HVAC UAE, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, VAV, LOUVERS, FLOWBAR, HIDDEN FRAME DIFFUSER'
+      content:
+        'MEPTECH, DAIKIN AUTHORIZED DEALER, AIR CONDITION TRADING, HVAC UAE, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, VAV, LOUVERS, FLOWBAR, HIDDEN FRAME DIFFUSER',
     });
 
     // Open Graph
-    this.metaService.updateTag({ property: 'og:title', content: 'About Us | MEPTECH HVAC Solutions UAE' });
-    this.metaService.updateTag({ property: 'og:description', content: 'Authorized Daikin Dealer in UAE delivering complete HVAC, VRV, FCU, and air distribution solutions.' });
-    this.metaService.updateTag({ property: 'og:image', content: 'https://meptechuae.com/logo1.png' });
+    this.metaService.updateTag({
+      property: 'og:title',
+      content: 'About MEPTECH UAE | Authorized Daikin HVAC Dealer',
+    });
+    this.metaService.updateTag({
+      property: 'og:description',
+      content:
+        'MEPTECH, DAIKIN AUTHORIZED DEALER, AIR CONDITION TRADING, HVAC UAE, VRV, VRF, VRV INSTALLATION, VRV SERVICE, FCU, FAN COIL UNITS, VAV, LOUVERS, FLOWBAR, HIDDEN FRAME DIFFUSER',
+    });
+    this.metaService.updateTag({
+      property: 'og:image',
+      content: 'https://meptechuae.com/logo1.png',
+    });
 
     // Twitter
-    this.metaService.updateTag({ property: 'twitter:title', content: 'About Us | MEPTECH HVAC Solutions UAE' });
-    this.metaService.updateTag({ property: 'twitter:description', content: 'MEPTECH delivers HVAC excellence in UAE with VRV, FCU, VAV, and air distribution products.' });
-    this.metaService.updateTag({ property: 'twitter:image', content: 'https://meptechuae.com/logo1.png' });
+    this.metaService.updateTag({
+      property: 'twitter:title',
+      content: 'About MEPTECH UAE | Authorized Daikin HVAC Dealer',
+    });
+    this.metaService.updateTag({
+      property: 'twitter:description',
+      content:
+        'MEPTECH delivers HVAC excellence in UAE with VRV, FCU, VAV, and air distribution products.',
+    });
+    this.metaService.updateTag({
+      property: 'twitter:image',
+      content: 'https://meptechuae.com/logo1.png',
+    });
   }
-
 }

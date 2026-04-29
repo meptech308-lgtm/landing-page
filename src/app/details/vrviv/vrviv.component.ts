@@ -84,13 +84,13 @@ export class VrvivComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.titleService.setTitle(
-      'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH',
+      'Daikin VRV IV Systems UAE | HVAC Supplier | MEPTECH',
     );
 
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Authorized Daikin dealer – MEPTECH.',
+        'Upgrade to Daikin VRV IV systems in UAE for powerful cooling. Experience energy savings, smart controls, and reliable HVAC for large commercial spaces.',
     });
 
     this.metaService.updateTag({
@@ -99,13 +99,13 @@ export class VrvivComponent implements OnInit, AfterViewInit {
         'Daikin VRV IV+, VRV system UAE, VRV HVAC Dubai, VRF system UAE, Daikin VRV dealer',
     });
     this.titleService.setTitle(
-      'Daikin VRV IV+ System | VRV HVAC Supplier & Installation UAE | MEPTECH',
+      'Daikin VRV IV Systems UAE | HVAC Supplier | MEPTECH',
     );
 
     this.metaService.updateTag({
       name: 'description',
       content:
-        'Daikin VRV IV+ variable refrigerant volume HVAC system for commercial and residential projects in UAE. Supplied and supported by MEPTECH, authorized Daikin dealer.',
+        'Upgrade to Daikin VRV IV systems in UAE for powerful cooling. Experience energy savings, smart controls, and reliable HVAC for large commercial spaces.',
     });
 
     this.metaService.updateTag({

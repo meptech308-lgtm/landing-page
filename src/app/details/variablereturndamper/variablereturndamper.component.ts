@@ -1,44 +1,85 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { ImageComponent } from "../shared/image/image.component";
-import { RandomlistComponent } from "../randomlist/randomlist.component";
+import { Component, OnInit } from '@angular/core';
+import { ImageComponent } from '../shared/image/image.component';
+import { RandomlistComponent } from '../randomlist/randomlist.component';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-variablereturndamper',
+  standalone: true,
   imports: [CommonModule, ImageComponent, RandomlistComponent],
   templateUrl: './variablereturndamper.component.html',
-  styleUrl: './variablereturndamper.component.css'
+  styleUrl: './variablereturndamper.component.css',
 })
-export class VariablereturndamperComponent {
+export class VariablereturndamperComponent implements OnInit {
+  constructor(
+    private title: Title,
+    private meta: Meta,
+  ) {}
+
+  ngOnInit(): void {
+    // ✅ SEO Title
+    this.title.setTitle(
+      'Variable Return Dampers UAE | Smart Air Control | MEPTECH',
+    );
+
+    // ✅ Meta Description
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'Optimize airflow with variable return dampers in UAE. Get smart air control, improved efficiency, and reliable HVAC performance for modern systems.',
+    });
+
+    // ✅ Keywords
+    this.meta.updateTag({
+      name: 'keywords',
+      content:
+        'variable return damper UAE, VAV dampers UAE, airflow control systems UAE, HVAC VAV systems Dubai, air balancing dampers',
+    });
+
+    // ✅ Open Graph
+    this.meta.updateTag({
+      property: 'og:title',
+      content: 'Variable Return Dampers UAE | Smart Air Control | MEPTECH',
+    });
+
+    this.meta.updateTag({
+      property: 'og:description',
+      content:
+        'Optimize airflow with variable return dampers in UAE. Get smart air control, improved efficiency, and reliable HVAC performance for modern systems.',
+    });
+  }
 
   product = {
     mainImg: '/products/variablereturn/main.png',
     name: 'Variable Return Damper',
-    short: `VAV systems supply air at a variable airflow rate from an air handling unit (AHU). Because VAV systems can meet varying heating and cooling needs of different building zones, these systems are found in many commercial buildings. Unlike most other air distribution systems, VAV systems use flow control to efficiently condition each building zone while maintaining required minimum flow rates.There are two major classifications of VAV boxes or terminals—pressure dependent and pressure independent.A VAV box is considered pressure dependent when the flow rate passing through the box varies with the inlet pressure in the supply duct. This form of control is less desirable because the damper in the box is controlled in response to temperature only and can lead to temperature swings and excessive noise.
-A pressure-independent VAV box uses a flow controller to maintain a constant flow rate regardless of variations in system inlet pressure. This type of box is more common and allows for more even and comfortable space conditioning. The balance of this guide will focus on pressure-independent VAV boxes
-CAV is a constant air volume system, the supply air flow rate is constant, but the supply air temperature is varied to meet the thermal loads of a space. This type of system is used in the zones where a constant flow is required`,
+    short: `Variable Air Volume (VAV) systems regulate airflow from an Air Handling Unit (AHU) to meet varying heating and cooling demands across different zones in a building. These systems are widely used in commercial applications for efficient air distribution and energy savings.
+
+VAV systems are classified into pressure-dependent and pressure-independent types. Pressure-dependent systems vary airflow based on duct pressure, which can lead to inconsistent temperatures and noise. In contrast, pressure-independent systems maintain constant airflow regardless of pressure variations, ensuring stable comfort and better control.
+
+Constant Air Volume (CAV) systems, on the other hand, deliver a fixed airflow while adjusting temperature to meet thermal loads. VAV systems provide greater efficiency and flexibility for modern HVAC applications.`,
+
     images: [
       {
         img: '/products/variablereturn/1.png',
-        head: 'Top By Pass Variable air volume TBP 501 Series'
+        head: 'Top By-Pass VAV TBP 501 Series',
       },
       {
         img: '/products/variablereturn/4.png',
-        head: 'Pressure Dependent Variable air volume TPD 600 Series'
+        head: 'Pressure Dependent VAV TPD 600 Series',
       },
       {
         img: '/products/variablereturn/2.png',
-        head: 'Pressure Independent Variable air volume TPI 700 Series'
+        head: 'Pressure Independent VAV TPI 700 Series',
       },
       {
         img: '/products/variablereturn/5.png',
-        head: 'Side By Pass Variable Air Volume TBP 502 Series'
+        head: 'Side By-Pass VAV TBP 502 Series',
       },
       {
         img: '/products/variablereturn/3.png',
-        head: 'Constant air volume type VAV TCV 800 Series1'
+        head: 'Constant Air Volume VAV TCV 800 Series',
       },
-    ]
-  }
-
+    ],
+  };
 }

@@ -1,79 +1,117 @@
-import { Component,OnInit } from '@angular/core';
-import { BannerComponent } from "../../shared/banner/banner.component";
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { BannerComponent } from '../../shared/banner/banner.component';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [BannerComponent, ReactiveFormsModule, CommonModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrl: './contact.component.css',
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   showPopup: boolean = false;
 
-  constructor(private fb: FormBuilder,private title: Title) {
+  productTypes: string[] = [
+    'AC EQUIPMENTS',
+    'VENTILATION',
+    'AIR DISTRIBUTION',
+    'CONTROLS',
+  ];
+
+  constructor(
+    private fb: FormBuilder,
+    private title: Title,
+    private meta: Meta,
+  ) {
     this.contactForm = this.fb.group({
       fullName: ['', Validators.required],
       phone: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      enquiry: ['', Validators.required],
-      details: ['', [Validators.required, Validators.minLength(10)]]
+      productType: ['', Validators.required],
+      productName: ['', Validators.required],
+      company: ['', Validators.required],
     });
   }
 
   ngOnInit(): void {
-  this.title.setTitle('Contact | MEPTECH Air-condition Trading LLC');
-  }
+    this.title.setTitle(
+      'Contact HVAC Experts UAE | HVAC Supplier Dubai | Get a Quote',
+    );
 
-
-  onSubmit() {
-
-  if (this.contactForm.invalid) {
-
-    (window as any).dataLayer.push({
-      event: 'form_error',
-      form_name: 'contact_page_form'
+    this.meta.updateTag({
+      name: 'description',
+      content:
+        'Contact HVAC experts in UAE for Daikin solutions. Get quick support, product details, and professional guidance for your cooling and ventilation needs.',
     });
 
-    this.contactForm.markAllAsTouched();
-    return;
+    this.meta.updateTag({
+      name: 'keywords',
+      content:
+        'HVAC contact UAE, HVAC supplier Dubai, Daikin dealer UAE, HVAC quote UAE, air conditioning supplier UAE',
+    });
+
+    this.meta.updateTag({
+      property: 'og:title',
+      content: 'Contact HVAC Experts UAE | HVAC Supplier Dubai | Get a Quote',
+    });
+
+    this.meta.updateTag({
+      property: 'og:description',
+      content:
+        'Contact HVAC experts in UAE for Daikin solutions. Get quick support, product details, and professional guidance for your cooling and ventilation needs.',
+    });
   }
 
-  const formValues = this.contactForm.value;
+  onSubmit() {
+    if (this.contactForm.invalid) {
+      (window as any).dataLayer.push({
+        event: 'form_error',
+        form_name: 'contact_page_form',
+      });
 
-  const message = `New Quote Request:
+      this.contactForm.markAllAsTouched();
+      return;
+    }
+
+    const formValues = this.contactForm.value;
+
+    const message = `New Quote Request:
 Full Name: ${formValues.fullName}
 Phone: ${formValues.phone}
 Email: ${formValues.email}
-Enquiry Type: ${formValues.enquiry}
-Project Details: ${formValues.details}`;
+Company: ${formValues.company}
 
-  const encodedMessage = encodeURIComponent(message);
+Product Type: ${formValues.productType}
+Product Name: ${formValues.productName}`;
 
-  const whatsappNumber = '971523124576';
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    const encodedMessage = encodeURIComponent(message);
 
-  window.open(whatsappUrl, '_blank');
+    const whatsappNumber = '971523124576';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-  this.showPopup = true;
+    window.open(whatsappUrl, '_blank');
 
-  (window as any).dataLayer.push({
-    event: 'form_success',
-    form_name: 'contact_page_form'
-  });
+    this.showPopup = true;
 
-  this.contactForm.reset();
-  this.contactForm.markAsPristine();
-  (this.contactForm as any).markAsUntouched?.();
-}
+    (window as any).dataLayer.push({
+      event: 'form_success',
+      form_name: 'contact_page_form',
+    });
 
+    this.contactForm.reset();
+  }
 
   openMap() {
     const mapUrl = 'https://share.google/wiHKuxZiVfYb826jz';
     window.open(mapUrl, '_blank');
   }
-
 }
